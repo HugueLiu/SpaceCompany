@@ -13,7 +13,7 @@ Game.techUI = (function() {
 			'<span>',
 			'{{desc}}',
 			'<br>',
-			'<span data-i18n="ui.tech.costs科学点">消耗</span> <span id="{{htmlIdCost}}"></span> <span data-i18n="ui.tech.science">科学点</span>',
+			'<span>消耗</span> <span id="{{htmlIdCost}}"></span> <span>科学点</span>',
 			'</span>',
 			'<br><br>',
 			'<button id="{{htmlIdButton}}" onclick="purchaseTech(\'{{id}}\')" class="btn btn-default">',

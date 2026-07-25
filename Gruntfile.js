@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['variable.js', 'utils.js', 'game.js', 'i18n.js', 'achievements.js', 'constants.js', 'core.js', 'loading.js', 'notification.js', 'resources.js', 'saving.js', 'solarSystem.js', 'solCenter.js', 'wonder.js', 'interstellar.js'],
+        src: ['variable.js', 'utils.js', 'game.js', 'achievements.js', 'constants.js', 'core.js', 'loading.js', 'notification.js', 'resources.js', 'saving.js', 'solarSystem.js', 'solCenter.js', 'wonder.js', 'interstellar.js'],
         dest: '<%= pkg.name %>.min.js'
       }
     },

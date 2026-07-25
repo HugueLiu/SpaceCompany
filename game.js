@@ -256,8 +256,7 @@ var Game = (function() {
 
         self.updateUI(self);
 
-        // Apply i18n after UI is ready
-                if (typeof refreshResources === 'function') refreshResources();
+        if (typeof refreshResources === 'function') refreshResources();
         if (typeof refreshResearches === 'function') refreshResearches();
         if (typeof refreshTabs === 'function') refreshTabs();
         if (typeof legacyRefreshUI === 'function') legacyRefreshUI();
