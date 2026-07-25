@@ -552,9 +552,9 @@ Game.interstellar.military = (function(){
                     shipData.displayNeedsUpdate = true;
                 }
                 if(losses){
-                    Game.notifyInfo('入侵成功！', '你征服了 star.name, star.resource1, star.resource2，可以获得生产加成。');
+                    Game.notifyInfo('入侵成功！', '你征服了 ' + star.name + '，获得了 ' + star.resource1 + ' 和 ' + star.resource2 + ' 的生产加成。');
                 } else {
-                    Game.notifyInfo('入侵成功！', '你零损失征服了 star.name, star.resource1, star.resource2！');
+                    Game.notifyInfo('入侵成功！', '你零损失征服了 ' + star.name + '，获得了 ' + star.resource1 + ' 和 ' + star.resource2 + ' 的生产加成！');
                 }
                 var faction = Game.stargaze.getStargazeData(star.factionId);
                 faction.opinion -= 10;
@@ -585,7 +585,7 @@ Game.interstellar.military = (function(){
             data.owned = true;
             data.displayNeedsUpdate = true;
             faction.displayNeedsUpdate = true;
-            Game.notifyInfo('成功吸收！', '你和平征服了 data.name, data.resource1, data.resource2。');
+            Game.notifyInfo('成功吸收！', '你和平征服了 ' + data.name + '，获得了 ' + data.resource1 + ' 和 ' + data.resource2 + ' 的生产加成。');
         }
     };
 
