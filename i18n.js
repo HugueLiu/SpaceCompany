@@ -69,9 +69,9 @@ Game.i18n = (function() {
                 if (el.children().length === 0) {
                     el.text(text);
                 } else {
-                    el.contents().filter(function() {
-                        return this.nodeType === 3;
-                    }).first().text(text);
+                    var childHtml = '';
+                    el.children().each(function() { childHtml += this.outerHTML; });
+                    el.html(text + ' ' + childHtml);
                 }
             }
         });
@@ -95,7 +95,12 @@ Game.i18n = (function() {
             'Upgrade your': self.t('common.upgradeStoragePrefix'),
             'storage size to': self.t('common.storageSizeTo'),
             'Time remaining until full storage:': self.t('common.timeRemainingFull'),
+            'Time remaining until empty storage:': self.t('common.timeRemainingEmpty'),
             'full storage:': self.t('common.fullStorageSuffix'),
+            'empty storage:': self.t('common.emptyStorageSuffix'),
+            ' storage:': self.t('common.storageSuffix'),
+            'Hydrogen with': self.t('common.hydrogenWith'),
+            ' Energy.': self.t('common.energyDot'),
             'Each engine produces': self.t('common.eachEngineProduces'),
             'Each Solar Panel produces': self.t('common.eachSolarPanelProduces'),
             'Each Power Station produces': self.t('common.eachPowerStationProduces'),
