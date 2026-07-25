@@ -145,8 +145,8 @@ function updateEnergyEfficiencyDisplay() {
 	Game.settings.turnRed(science, cost, tech.htmlIdCost);
 
 	if(tech.current === tech.maxLevel) {
-		tech.getTitleElement().text(tech.name + " " + tech.maxLevel + " (MAX)");
-		tech.getCostElement().text("N/A");
+		tech.getTitleElement().text(tech.name + " " + tech.maxLevel + " (满级)");
+		tech.getCostElement().text("不可用");
 	} else {
 		tech.getTitleElement().text(tech.name + " " + (tech.current) + " / " + tech.maxLevel);
 		tech.getCostElement().text(Game.settings.format(cost));
@@ -192,8 +192,8 @@ function updateBatteryEfficiencyDisplay() {
 	Game.settings.turnRed(science, cost, tech.htmlIdCost);
 
 	if(tech.current === tech.maxLevel) {
-		tech.getTitleElement().text(tech.name + " " + tech.maxLevel + " (MAX)");
-		tech.getCostElement().text("N/A");
+		tech.getTitleElement().text(tech.name + " " + tech.maxLevel + " (满级)");
+		tech.getCostElement().text("不可用");
 	} else {
 		tech.getTitleElement().text(tech.name + " " + (tech.current) + " / " + tech.maxLevel);
 		tech.getCostElement().text(Game.settings.format(cost));

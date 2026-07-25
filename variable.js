@@ -1,6 +1,6 @@
 // Variables in save function
 
-var versionNumber = "V0.5.1.2 Beta"; var companyName = "Space";
+var versionNumber = "V0.5.1.2 Beta"; var companyName = "太空";
 
 // unlocked & activated
 

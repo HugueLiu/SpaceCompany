@@ -408,7 +408,7 @@ Game.interstellarUI = (function(){
                 }
                 //Update System Status
                 if(data.owned){
-                    $('#star_' + id + '_owned').text("Conquered");
+                    $('#star_' + id + '_owned').text("已征服");
                     document.getElementById('star_' + id + '_conquerButtons').className = "hidden";
                 } else {
                     $('#star_' + id + '_owned').text("已保护");
@@ -766,14 +766,14 @@ Game.interstellarUI = (function(){
         if(data.built == true){
             var status = document.getElementById('roc_' + data.id + 'Built');
             document.getElementById("interRocketBuilt").className = "green";
-            document.getElementById("interRocketBuilt").textContent = "Built";
+            document.getElementById("interRocketBuilt").textContent = "已建造";
             for(var id in this.rocketPartEntries){
                 var partData = Game.interstellar.rocketParts.entries[id];
                 if(partData.entryName == "shield" || "engine" || "aero"){
                     document.getElementById("rocpart_" + partData.entryName).className = "hidden";
                 }
             }
-            status.textContent = "Built";
+            status.textContent = "已建造";
             status.className = "green";
             var costElement = $('#' + data.htmlId + '_cost');
             costElement.empty();

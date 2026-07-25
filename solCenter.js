@@ -107,7 +107,7 @@ function refreshConversionDisplay() {
 
 	var emcAmountBtn = $('#emcButton');
 	if (emcAmount === 'Max') {
-		emcAmountBtn.text('Max');
+		emcAmountBtn.text('最大');
 	} else {
 		emcAmountBtn.text(Game.settings.format(emcAmount));
 	}

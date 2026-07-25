@@ -62,7 +62,7 @@ Game.constants = (function(){
 
     instance.statisticCategoryGeneral = "通用";
     instance.statisticCategoryUnlockable = "可解锁内容";
-    instance.statisticCategoryTiming = "Timing";
+    instance.statisticCategoryTiming = "时间统计";
 
     instance.maxTier = 6;
 

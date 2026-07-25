@@ -180,7 +180,7 @@ Game.stargazeUI = (function(){
                 var data = Game.stargaze.upgradeEntries[id];
                 if(id != 'rebirth' && id != 'respec'){
                     if(data.achieved == true){
-                        document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "激活d";
+                        document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "已激活";
                         document.getElementById("stargazeUpg" + id + '_buy').className = "btn btn-default disabled";
                     } else{
                         document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "未激活";
