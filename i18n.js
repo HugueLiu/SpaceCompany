@@ -165,6 +165,91 @@ Game.i18n = (function() {
             'Science': self.t('resource.science.name'),
             'Energy': self.t('resource.energy.name'),
             'Plasma': self.t('resource.plasma.name'),
+            'Plasma,': self.t('resource.plasma.name') + ',',
+            'Meteorite,': self.t('resource.meteorite.name') + ',',
+            'wood,': self.t('resource.wood.name') + ',',
+            'Get ': self.t('common.get'),
+            'Destroy ': self.t('common.destroy'),
+            'Fire ': self.t('common.fire'),
+            'Build ': self.t('common.build'),
+            'Toggle All Energy Production + Consumption': self.t('common.toggleAllEnergy'),
+            'Turn Charcoal Production': self.t('common.turnCharcoalProduction'),
+            'Turn Meteorite Production': self.t('common.turnMeteoriteProduction'),
+            'Turn Rocket Fuel': self.t('common.turnRocketFuel'),
+            'Collapse Inner Solar System': self.t('common.collapseInner'),
+            'Collapse Outer Solar System': self.t('common.collapseOuter'),
+            'Explore Moon': self.t('common.exploreMoon'),
+            'Explore Venus': self.t('common.exploreVenus'),
+            'Explore Mars': self.t('common.exploreMars'),
+            'Explore Asteroid Belt': self.t('common.exploreAsteroidBelt'),
+            'Explore The Wonder Station': self.t('common.exploreWonderStation'),
+            'Explore Jupiter': self.t('common.exploreJupiter'),
+            'Explore Saturn': self.t('common.exploreSaturn'),
+            'Explore Pluto': self.t('common.explorePluto'),
+            'Explore Kuiper Belt': self.t('common.exploreKuiperBelt'),
+            'Explore Sol Center': self.t('common.exploreSolCenter'),
+            'Rebuild Communication Wonder': self.t('common.rebuildCommsWonder'),
+            'Rebuild Rocket Wonder': self.t('common.rebuildRocketWonder'),
+            'Rebuild Antimatter Wonder': self.t('common.rebuildAntimatterWonder'),
+            'Rebuild Stargate': self.t('common.rebuildStargate'),
+            'Activate Precious Wonder': self.t('common.activatePreciousWonder'),
+            'Activate Energetic Wonder': self.t('common.activateEnergeticWonder'),
+            'Activate Technological Wonder': self.t('common.activateTechnologicalWonder'),
+            'Activate Meteorite Wonder': self.t('common.activateMeteoriteWonder'),
+            'Activate Portal': self.t('common.activatePortal'),
+            'Unlock Plasma Research': self.t('common.unlockPlasmaResearch'),
+            'Unlock EMC Machine Research': self.t('common.unlockEmcResearch'),
+            'Unlock Dyson Sphere Research': self.t('common.unlockDysonResearch'),
+            'The next segment costs:': self.t('common.nextSegmentCosts'),
+            'Build Dyson Segment': self.t('common.buildDysonSegment'),
+            'Build up to 50': self.t('common.buildUpTo50'),
+            'Build up to 100': self.t('common.buildUpTo100'),
+            'Build up to 250': self.t('common.buildUpTo250'),
+            'Construct Ring': self.t('common.constructRing'),
+            'Construct Swarm': self.t('common.constructSwarm'),
+            'Construct Sphere': self.t('common.constructSphere'),
+            'Build up to 50 and Ring': self.t('common.buildUpTo50Ring'),
+            'Build up to 100 and Swarm': self.t('common.buildUpTo100Swarm'),
+            'Build up to 250 and Sphere': self.t('common.buildUpTo250Sphere'),
+            'You currently have': self.t('common.youCurrentlyHave'),
+            'Remaining energy:': self.t('common.remainingEnergy'),
+            'Remaining plasma:': self.t('common.remainingPlasma'),
+            'Converting': self.t('common.converting'),
+            'Cost (Energy)': self.t('common.costEnergy'),
+            'Material': self.t('common.material'),
+            'Current amount / Storage': self.t('common.currentAmountStorage'),
+            'Auto Emc': self.t('common.autoEmc'),
+            'Export Save': self.t('common.exportSave'),
+            'Import Save': self.t('common.importSave'),
+            'Copy Text Below To Clipboard': self.t('common.copyToClipboard'),
+            'Red Costs: Bold': self.t('common.redCostsBold'),
+            'Autosave Notifications': self.t('common.autosaveNotifications'),
+            'Screen Notifications': self.t('common.screenNotifications'),
+            'Compress Rows in Sidebar to Decrease White Space': self.t('common.compressRows'),
+            'Gain Buttons Hidden': self.t('common.gainButtonsHidden'),
+            'Destroy Buttons Red': self.t('common.destroyButtonsRed'),
+            'Hidden': self.t('common.hidden'),
+            'Red Costs:': self.t('common.redCostsLabel'),
+            'Company': self.t('common.company'),
+            'Rocket Fuel': self.t('common.rocketFuelLabel'),
+            'Space Rocket': self.t('common.spaceRocketLabel'),
+            'Build Rocket': self.t('common.buildRocketLabel'),
+            'Launch Rocket': self.t('common.launchRocketLabel'),
+            'Not Built': self.t('common.notBuilt'),
+            'Built': self.t('common.built'),
+            'Dormant': self.t('common.dormant'),
+            'Donate Resources': self.t('common.donateResources'),
+            'Activate Wonder': self.t('common.activateWonder'),
+            'Costs:': self.t('common.costsColon'),
+            'Activate': self.t('common.activate'),
+            'Explored': self.t('common.explored'),
+            'Explore': self.t('common.explore'),
+            'Build Chemical Plant': self.t('common.buildChemPlant'),
+            'Destroy Chemical Plant': self.t('common.destroyChemPlant'),
+            'Build Oxidisation Chamber': self.t('common.buildOxidisation'),
+            'Destroy Oxidisation Chamber': self.t('common.destroyOxidisation'),
+            'Build Hydrazine Catalyst': self.t('common.buildHydrazine'),
+            'Destroy Hydrazine Catalyst': self.t('common.destroyHydrazine'),
         };
         var walker = document.createTreeWalker(document.getElementById('game'), NodeFilter.SHOW_TEXT, null, false);
         var textNodes = [];
@@ -322,6 +407,31 @@ Game.i18n = (function() {
         if (typeof refreshResearches === 'function') refreshResearches();
         if (typeof refreshTabs === 'function') refreshTabs();
         if (typeof legacyRefreshUI === 'function') legacyRefreshUI();
+        this.startObserver();
+    };
+
+    instance.startObserver = function() {
+        if (this.observer || this.currentLanguage === 'en') return;
+        var self = this;
+        var debounce = null;
+        this.observer = new MutationObserver(function(mutations) {
+            if (debounce) return;
+            debounce = setTimeout(function() {
+                self.translateTextNodes();
+                debounce = null;
+            }, 200);
+        });
+        var game = document.getElementById('game');
+        if (game) {
+            this.observer.observe(game, { childList: true, subtree: true, characterData: true });
+        }
+    };
+
+    instance.stopObserver = function() {
+        if (this.observer) {
+            this.observer.disconnect();
+            this.observer = null;
+        }
     };
 
     instance.toggleLanguage = function() {
@@ -330,6 +440,11 @@ Game.i18n = (function() {
         var selector = $('#languageSelector');
         if (selector.length > 0) {
             selector.val(newLang);
+        }
+        if (newLang === 'en') {
+            this.stopObserver();
+        } else {
+            this.startObserver();
         }
     };
 
