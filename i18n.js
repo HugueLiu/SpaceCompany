@@ -83,6 +83,57 @@ Game.i18n = (function() {
                 el.html(text);
             }
         });
+        self.translateTextNodes();
+    };
+
+    instance.translateTextNodes = function() {
+        var self = this;
+        if (this.currentLanguage === 'en') return;
+        var replacements = {
+            'Storage Upgrade': self.t('common.storageUpgrade'),
+            'Upgrade your': self.t('common.upgradeStoragePrefix'),
+            'storage size to': self.t('common.storageSizeTo'),
+            'Time remaining until full storage:': self.t('common.timeRemainingFull'),
+            'Each engine produces': self.t('common.eachEngineProduces'),
+            'Each Solar Panel produces': self.t('common.eachSolarPanelProduces'),
+            'Each Power Station produces': self.t('common.eachPowerStationProduces'),
+            'per second.': self.t('common.perSecondDot'),
+            'per second': self.t('common.perSecond'),
+            'Produces': self.t('common.produces'),
+            'Uses': self.t('common.uses'),
+            'Costs': self.t('common.costs'),
+            'Build an': self.t('common.buildAn'),
+            'Build a': self.t('common.buildA'),
+            'Get PSU': self.t('common.getPsu'),
+            'Turn Super-Heater': self.t('common.turnSuperHeater'),
+            'Off': self.t('common.off'),
+            'Destroy Super-Heater': self.t('common.destroySuperHeater'),
+            'Turn Plasmatic Pit': self.t('common.turnPlasmaticPit'),
+            'Destroy Plasmatic Pit': self.t('common.destroyPlasmaticPit'),
+            'Turn Electron Bath': self.t('common.turnElectronBath'),
+            'Destroy Electron Bath': self.t('common.destroyElectronBath'),
+            'Get Battery': self.t('common.getBattery'),
+            'Get Battery T2': self.t('common.getBatteryT2'),
+            'Get Battery T3': self.t('common.getBatteryT3'),
+            'Get Battery T4': self.t('common.getBatteryT4'),
+            'Get Battery T5': self.t('common.getBatteryT5'),
+            'Gain': self.t('common.gain'),
+            'Convert': self.t('common.convert'),
+        };
+        var walker = document.createTreeWalker(document.getElementById('game'), NodeFilter.SHOW_TEXT, null, false);
+        var textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+        for (var node of textNodes) {
+            var text = node.textContent;
+            var changed = false;
+            for (var eng in replacements) {
+                if (text.indexOf(eng) !== -1 && replacements[eng]) {
+                    text = text.split(eng).join(replacements[eng]);
+                    changed = true;
+                }
+            }
+            if (changed) node.textContent = text;
+        }
     };
 
     instance.patchDataObjects = function() {
@@ -115,6 +166,16 @@ Game.i18n = (function() {
                 var rDesc = this.t(rKey + '.desc');
                 if (rName !== rKey + '.name') Game.resourceData[id].name = rName;
                 if (rDesc !== rKey + '.desc') Game.resourceData[id].desc = rDesc;
+            }
+        }
+
+        if (typeof Game.storageData !== 'undefined') {
+            for (var id in Game.storageData) {
+                var sKey = 'storage.' + id;
+                var sName = this.t(sKey + '.name');
+                var sDesc = this.t(sKey + '.desc');
+                if (sName !== sKey + '.name') Game.storageData[id].name = sName;
+                if (sDesc !== sKey + '.desc') Game.storageData[id].desc = sDesc;
             }
         }
 
