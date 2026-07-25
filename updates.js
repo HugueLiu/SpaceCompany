@@ -7,8 +7,8 @@ Game.updates = (function(){
 	instance.updateRead = false;
 
 	instance.updateTitleTemplate = Handlebars.compile(['<div id="updateAlert" class="alert alert-info alert-dismissible fade in">',
-	    '<button href="#" class="close btn.btn-info" data-dismiss="alert" aria-label="close">Close</button>',
-	    '<strong>New Update!</strong> These are the features since you last played:<br>',
+	    '<button href="#" class="close btn.btn-info" data-dismiss="alert" aria-label="close">关闭</button>',
+	    '<strong>新版本更新！</strong> 以下是你上次游玩后新增的内容：<br>',
 	    '<ul id="updateLog"></ul>',
 	'</div>'].join('\n'));
 	instance.updateTemplate = Handlebars.compile('<li><span>{{desc}}</span></li>');
@@ -30,7 +30,7 @@ Game.updates = (function(){
 	        }
 	        if(extra > 0){
 	        	var extraUpdates = {
-	        		desc: '+' + extra + ' more. Click the version number to see the full changelog.',
+	        		desc: '+' + extra + ' 项更多内容。点击版本号可查看完整更新日志。',
 	        		read: false
 	        	}
 	        	this.createDisplay(extraUpdates);
@@ -88,172 +88,172 @@ Game.updatesData = (function(){
 	var instance = {};
 
 	instance.nerfEnergyEff = {
-		desc: 'Nerfed Energy Efficiency to be 100x cheaper, but only go up to 25%',
+		desc: '降低了能源效率研究成本，变为原来的 1/100，但上限调整为 25%',
 		read: false
 	};
 
 	instance.batteryEff = {
-		desc: 'Battery Efficiency Upgrade increases your battery storage by 1% (max 50)',
+		desc: '电池效率升级现在每级提高 1% 电池容量（最多 50 级）',
 		read: false
 	};
 
 	instance.effResearchLevel = {
-		desc: 'Changed Efficiency researches to show current level instead of next level',
+		desc: '效率研究现在显示当前等级，而不是下一级',
 		read: false
 	};
 
 	instance.buffBattEff = {
-		desc: 'Buffed Battery Efficiency to go up to 200 levels instead of 50.',
+		desc: '强化了电池效率升级，上限从 50 级提升到 200 级',
 		read: false
 	};
 
 	instance.redDestroy = {
-		desc: 'More -> Graphics Options. Added option to turn destroy buttons red.',
+		desc: '“更多 -> 图形选项”中新增了将销毁按钮显示为红色的选项',
 		read: false
 	};
 
 	instance.nerfRocketFuelResearch = {
-		desc: 'Increased the Science cost of Rocket Fuel researches',
+		desc: '提高了火箭燃料研究的科学点消耗',
 		read: false
 	};
 
 	instance.rocketFuelT3 = {
-		desc: 'Added Hydrazine Catalyst - T3 Rocket Fuel',
+		desc: '新增联氨催化剂：T3 火箭燃料',
 		read: false
 	};
 
 	instance.achievFormat = {
-		desc: 'Added Achievement Number Formatting',
+		desc: '新增成就数字格式选项',
 		read: false
 	};
 
 	instance.splash = {
-		desc: 'There are now 100 Loading Messages!',
+		desc: '现在已有 100 条加载提示语！',
 		read: false
 	};
 
 	instance.stargazeIntro = {
-		desc: 'Barebones + Intro added for Stargaze tab',
+		desc: '为观星标签页加入了基础内容与开场介绍',
 		read: false
 	};
 
 	instance.irs = {
-		desc: 'Added Interstellar Radar Scanner (Interstellar -> Comms)',
+		desc: '新增星际雷达扫描仪（星际 -> 通讯）',
 		read: false
 	};
 
 	instance.ranks = {
-		desc: 'Added Achievement Ranks',
+		desc: '新增成就等级',
 		read: false
 	};
 
 	instance.lunarite = {
-		desc: 'Changed Space Metal to Lunarite',
+		desc: '将“太空金属”更名为“月岩”',
 		read: false
 	};
 
 	instance.hideWonder = {
-		desc: 'The Wonder Tab hides itself when completed (makes space for more tabs)',
+		desc: '奇迹标签页在完成后会自动隐藏，为其他标签页腾出空间',
 		read: false
 	};
 
 	instance.dmCounter = {
-		desc: 'Dark Matter is now calculated and shown.',
+		desc: '现在会计算并显示暗物质收益',
 		read: false
 	};
 
 	instance.hideButton = {
-		desc: 'You can unhide completed tabs if wanted. More -> Graphics Options.',
+		desc: '现在可以取消隐藏已完成的标签页，位置在“更多 -> 图形选项”',
 		read: false
 	};
 
 	instance.achivementsReset = {
-		desc: 'Achievements have been reset, you will get back any you are currently over the level needed for.',
+		desc: '成就已重置；若你当前已经达到对应条件，会重新获得这些成就',
 		read: false
 	};
 
 	instance.relationUpgrades = {
-		desc: 'Rebirth Upgrades now give relationship for upgrading them.',
+		desc: '重生升级现在会提供对应阵营关系值',
 		read: false
 	};
 
 	instance.fixSecondRebirth = {
-		desc: 'Fixed Subsequent Rebirths. You can now rebirth more than once without fear of save corruption!',
+		desc: '修复了多次重生问题，现在可以安全进行多次重生而不会损坏存档',
 		read: false
 	};
 
 	instance.T5Batteries = {
-		desc: 'Added Tier 5 Batteries: Stargaze -> Kitrinos Corporation',
+		desc: '新增 T5 电池：观星 -> 基特里诺斯公司',
 		read: false
 	};
 
 	instance.memoryLeak = {
-		desc: 'Fixed Huge Memory Leak. The Game should run much smoother now and use much less CPU' ,
+		desc: '修复了严重的内存泄漏问题，游戏现在会更流畅且占用更少 CPU' ,
 		read: false
 	};
 
 	instance.multiSpheres = {
-		desc: 'Each Star System Conquered allows you to build a sphere.',
+		desc: '每征服一个恒星系，就允许你建造一个戴森球',
 		read: false
 	};
 
 	instance.autoEmc = {
-		desc: 'Added Auto Emc! Stargaze -> Prasnian Empire',
+		desc: '新增自动 EMC：观星 -> 普拉斯尼帝国',
 		read: false
 	};
 
 	instance.respec = {
-		desc: 'Keep your DM upgrades and have the ability to respec.',
+		desc: '现在可以保留暗物质升级，并获得重置升级的能力',
 		read: false
 	};
 
 	instance.segmentAndSphere = {
-		desc: 'Build 250 Segments and Dyson Sphere Button',
+		desc: '新增建造 250 个结构段与戴森球按钮',
 		read: false
 	};
 
 	instance.meteoriteTier34 = {
-		desc: 'Meteorite Tiers 3 and 4. Stargaze -> Moviton Syndicate',
+		desc: '新增陨石 T3 与 T4：观星 -> 莫维顿辛迪加',
 		read: false
 	};
 
 	instance.buffCapitalShip = {
-		desc: 'Buffed Capital Ship\' power and defense.',
+		desc: '强化了主力舰的攻击力与防御力。',
 		read: false
 	};
 
 	instance.dmStats = {
-		desc: 'Live counter showing how much DM you will get from each section',
+		desc: '新增实时计数器，显示各部分将提供多少暗物质',
 		read: false
 	};
 
 	instance.energyEffBug = {
-		desc: 'Fixed the 25/50 max Energy Efficiency Bug',
+		desc: '修复了能源效率研究 25/50 上限的错误',
 		read: false
 	};
 
 	instance.buffOilT3 = {
-		desc: 'Reduced Oil T3 energy cost',
+		desc: '降低了石油 T3 的能耗',
 		read: false
 	};
 
 	instance.dmBoostMultiplicative = {
-		desc: 'Made Science and Resource Efficiency multiplicative with dark matter boost',
+		desc: '科学效率与资源效率现在会与暗物质加成进行乘算',
 		read: false
 	};
 
 	instance.antimatterDMBoost = {
-		desc: 'Fixed Antimatter not being affected by DM Boost',
+		desc: '修复了反物质不受暗物质加成影响的问题',
 		read: false
 	};
 
 	instance.starListExpansion = {
-		desc: 'Massively expanded the list of star systems that can be traveled to and conquered in the interstellar tab',
+		desc: '大幅扩展了星际标签页中可旅行和可征服的恒星系列表',
 		read: false
 	};
 
 	instance["0511"] = {
-		desc: 'Fixed several UI issues after rebirth with the interstellar tab',
+		desc: '修复了重生后星际标签页中的若干界面问题',
 		read: false
 	};
 	

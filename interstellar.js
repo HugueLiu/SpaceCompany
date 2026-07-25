@@ -21,7 +21,7 @@ Game.interstellar = (function(){
             
         }
 
-        console.debug("Loaded " + this.navCount + " Interstellar Navs");
+        console.debug("已加载 " + this.navCount + " 个星际导航");
         this.comms.initialise();
         this.rocketParts.initialise();
         this.rocket.initialise();

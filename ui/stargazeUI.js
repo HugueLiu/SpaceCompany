@@ -23,7 +23,7 @@ Game.stargazeUI = (function(){
 
     instance.initialise = function() {
 
-        this.tab = Game.ui.createTab({id: 'stargaze', title: 'Stargaze'});
+        this.tab = Game.ui.createTab({id: 'stargaze', title: '观星'});
         this.tab.initialise();
 
         if(sphere == 0) {
@@ -87,9 +87,9 @@ Game.stargazeUI = (function(){
                 '<h3 class="default btn-link">{{name}}</h3>',
                 '<span>',
                     '<p>{{{desc}}}</p>',
-                    '<p id="{{htmlId}}_cost">Costs: {{cost}} Dark Matter</p>',,
+                    '<p id="{{htmlId}}_cost">消耗：{{cost}} 暗物质</p>',,
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.stargaze.upgrade(\'{{id}}\')" class="btn btn-warning">Rebirth</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.stargaze.upgrade(\'{{id}}\')" class="btn btn-warning">重生</div>',
                 '<br><br>',
                 '</td></tr>'].join('\n'));
 
@@ -98,21 +98,21 @@ Game.stargazeUI = (function(){
                 '<h3 class="default btn-link">{{name}}: <span id=\'respecCount\'>3</span></h3>',
                 '<span>',
                     '<p>{{{desc}}}</p>',
-                    '<p id="{{htmlId}}_cost">Costs: {{cost}} Dark Matter</p>',,
+                    '<p id="{{htmlId}}_cost">消耗：{{cost}} 暗物质</p>',,
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.stargaze.upgrade(\'{{id}}\')" class="btn btn-warning">Respec</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.stargaze.upgrade(\'{{id}}\')" class="btn btn-warning">重置</div>',
                 '<br><br>',
                 '</td></tr>'].join('\n'));
 
         instance.upgradeTemplate = Handlebars.compile(
             ['<tr id="{{htmlId}}"><td>',
-                '<h3 class="default btn-link">{{name}}: <span id="{{htmlId}}Achieved">Dormant</span></h3>',
+                '<h3 class="default btn-link">{{name}}: <span id="{{htmlId}}Achieved">未激活</span></h3>',
                 '<span>',
                     '<p>{{{desc}}}</p>',
-                    '<p id="{{htmlId}}_cost">Costs: {{cost}} Dark Matter</p>',
-                    '<p id="{{htmlId}}_opinion">Improves relationship by {{opinion}}</p>',
+                    '<p id="{{htmlId}}_cost">消耗：{{cost}} 暗物质</p>',
+                    '<p id="{{htmlId}}_opinion">关系提升 {{opinion}}</p>',
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.stargaze.upgrade(\'{{id}}\')" class="btn btn-default">Activate</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.stargaze.upgrade(\'{{id}}\')" class="btn btn-default">激活</div>',
                 '<br><br>',
                 '</td></tr>'].join('\n'));
 
@@ -175,15 +175,15 @@ Game.stargazeUI = (function(){
             //     }
             // }
 
-            // Marks achieved upgrades as 'Activated'
+            // Marks achieved upgrades as '激活d'
             for(var id in Game.stargaze.upgradeEntries){
                 var data = Game.stargaze.upgradeEntries[id];
                 if(id != 'rebirth' && id != 'respec'){
                     if(data.achieved == true){
-                        document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "Activated";
+                        document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "激活d";
                         document.getElementById("stargazeUpg" + id + '_buy').className = "btn btn-default disabled";
                     } else{
-                        document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "Dormant";
+                        document.getElementById("stargazeUpg" + id + 'Achieved').textContent = "未激活";
                         document.getElementById("stargazeUpg" + id + '_buy').className = "btn btn-default";
                     }
                 }

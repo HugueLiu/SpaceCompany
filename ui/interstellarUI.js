@@ -28,7 +28,7 @@ Game.interstellarUI = (function(){
 
     instance.initialise = function() {
 
-        this.tab = Game.ui.createTab({id: 'interstellar', title: 'Interstellar', hidden: 'hidden'});
+        this.tab = Game.ui.createTab({id: 'interstellar', title: '星际', hidden: 'hidden'});
         this.tab.initialise();
 
         instance.titleTemplate = Handlebars.compile(
@@ -101,140 +101,140 @@ Game.interstellarUI = (function(){
                     '<p>{{desc}}</p>',
                     '<p id="{{htmlId}}_cost"></p>',
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.rocketParts.buildPart(\'{{entryName}}\', 1)" class="btn btn-default">Get {{name}}</div>',
-                '<div id="{{htmlId}}_buy10" onclick="Game.interstellar.rocketParts.buildPart(\'{{entryName}}\', 10)" class="btn btn-default">Buy 10</div>',
-                '<div id="{{htmlId}}_buy{{max}}" onclick="Game.interstellar.rocketParts.buildPart(\'{{entryName}}\', {{max}})" class="btn btn-default">Buy {{max}}</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.rocketParts.buildPart(\'{{entryName}}\', 1)" class="btn btn-default">获取{{name}}</div>',
+                '<div id="{{htmlId}}_buy10" onclick="Game.interstellar.rocketParts.buildPart(\'{{entryName}}\', 10)" class="btn btn-default">购买 10 个</div>',
+                '<div id="{{htmlId}}_buy{{max}}" onclick="Game.interstellar.rocketParts.buildPart(\'{{entryName}}\', {{max}})" class="btn btn-default">购买 {{max}} 个</div>',
                 '</td></tr>'].join('\n'));
 
         instance.starTemplate = Handlebars.compile(
             ['<tr id="{{htmlId}}" class="hidden"><td style="width:300px;">',
                 '<h3 class="default btn-link" id="{{htmlId}}_name">{{name}}</h3>',
                 '<h5>',
-                    'Distance: {{distance}} (<span id="{{htmlId}}Cost">{{cost}}</span> Antimatter)<br>',
-                    'Planets: {{planets}}<br>',
+                    '距离：{{distance}}（<span id="{{htmlId}}Cost">{{cost}}</span> 反物质）<br>',
+                    '行星数：{{planets}}<br>',
                 '</h5>',
-                '<div class="btn btn-default" id="{{htmlId}}_explore" onclick="Game.interstellar.stars.exploreSystem(\'{{id}}\');">Explore</div>',
+                '<div class="btn btn-default" id="{{htmlId}}_explore" onclick="Game.interstellar.stars.exploreSystem(\'{{id}}\');">探索</div>',
                 '</td><td><br><br><br>',
                 '<p>{{desc}}</p>',
                 '</td></tr>'].join('\n'));
 
         instance.factionStarTemplate = Handlebars.compile(
             ['<tr id="{{htmlId}}_conquer" class="hidden"><td colspan="1">',
-                '<h3 class="default btn-link" id="{{htmlId}}_name">{{name}}: <span id="{{htmlId}}_owned">Protected</span></h3>',
+                '<h3 class="default btn-link" id="{{htmlId}}_name">{{name}}: <span id="{{htmlId}}_owned">已保护</span></h3>',
                 '<h5>',
-                    'Distance: {{distance}}<br>',
-                    'Planets: {{planets}}<br>',
-                    'Faction: {{faction}}<br>',
-                    'Resources Present: {{resource1}}, {{resource2}}',
+                    '距离：{{distance}}<br>',
+                    '行星数：{{planets}}<br>',
+                    '阵营：{{faction}}<br>',
+                    '可产出资源：{{resource1}}、{{resource2}}',
                 '</h5><hide id="{{htmlId}}_conquerButtons">',
 
-                    // Espionage
-                    '<div class="btn btn-default" data-toggle="modal" data-target="#{{htmlId}}_spy">Espionage</div>',
+                    // 侦察
+                    '<div class="btn btn-default" data-toggle="modal" data-target="#{{htmlId}}_spy">侦察</div>',
                     '<div id="{{htmlId}}_spy" class="modal fade" role="dialog">',
                         '<div class="modal-dialog modal-lg">',
                             '<div class="modal-content">',
                                 '<div class="modal-header">',
                                     '<button type="button" class="close" data-dismiss="modal">&times;</button>',
-                                    '<h2 class="modal-title">{{name}}: Espionage</h2>',
+                                    '<h2 class="modal-title">{{name}}: 侦察</h2>',
                                 '</div>',
                                 '<div class="modal-body">',
-                                    '<span>This is where you can send ships to find information about your enemies\' fleets. At the first level, you will be able to see the number of digits in the enemy fleet statistics, with the second revealing the first digit in all three stats and each successive level will reveal the next digit.</span>',
+                                    '<span>你可以派出舰船侦察敌方舰队信息。第一层侦察会显示敌方舰队三项属性的位数；第二层会揭示三项属性的首位数字；之后每提升一级，都会继续揭示下一位数字。</span>',
                                 '</div>',
                                 '<div class="modal-body">',
                                     '<table class="table"><tr><td>',
-                                        '<h4>Active Scouts: <span class="scoutActive">0</span>/<span class="scoutCount">0</span></h4>',
+                                        '<h4>已派出侦察舰：<span class="scoutActive">0</span>/<span class="scoutCount">0</span></h4>',
                                         '<div class="btn-group">',
                                         '<button style="width:40px;" class="btn btn-default" onclick="Game.interstellar.military.addShip(\'scout\', \'max\');">++</button>',
                                         '<button style="width:40px;" class="btn btn-default" onclick="Game.interstellar.military.addShip(\'scout\', 1);">+</button>',
                                         '<button style="width:40px;" class="btn btn-default" onclick="Game.interstellar.military.addShip(\'scout\', -1);">-</button>',
                                         '<button style="width:40px;" class="btn btn-default" onclick="Game.interstellar.military.addShip(\'scout\', \'none\')">--</button></div>',
-                                        '<br><h4>Success Chance: <span id="{{htmlId}}_spyChance">90</span>%',
+                                        '<br><h4>成功率：<span id="{{htmlId}}_spyChance">90</span>%',
                                     '</td><td style="text-align:center;">',
-                                        '<h4>System Fleet Statistics:</h4>',
-                                        '<span class="{{htmlId}}_power">??</span> Power,',
-                                        '<span class="{{htmlId}}_defense">??</span> Defense,',
-                                        '<span class="{{htmlId}}_speed">??</span> Speed',
+                                        '<h4>星系舰队属性：</h4>',
+                                        '<span class="{{htmlId}}_power">??</span> 攻击力，',
+                                        '<span class="{{htmlId}}_defense">??</span> 防御力，',
+                                        '<span class="{{htmlId}}_speed">??</span> 速度',
                                         '<br><br>',
                                         // '<h4>Fleet Breakdown</h4>',
                                         // '<span class="{{htmlId}}_ships">???</span>',
                                     '</td><td style="text-align:center;">',
-                                        '<h4>Threat Level: (<span class="{{htmlId}}_threat">•</span>)<br><br>',
-                                        '<button class="btn btn-default" data-dismiss="modal" onclick="Game.interstellar.military.spy(\'{{id}}\');">Send Scouts</button>',
+                                        '<h4>威胁等级：(<span class="{{htmlId}}_threat">•</span>)<br><br>',
+                                        '<button class="btn btn-default" data-dismiss="modal" onclick="Game.interstellar.military.spy(\'{{id}}\');">派出侦察舰</button>',
                                     '</td></tr></table>',
                                 '</div>',
                                 '<div class="modal-footer">',
-                                    '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+                                    '<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>',
                                 '</div>',
                             '</div>',
                         '</div>',
                     '</div>',
 
-                    // Invade
-                    '<div class="btn btn-default" data-toggle="modal" data-target="#{{htmlId}}_invade">Invade</div>',
+                    // 入侵
+                    '<div class="btn btn-default" data-toggle="modal" data-target="#{{htmlId}}_invade">入侵</div>',
                     '<div id="{{htmlId}}_invade" class="modal fade" role="dialog">',
                         '<div class="modal-dialog modal-lg">',
                             '<div class="modal-content">',
                                 '<div class="modal-header">',
                                     '<button type="button" class="close" data-dismiss="modal">&times;</button>',
-                                    '<h2 class="modal-title">{{name}}: Invasion</h2>',
+                                    '<h2 class="modal-title">{{name}}: 入侵</h2>',
                                 '</div>',
                                 '<div class="modal-body">',
-                                    '<span>Here, you can activate ships within your fleet and attempt to invade the faction\' star system. You reputation with them affects how prepared they are to a possible invasion. The star system\' fleet statistics take this into account already, so no extra calculation is needed. Invading has a bad effect on your reputation with the faction in question, reducing it by 10 for a successful invasion. However, due to their large ego, they take pity on failed attempts and reputation is not changed in the result of a loss.</span>',
+                                    '<span>你可以在这里调动舰队并尝试入侵该阵营控制的星系。你与该阵营的关系会影响他们对入侵的防备程度，界面中显示的星系舰队属性已经将这一因素计算在内。成功入侵会使你与该阵营的关系降低 10；若入侵失败，则关系不会发生变化。</span>',
                                 '</div>',
                                 '<div class="modal-body">',
                                     '<table class="table"><tr><td id="{{htmlId}}_invadeShips" style="width:33%">',
-                                        '<h4>Active Ships:</h4>',
+                                        '<h4>已出战舰船：</h4>',
                                         /***************************
                                         ** Add Ships Procedurally **
                                         ***************************/
                                     '</td><td style="text-align:center; width:33%">',
-                                        '<h4>Your Active Fleet Statistics:</h4>',
-                                        '<span class="activeFleetPower">0</span> Power,',
-                                        '<span class="activeFleetDefense">0</span> Defense,',
-                                        '<span class="activeFleetSpeed">0</span> Speed',
+                                        '<h4>你的出战舰队属性：</h4>',
+                                        '<span class="activeFleetPower">0</span> 攻击力，',
+                                        '<span class="activeFleetDefense">0</span> 防御力，',
+                                        '<span class="activeFleetSpeed">0</span> 速度',
                                         '<br><br>',
-                                        '<h4>System Fleet Statistics:</h4>',
-                                        '<span class="{{htmlId}}_power">??</span> Power,',
-                                        '<span class="{{htmlId}}_defense">??</span> Defense,',
-                                        '<span class="{{htmlId}}_speed">??</span> Speed',
+                                        '<h4>星系舰队属性：</h4>',
+                                        '<span class="{{htmlId}}_power">??</span> 攻击力，',
+                                        '<span class="{{htmlId}}_defense">??</span> 防御力，',
+                                        '<span class="{{htmlId}}_speed">??</span> 速度',
                                         '<br><br>',
-                                        '<h4>System Fleet Power/Defense Multiplier (Reputation)</h4>',
+                                        '<h4>星系舰队攻防倍率（关系影响）</h4>',
                                         'X<span class="{{factionId}}_multiplier">1</span>',
                                         '<br><br>',
                                         // '<h4>Fleet Breakdown</h4>',
                                         // '<span class="{{htmlId}}_ships">???</span>',
                                     '</td><td style="text-align:center; width:33%">',
-                                        '<h4>Threat Level: (<span class="{{htmlId}}_threat">•</span>)</h4>',
-                                        '<h4>Chance of Victory: <span class="{{htmlId}}_invadeChance">0</span>%</h4>',
-                                        '<button class="btn btn-default" id="{{htmlId}}_invadeButton" data-dismiss="modal" onclick="Game.interstellar.military.invadeSystem(\'{{id}}\');">Attack!</button>',
+                                        '<h4>威胁等级：(<span class="{{htmlId}}_threat">•</span>)</h4>',
+                                        '<h4>胜率：<span class="{{htmlId}}_invadeChance">0</span>%</h4>',
+                                        '<button class="btn btn-default" id="{{htmlId}}_invadeButton" data-dismiss="modal" onclick="Game.interstellar.military.invadeSystem(\'{{id}}\');">进攻！</button>',
                                     '</td></tr></table>',
                                 '</div>',
                                 '<div class="modal-footer">',
-                                    '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+                                    '<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>',
                                 '</div>',
                             '</div>',
                         '</div>',
                     '</div>',
 
-                    // Absorb
-                    '<div class="btn btn-default" data-toggle="modal" data-target="#{{htmlId}}_absorb">Absorb</div>',
+                    // 吸收
+                    '<div class="btn btn-default" data-toggle="modal" data-target="#{{htmlId}}_absorb">吸收</div>',
                     '<div id="{{htmlId}}_absorb" class="modal fade" role="dialog">',
                         '<div class="modal-dialog modal-lg">',
                             '<div class="modal-content">',
                                 '<div class="modal-header">',
                                     '<button type="button" class="close" data-dismiss="modal">&times;</button>',
-                                    '<h2 class="modal-title">{{name}}: Absorption</h2>',
+                                    '<h2 class="modal-title">{{name}}: 吸收</h2>',
                                 '</div>',
                                 '<div class="modal-body">',
-                                    '<span>Absorbing is the simplest way of conquering a star system. Unfortunately, you must be on good terms with the faction in control, with over 60 reputation with them. When Absorbing, you will lose 5 reputation in doing so, which is half the amount you would lose in an invasion.</span>',
+                                    '<span>吸收是征服星系最简单的方式，但你必须与该星系所属阵营保持良好关系，关系值需要高于 60。执行吸收时会损失 5 点关系值，仅为直接入侵损失的一半。</span>',
                                 '</div>',
                                 '<div class="modal-body">',
                                     '<table style="height:100%" class="table"><tr><td style="text-align:center;" vertical-align="middle">',
-                                        '<div class="btn btn-default disabled" data-dismiss="modal" id="{{htmlId}}_absorbButton" onclick="Game.interstellar.military.absorbSystem(\'{{id}}\');">Absorb (5 Opinion)</div>',
+                                        '<div class="btn btn-default disabled" data-dismiss="modal" id="{{htmlId}}_absorbButton" onclick="Game.interstellar.military.absorbSystem(\'{{id}}\');">吸收（消耗 5 点关系）</div>',
                                     '</td></tr></table>',
                                 '</div>',
                                 '<div class="modal-footer">',
-                                    '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+                                    '<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>',
                                 '</div>',
                             '</div>',
                         '</div>',
@@ -242,11 +242,11 @@ Game.interstellarUI = (function(){
 
 
                 '</hide></td><td colspan="1">',
-                '<h3 class="btn-link">Resource Production:</h3>',
+                '<h3 class="btn-link">资源产出：</h3>',
                 '<h4>{{resource1}}:</h4>',
-                '<span class="star_{{resource1}}_prod">0</span> / Second',
+                '<span class="star_{{resource1}}_prod">0</span> / 秒',
                 '<h4>{{resource2}}:</h4>',
-                '<span class="star_{{resource2}}_prod">0</span> / Second',
+                '<span class="star_{{resource2}}_prod">0</span> / 秒',
                 '</td></tr>'].join('\n'));
 
         instance.invadeShipsTemplate = Handlebars.compile(
@@ -262,11 +262,11 @@ Game.interstellarUI = (function(){
                 '<h3 class="default btn-link">{{name}}: <span id="{{htmlId}}Count">0</span></h3>',
                 '<span>',
                     '<p>{{desc}}</p>',
-                    '<p id="{{htmlId}}_stats">Attributes: {{stats.power}} Power, {{stats.defense}} Defense, {{stats.speed}} Speed</p>',
+                    '<p id="{{htmlId}}_stats">属性：{{stats.power}} 攻击力，{{stats.defense}} 防御力，{{stats.speed}} 速度</p>',
                     '<p id="{{htmlId}}_cost"></p>',
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.military.buildShip(\'{{entryName}}\')" class="btn btn-default">Get 1</div>',
-                '<div id="{{htmlId}}_destroy" onclick="Game.interstellar.military.destroyShip(\'{{entryName}}\')" class="btn btn-default">Destroy 1</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.military.buildShip(\'{{entryName}}\')" class="btn btn-default">获取 1 个</div>',
+                '<div id="{{htmlId}}_destroy" onclick="Game.interstellar.military.destroyShip(\'{{entryName}}\')" class="btn btn-default">销毁 1 个</div>',
                 '</td></tr>'].join('\n'));
 
         instance.navTemplate = Handlebars.compile(
@@ -278,14 +278,14 @@ Game.interstellarUI = (function(){
             ['<td style="vertical-align:middle;" colspan="1">',
                     '<span>{{name}}</span>',
                 '</td><td style="vertical-align:middle; text-align:right;" colspan="2">',
-                '<span id="interRocketBuilt" class="red">Not Built</span>'].join('\n'));
+                '<span id="interRocketBuilt" class="red">未建造</span>'].join('\n'));
 
         instance.antimatterNavTemplate = Handlebars.compile(
             ['<td style="vertical-align:middle;">',
                     '<span>{{name}}</span>',
                 '</td>',
                 '<td style="vertical-align:middle; text-align:center;">',
-                    '<span id="{{htmlId}}_perSecond">0</span>/Sec',
+                    '<span id="{{htmlId}}_perSecond">0</span>/秒',
                 '</td>',
                 '<td style="vertical-align:middle; text-align:right;">',
                     '<span id="{{htmlId}}_current">0</span>',
@@ -411,7 +411,7 @@ Game.interstellarUI = (function(){
                     $('#star_' + id + '_owned').text("Conquered");
                     document.getElementById('star_' + id + '_conquerButtons').className = "hidden";
                 } else {
-                    $('#star_' + id + '_owned').text("Protected");
+                    $('#star_' + id + '_owned').text("已保护");
                     document.getElementById('star_' + id + '_conquerButtons').className = "";
 
                     var multi = Game.interstellar.military.getMultiplier(data.factionId);

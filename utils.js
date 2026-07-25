@@ -7,7 +7,7 @@ String.prototype.format = function() {
     for (var i = 0; i < arguments.length; i++) {
         var key = '{' + i.toString() + '}';
         if(formatted.indexOf(key) < 0) {
-            throw new Error(StrLoc("Index {0} was not defined in string: {1}").format(i, formatted));
+            throw new Error(StrLoc("字符串中未定义索引 {0}：{1}").format(i, formatted));
         }
 
         formatted = formatted.replace(key, arguments[i]);
@@ -69,7 +69,7 @@ Game.utils = (function(){
                 }
 
                 if (base > notations.length) {
-                    return StrLoc('Infinity');
+                    return StrLoc('无限');
                 } else {
                     notationValue = notations[base];
                 }
@@ -139,9 +139,9 @@ Game.utils = (function(){
     instance.formatters = {
         'raw': instance.formatRaw,
         'rounded': instance.formatRaw,
-        'name': instance.formatEveryThirdPower(['', StrLoc(' million'), StrLoc(' billion'), StrLoc(' trillion'), StrLoc(' quadrillion'),
-            StrLoc(' quintillion'), StrLoc(' sextillion'), StrLoc(' septillion'), StrLoc(' octillion'),
-            StrLoc(' nonillion'), StrLoc(' decillion')
+        'name': instance.formatEveryThirdPower(['', StrLoc(' 百万'), StrLoc(' 十亿'), StrLoc(' 万亿'), StrLoc(' 千万亿'),
+            StrLoc(' 百京'), StrLoc(' 十垓'), StrLoc(' 秭'), StrLoc(' 穰'),
+            StrLoc(' 沟'), StrLoc(' 涧')
         ]),
         'shortName': instance.formatEveryThirdPower(['', StrLoc('M'), StrLoc('B'), StrLoc('T'), StrLoc('Qa'), StrLoc('Qi'), StrLoc('Sx'),StrLoc('Sp'), StrLoc('Oc'), StrLoc('No'), StrLoc('De') ]),
         'shortName2': instance.formatEveryThirdPower(['', StrLoc('M'), StrLoc('G'), StrLoc('T'), StrLoc('P'), StrLoc('E'), StrLoc('Z'), StrLoc('Y')]),
@@ -184,7 +184,7 @@ Game.utils = (function(){
         var hourMinutePart = this.getTimeDisplay(seconds, use24hourTime);
 
         if(timeSplit[1] > 0) {
-            return timeSplit[1] + ' Days ' + hourMinutePart;
+            return timeSplit[1] + ' 天 ' + hourMinutePart;
         }
 
         return hourMinutePart;
@@ -200,9 +200,9 @@ Game.utils = (function(){
         if (use24hourTime === false) {
             if (timeSplit[2] > 12) {
                 timeSplit[2] -= 12;
-                suffix = ' ' + StrLoc('pm');
+                suffix = ' ' + StrLoc('下午');
             } else {
-                suffix = ' ' + StrLoc('am');
+                suffix = ' ' + StrLoc('上午');
             }
         }
 

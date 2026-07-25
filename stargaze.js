@@ -29,7 +29,7 @@ Game.stargaze = (function(){
 				displayNeedsUpdate: true
 			});
 		}
-		console.debug("Loaded " + this.navCount + " Stargaze Navs");
+		console.debug("已加载 " + this.navCount + " 个观星导航");
 
 		for (var id in Game.prestigeData) {
 			var data = Game.prestigeData[id];
@@ -58,7 +58,7 @@ Game.stargaze = (function(){
 
 	instance.rebirth = function(){
 		if(sphere < 1)return;
-		var check = confirm("Are you sure? This is non-reversible after you reset and save.");
+		var check = confirm("你确定吗？重生并保存后将无法撤销。");
 		if(check){
 			this.entries.darkMatter.count += this.entries.darkMatter.current;
 			Game.notifySuccess('暗物质！', '你通过重生获得了 ' + this.entries.darkMatter.current + ' 暗物质！');
@@ -78,7 +78,7 @@ Game.stargaze = (function(){
 				document.getElementById(explored[i]).className = "inner sideTab hidden";
 				if(explored[i] != "moon", explored[i] != "venus", explored[i] != "mars", explored[i] != "asteroidBelt")document.getElementById(explored[i]).className = "outer sideTab hidden";
 			}
-			document.getElementById("rocket").textContent = "Not Built";
+			document.getElementById("rocket").textContent = "未建造";
 			document.getElementById("rocketRocketCost").className = "red";
 			document.getElementById("solarRocket").className = "";
 			document.getElementById("spaceRocket").className = "sideTab";
@@ -89,7 +89,7 @@ Game.stargaze = (function(){
 				document.getElementById(tabsUnlocked[i]).className = "hidden";
 			}
 			for(var i = 0; i < activated.length; i++){
-				$(document.getElementById(activated[i] + "Activation")).text("Dormant");
+				$(document.getElementById(activated[i] + "Activation")).text("未激活");
 				document.getElementById(activated[i] + "Activation").className = "red";
 			}
 			Game.tech.reset();
@@ -112,7 +112,7 @@ Game.stargaze = (function(){
             }
             $('#gainButtonsHidden').prop('checked', false);
 
-			// Refreshing Interstellar Tab
+			// 刷新星际标签页
 			var objects = ["comms", "rocket", "rocketParts", "antimatter", "military"];
 			for(var i = 0; i < objects.length; i++){
 				var object = Game.interstellar[objects[i]];
@@ -168,7 +168,7 @@ Game.stargaze = (function(){
 		}
 		var upgradeData = this.upgradeEntries[id];
 		if(!upgradeData) {
-			console.log('"' + id + '" is not a recognised upgrade.');
+			console.log('"' + id + '" 不是可识别的升级。');
 			return;
 		}
 		if(upgradeData.achieved == false){
@@ -203,7 +203,7 @@ Game.stargaze = (function(){
 		if(this.respecCount <= 0){
 			return;
 		}
-		if(confirm('Warning! You will still lose the respec if you have no upgrades.') == false){
+		if(confirm('警告：即使你没有已购买升级，也会消耗一次重置次数。') == false){
 			return;
 		}
 		this.respecCount -= 1;

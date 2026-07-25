@@ -70,7 +70,7 @@ var Game = (function() {
         self.updateAutoSave(delta);
 
         if(delta > 1) {
-            console.log("You have been away for " + Game.utils.getTimeDisplay(delta));
+            console.log("你离开了 " + Game.utils.getTimeDisplay(delta));
         }
     };
 
@@ -100,21 +100,21 @@ var Game = (function() {
 
     instance.import = function() {
         var text = $('#impexpField').val();
-        if (!text.trim()) return console.warn("No save to import provided.");
+        if (!text.trim()) return console.warn("未提供可导入的存档。");
         if(text.length % 4 !== 0) {
-            console.log("String is not valid base64 encoded: " + text.length + ' (' + text.length % 4 + ')');
+            console.log("字符串不是有效的 Base64 编码：" + text.length + ' (' + text.length % 4 + ')');
             return;
         }
 
         var decompressed = LZString.decompressFromBase64(text);
         if(!decompressed) {
-            console.log("Import Game failed, could not decompress!");
+            console.log("导入存档失败，无法解压！");
             return;
         }
 
         localStorage.setItem("save", decompressed);
 
-        console.log("Imported Saved Game");
+        console.log("已导入存档");
 
         window.location.reload();
     };
@@ -125,8 +125,8 @@ var Game = (function() {
         var string = JSON.stringify(data);
         var compressed = LZString.compressToBase64(string);
 
-        console.log('Compressing Save');
-        console.log('Compressed from ' + string.length + ' to ' + compressed.length + ' characters');
+        console.log('正在压缩存档');
+        console.log('已从 ' + string.length + ' to ' + compressed.length + ' 个字符');
         $('#impexpField').val(compressed);
     };
 
@@ -149,7 +149,7 @@ var Game = (function() {
 
         localStorage.setItem("save",JSON.stringify(data));
         Game.notifyInfo('游戏已保存', '您的存档数据已保存在浏览器本地存储中');
-        console.log('Game Saved');
+        console.log('游戏已保存');
 
         return data;
     };
@@ -176,7 +176,7 @@ var Game = (function() {
             }
         }
 
-        console.log("Load Successful");
+        console.log("加载成功");
     };
 
     instance.updateUI = function(self){
@@ -213,9 +213,9 @@ var Game = (function() {
     };
 
     instance.deleteSave = function() {
-        var deleteSave = prompt('你确定要删除存档吗？此操作不可逆！如果确定，请在框中输入DELETE。');
+        var deleteSave = prompt('你确定要删除存档吗？此操作不可逆！如果确定，请在框中输入删除。');
 
-        if(deleteSave === "DELETE") {
+        if(deleteSave === "删除") {
             localStorage.removeItem("save");
 
             alert('存档已删除');
@@ -229,7 +229,7 @@ var Game = (function() {
      instance.loadDelay = function (self, delta) {
         document.getElementById("game").className = "container";
 
-        self.deleteInterval("Loading");
+        self.deleteInterval("加载中");
 
         registerLegacyBindings();
         self.ui.updateAutoDataBindings();
@@ -266,15 +266,15 @@ var Game = (function() {
         self.updates.initialise();
 
         // Then start the main loops
-        self.createInterval("Fast Update", self.fastUpdate, 100);
-        self.createInterval("Slow Update", self.slowUpdate, 1000);
-        self.createInterval("UI Update", self.uiUpdate, 100);
+        self.createInterval("快速更新", self.fastUpdate, 100);
+        self.createInterval("慢速更新", self.slowUpdate, 1000);
+        self.createInterval("界面更新", self.uiUpdate, 100);
 
         // Do this in a setInterval so it gets called even when the window is inactive
         window.setInterval(function(){ Game.fixedUpdate(); },100);
 
         setTimeout(function(){document.getElementById("loadScreen").className = "hidden";}, 100)
-        console.debug("Load Complete");
+        console.debug("加载完成");
 
     };
 
@@ -405,10 +405,10 @@ var Game = (function() {
         $('[data-toggle="tooltip"]').tooltip();
 
         
-        console.debug("Loading Game");
+        console.debug("加载中 Game");
         
-        this.createInterval("Loading Animation", this.loadAnimation, 10);
-        this.createInterval("Loading", this.loadDelay, 1000);
+        this.createInterval("加载中 Animation", this.loadAnimation, 10);
+        this.createInterval("加载中", this.loadDelay, 1000);
 
         this.update_frame(0);
     };

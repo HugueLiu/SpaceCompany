@@ -70,7 +70,7 @@ var splashTextArray = ["探索未知...",
 "绝了！",
 "我保证！这不是骗局！",
 "不是复制粘贴的！",
-"Space Company明早还在！去睡觉吧！",
+"太空公司明早还在！去睡觉吧！",
 "经常休息！",
 "理论上有效！",
 "告诉你的朋友！",
@@ -106,7 +106,7 @@ var splashTextArray = ["探索未知...",
 "严禁自动点击！",
 "甚至比坎巴拉太空计划更深入！",
 "欢迎来到侏罗纪公园...",
-"长时间接触Space Company的影响目前未知...",
+"长时间接触太空公司的影响目前未知...",
 ];
 var splashText = splashTextArray[Math.floor(Math.random()*splashTextArray.length)];
 

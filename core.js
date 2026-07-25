@@ -1001,7 +1001,7 @@ function refreshResources(){
 		}
 	}
 	for(var i=0; i<activated.length; i++){
-		document.getElementById(activated[i] + "Activation").textContent = "Activated";
+		document.getElementById(activated[i] + "Activation").textContent = "已激活";
 		document.getElementById(activated[i] + "Activation").className += " green";
 	}
 	if(techUnlocked === true){
@@ -1310,7 +1310,7 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip({container: 'body'}); 
 });
 
-//Change Company Name
+// 更改公司名称
 $('input[name="companyName"]').change(function(){
 	companyName = ($('input[name="companyName"]').val());
 	Game.settings.updateCompanyName();

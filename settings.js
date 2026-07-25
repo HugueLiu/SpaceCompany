@@ -297,8 +297,6 @@ Game.settings = (function(){
             });
         }
 
-        $('#languageSelector').change(function(){
-        });
     };
 
     instance.update = function(delta) {
@@ -312,7 +310,7 @@ Game.settings = (function(){
         var element = $('#theme_css');
 
         if(element.length === 0) {
-            console.warn("Theme CSS Element does not exist!");
+            console.warn("主题 CSS 元素不存在！");
             return;
         }
 

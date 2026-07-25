@@ -38,15 +38,15 @@
 	
     	<meta name="author" content="Sparticle999">
     	<meta name="title" content="太空公司">
-    	<meta name="description" content="太空公司 is a science-fiction incremental game where you start from humble beginnings on Earth, working your way up to travelling between star systems and building Dyson Spheres and pretty much colonising the entire galaxy(ies?)">
+    	<meta name="description" content="《太空公司》是一款科幻放置增量游戏。你将从地球上的微小起点开始发展，逐步跨越恒星系、建造戴森球，并最终殖民整片银河。">
     	<meta content="太空公司" property="og:title">
-    	<meta property="og:description" content="太空公司 is a science-fiction incremental game where you start from humble beginnings on Earth, working your way up to travelling between star systems and building Dyson Spheres and pretty much colonising the entire galaxy(ies?)">
+    	<meta property="og:description" content="《太空公司》是一款科幻放置增量游戏。你将从地球上的微小起点开始发展，逐步跨越恒星系、建造戴森球，并最终殖民整片银河。">
     	<meta content="太空公司" property="og:site_name">
     	<meta property="og:image" content="https://sparticle999.github.io/SpaceCompany/SpaceCompanyFavicon.png">
     	<meta name="twitter:card" value="summary">
     	<meta property="twitter:url" content="https://sparticle999.github.io/SpaceCompany">
     	<meta property="twitter:title" content="太空公司">
-    	<meta property="twitter:description" content="太空公司 is a science-fiction incremental game where you start from humble beginnings on Earth, working your way up to travelling between star systems and building Dyson Spheres and pretty much colonising the entire galaxy(ies?)">
+    	<meta property="twitter:description" content="《太空公司》是一款科幻放置增量游戏。你将从地球上的微小起点开始发展，逐步跨越恒星系、建造戴森球，并最终殖民整片银河。">
     	<meta property="twitter:image" content="https://sparticle999.github.io/SpaceCompany/SpaceCompanyFavicon.png">
 	
 	<!-- When you put the link in discord, it uses this tag to color the stripe on the embed -->
@@ -64,7 +64,7 @@
 		<br>
 	</div>
 	<div id="splashText" style="width:100%; font-size:40px; font-family: 'Orbitron', 'sans-serif'; font-weight: bold; color:#ffffff; line-height:40px; text-align:center;">
-		Reticulating Splines...
+		正在整理样条曲线...
 	</div>
 </div>
 <script type="text/javascript" src="data/splashTextData.js"></script>
@@ -78,23 +78,19 @@
 					<img src="SpaceCompanyFavicon.png" style="width:40px; height:auto; margin-top:-30%;">
 				</a>
 				<a class="navbar-brand page-title" href="#">
-					<span id="companyName">Space</span> Company
+					<span id="companyName">太空公司</span>
 				</a>
 				<a class="navbar-brand" ng-href="" target="_blank" href="https://github.com/sparticle999/SpaceCompany#changelog">
 					<span id="versionLabel" class="text-muted small ng-binding"></span>
 				</a>
 				<a class="navbar-brand">
 				<span id="energyLow" class="text-muted small ng-binding red hidden" data-i18n="ui.header.energyDeficit">
-					Energy Deficit!
-				</span>
+					能源不足！</span>
 				</a>
 				<a class="navbar-brand pointer" target="_blank" href="http://discord.gg/hgRUjVp">
 					<span class="text-muted small" data-i18n="ui.header.joinDiscord">加入我们的Discord！</span>
 				</a>
-				<a class="navbar-brand pointer" onclick="Game.i18n.toggleLanguage()" style="cursor:pointer;">
-					<span id="langToggle" class="text-muted small" data-i18n="ui.header.langToggle">中文</span>
-				</a>
-				<div class="pull-right" style="width:200px;">
+								<div class="pull-right" style="width:200px;">
 					<a class="navbar-brand">
 						<span id="autoSaveTimer" class="text-muted small ng-binding" style="font-size:14px;">
 
@@ -117,7 +113,7 @@
     	<li role="presentation" id="wonderTab" class="hidden"><a href="#wonder" aria-control="wonder" role="tab" data-toggle="tab"onclick="tabClicked('wonder')"><div id="wonderTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.wonders">奇迹</span></a></li>
     	<li role="presentation" id="solCenterTopTab" class="hidden"><a href="#solCenterPage" aria-control="solCenterPage" role="tab" data-toggle="tab"onclick="tabClicked('solCenter')"><div id="solCenterTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.solCenter">太阳中心</span></a></li>
     	<li role="presentation" id="machineTopTab" style="display: none;"><a href="#machineTab" aria-control="machineTab" role="tab" data-toggle="tab"onclick="tabClicked('machine')"><div id="machineTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.machines">机器</span></a></li>
-    	<li role="presentation" class="pull-right"><a href="#help" aria-control="help" role="tab" data-toggle="tab"><div class="glyphicon glyphicon-info-sign"></div> <span data-i18n="ui.tab.help">帮助/常见问题</span></a></li>
+    	<li role="presentation" class="pull-right"><a href="#help" aria-control="help" role="tab" data-toggle="tab"><div class="glyphicon glyphicon-info-sign"></div> <span data-i18n="ui.tab.help">帮助 / 常见问题</span></a></li>
     	<li role="presentation" class="pull-right"><a href="#more" aria-control="more" role="tab" data-toggle="tab" onclick="tabClicked('more')"><div id="moreTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.more">更多...</span></a></li>
 	</ul>
 
@@ -135,12 +131,11 @@
 						</td>
 						<td style="border:none; vertical-align:middle;">
 							<span data-i18n="ui.nav.plasma">
-								Plasma
-							</span>
+								等离子体</span>
 						</td>
 						<td style="border: none; vertical-align:middle; text-align:center;">
 							<span>
-								<span id="plasmaps">0</span>/Sec
+								<span id="plasmaps">0</span>/秒
 							</span>
 						</td>
 						<td style="border:none; vertical-align:middle; text-align:right;">
@@ -159,12 +154,11 @@
 						</td>
 						<td id="energyNav1" style="border:none; vertical-align:middle;">
 							<span data-i18n="ui.nav.energy">
-								Energy
-							</span>
+								能源</span>
 						</td>
 						<td id="energyNav2" style="border: none; vertical-align:middle; text-align:center;">
 							<span>
-								<span id="energyps">0</span>/Sec
+								<span id="energyps">0</span>/秒
 							</span>
 						</td>
 						<td id="energyNav3" style="border:none; vertical-align:middle; text-align:right;">
@@ -183,12 +177,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.uranium">
-								Uranium
-							</span>
+								铀</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="uraniumps">0</span>/Sec
+								<span id="uraniumps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -205,12 +198,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.lava">
-								Lava
-							</span>
+								熔岩</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="lavaps">0</span>/Sec
+								<span id="lavaps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -232,12 +224,11 @@
 						</td>
 						<td id="oilNav1" style="vertical-align:middle;">
 							<span data-i18n="ui.nav.oil">
-								Oil
-							</span>
+								石油</span>
 						</td>
 						<td id="oilNav2" style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="oilps">0</span>/Sec
+								<span id="oilps">0</span>/秒
 							</span>
 						</td>
 						<td id="oilNav3" style="vertical-align:middle; text-align:right;">
@@ -254,12 +245,11 @@
 						</td>
 						<td id="metalNav1" style="vertical-align:middle;">
 							<span data-i18n="ui.nav.metal">
-								Metal
-							</span>
+								金属</span>
 						</td>
 						<td id="metalNav2" style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="metalps">0</span>/Sec
+								<span id="metalps">0</span>/秒
 							</span>
 						</td>
 						<td id="metalNav3" style="vertical-align:middle; text-align:right;">
@@ -276,12 +266,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.gem">
-								Gems
-							</span>
+								宝石</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="gemps">0</span>/Sec
+								<span id="gemps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -298,12 +287,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.charcoal">
-								Charcoal
-							</span>
+								木炭</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="charcoalps">0</span>/Sec
+								<span id="charcoalps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -320,12 +308,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.wood">
-								Wood
-							</span>
+								木材</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="woodps">0</span>/Sec
+								<span id="woodps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -342,12 +329,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.silicon">
-								Silicon
-							</span>
+								硅</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="siliconps">0</span>/Sec
+								<span id="siliconps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -369,12 +355,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.lunarite">
-								Lunarite
-							</span>
+								月岩</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="lunariteps">0</span>/Sec
+								<span id="lunariteps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -391,12 +376,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.methane">
-								Methane
-							</span>
+								甲烷</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="methaneps">0</span>/Sec
+								<span id="methaneps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -413,12 +397,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.titanium">
-								Titanium
-							</span>
+								钛</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="titaniumps">0</span>/Sec
+								<span id="titaniumps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -435,12 +418,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.gold">
-								Gold
-							</span>
+								黄金</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="goldps">0</span>/Sec
+								<span id="goldps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -457,12 +439,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.silver">
-								Silver
-							</span>
+								白银</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="silverps">0</span>/Sec
+								<span id="silverps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -484,12 +465,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.hydrogen">
-								Hydrogen
-							</span>
+								氢</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="hydrogenps">0</span>/Sec
+								<span id="hydrogenps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -506,12 +486,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.helium">
-								Helium
-							</span>
+								氦</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="heliumps">0</span>/Sec
+								<span id="heliumps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -528,12 +507,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.ice">
-								Ice
-							</span>
+								冰</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="iceps">0</span>/Sec
+								<span id="iceps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -550,12 +528,11 @@
 						</td>
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.nav.meteorite">
-								Meteorite
-							</span>
+								陨石</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="meteoriteps">0</span>/Sec
+								<span id="meteoriteps">0</span>/秒
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
@@ -580,14 +557,14 @@
 								<span>
 									等离子体是物质的第四态，被第四级机器和大型太空结构用作极端能源。初始最大存储量为100,000，但可以解锁和购买等离子体存储单元来增加容量。
 									<br>
-									存储满之前的剩余时间：<span id="plasmaLimitType">满</span>：<b><span id="plasmaLimitTime">N/A</span></b>
+									存储满之前的剩余时间：<span id="plasmaLimitType">满</span>：<b><span id="plasmaLimitTime">无</span></b>
 									<br>
 									1个等离子体通过将 <span id="manualPlasmaHydrogenCost">10</span> 氢与 <span id="manualPlasmaEnergyCost">1000</span> 能源融合产生。
 								</span>
 									<br>
 									<br>
 									<hide class="gainButton">
-										<div onclick="gainResource('plasma')" class="btn btn-default" data-i18n='resource.plasma.gain'>获取 <span id="plasmaGain">1</span></div>
+										<div onclick="gainResource('plasma')" class="btn btn-default" data-i18n='resource.plasma.gain'>获取<span id="plasmaGain">1</span></div>
 										<br>
 										<br>
 									</hide>
@@ -695,26 +672,24 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='resource.energy.heading'>
-										Energy
-									</h2>
+										能源</h2>
 									<span>
-										Energy is created by power sources such as steam engines, solar power and advances even to fusion power and nuclear energy. The maximum you can hold to start with is 100,000 能源, but batteries are unlockable which can increase this.
+										能源由蒸汽机、太阳能等发电装置产生，后期甚至可以使用聚变和核能。初始最大存储量为 100,000，但可以通过解锁电池来继续提升。
 										<br>
-										存储满之前的剩余时间： <span id="energyLimitType">满</span> 存储： <b><span id="energyLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="energyLimitType">满</span> 存储： <b><span id="energyLimitTime">无</span></b>
 										<br>
 									</span>
 									<br>
-									<button onclick="toggleEnergy()" class="btn btn-default" data-i18n='common.toggleAllEnergy'>Toggle All 能源 Production + Consumption</button>
+									<button onclick="toggleEnergy()" class="btn btn-default" data-i18n='common.toggleAllEnergy'>切换所有能源生产与消耗</button>
 								</td>
 							</tr>
 							<tr id="batteries" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.batteries'>
-										Batteries: <span id="battery">0</span>
+										电池：<span id="battery">0</span>
 									</h3>
 									<span data-i18n='common.batteriesDesc'>
-										Batteries increase your energy storage by 50,000 per battery built.
-										<br>
+										每个电池增加50,000的能源存储。<br>
 										消耗 <span id="batteryMetalCost">50,000</span> 金属, <span id="batteryGemCost">50,000</span> 宝石, <span id="batteryLunariteCost">30,000</span> 月岩.
 									</span>
 									<br>
@@ -725,10 +700,10 @@
 							<tr id="batteriesT2" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.t2batteries'>
-										T2 Batteries: <span id="batteryT2">0</span>
+										T2电池：<span id="batteryT2">0</span>
 									</h3>
 									<span>
-										Tier 2 Batteries increase your energy storage by 500,000 per battery built.
+										每建造一个 T2 电池，能源存储上限提高 500,000。
 										<br>
 										消耗 <span id="batteryT2MetalCost">550,000</span> 金属, <span id="batteryT2GemCost">550,000</span> 宝石, <span id="batteryT2LunariteCost">330,000</span> 月岩.
 									</span>
@@ -740,10 +715,10 @@
 							<tr id="batteriesT3" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.t3batteries'>
-										T3 Batteries: <span id="batteryT3">0</span>
+										T3电池：<span id="batteryT3">0</span>
 									</h3>
 									<span>
-										Tier 3 Batteries increase your energy storage by 5,000,000 per battery built.
+										每建造一个 T3 电池，能源存储上限提高 5,000,000。
 										<br>
 										消耗 <span id="batteryT3MetalCost">5,500,000</span> 金属, <span id="batteryT3GemCost">5,500,000</span> 宝石, <span id="batteryT3LunariteCost">3,300,000</span> 月岩.
 									</span>
@@ -755,10 +730,10 @@
 							<tr id="batteriesT4" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.t4batteries'>
-										T4 Batteries: <span id="batteryT4">0</span>
+										T4电池：<span id="batteryT4">0</span>
 									</h3>
 									<span>
-										Tier 4 Batteries increase your energy storage by 50,000,000 per battery built.
+										每建造一个 T4 电池，能源存储上限提高 50,000,000。
 										<br>
 										消耗 <span id="batteryT4MetalCost">55,000,000</span> 金属, <span id="batteryT4GemCost">55,000,000</span> 宝石, <span id="batteryT4LunariteCost">33,000,000</span> 月岩.
 									</span>
@@ -770,10 +745,10 @@
 							<tr id="batteriesT5" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.t5batteries'>
-										T5 Batteries: <span id="batteryT5">0</span>
+										T5电池：<span id="batteryT5">0</span>
 									</h3>
 									<span>
-										Tier 5 Batteries increase your energy storage by 500,000,000 per battery built.
+										每建造一个 T5 电池，能源存储上限提高 500,000,000。
 										<br>
 										消耗 <span id="batteryT5MetalCost">490,000,000</span> 金属, <span id="batteryT5GemCost">490,000,000</span> 宝石, <span id="batteryT5LunariteCost">290,000,000</span> 月岩.
 									</span>
@@ -788,70 +763,70 @@
 										木炭引擎： <span id="charcoalEngine">0</span>
 									</h3>
 									<span>
-										Burns 木炭 to produce a steady source of 能源.
+										燃烧木炭，稳定地产生能源。
 										<br>
-										Each engine produces <span id="charcoalEngineOutput">2</span> 能源 and uses 1 木炭每秒。
+										每台引擎产出 <span id="charcoalEngineOutput">2</span> 能源，并且每秒消耗 1 木炭。
 										<br>
-										消耗 <span id="charcoalEngineMetalCost">50</span> 金属, <span id="charcoalEngineGemCost">25</span> 宝石s.
+										消耗 <span id="charcoalEngineMetalCost">50</span> 金属，<span id="charcoalEngineGemCost">25</span> 宝石。
 									</span>
 									<br>
 									<br>
-									<button onclick="getCharcoalEngine()" class="btn btn-default">获取 木炭 Engine</button>
-									<button onclick="destroyMachine('charcoalEngine')" class="btn btn-default destroy hidden">销毁 木炭 Engine</button>
+									<button onclick="getCharcoalEngine()" class="btn btn-default">获取木炭引擎</button>
+									<button onclick="destroyMachine('charcoalEngine')" class="btn btn-default destroy hidden">销毁木炭引擎</button>
 								</td>
 							</tr>
 							<tr id="solarPower" class="hidden">
 								<td>
 									<h3 class="default btn-link">
-										Solar Panels: <span id="solarPanel">0</span>
+										太阳能板：<span id="solarPanel">0</span>
 									</h3>
 									<span>
-										Gains 能源 slowly from the sun without using any resources.
+										无需消耗任何资源，缓慢从太阳获取能源。
 										<br>
-										Each Solar Panel produces <span id="solarPanelOutput">1.5</span> 能源每秒。
+										每块太阳能板每秒产出 <span id="solarPanelOutput">1.5</span> 能源。
 										<br>
-										消耗 <span id="solarPanelMetalCost">30</span> 金属, <span id="solarPanelGemCost">35</span> 宝石s.
+										消耗 <span id="solarPanelMetalCost">30</span> 金属，<span id="solarPanelGemCost">35</span> 宝石。
 									</span>
 									<br>
 									<br>
 									<button onclick="getSolarPanel()" class="btn btn-default">获取太阳能板</button>
-									<button onclick="destroyMachine('solarPanel')" class="btn btn-default destroy hidden">销毁 Solar Panel</button>
+									<button onclick="destroyMachine('solarPanel')" class="btn btn-default destroy hidden">销毁太阳能板</button>
 								</td>
 							</tr>
 							<tr id="methanePower" class="hidden">
 								<td>
 									<h3 class="default btn-link">
-										Methane Power Stations: <span id="methaneStation">0</span>
+										甲烷发电站：<span id="methaneStation">0</span>
 									</h3>
 									<span>
-										Burn powerful methane from Venus to satisfy all your power needs.
+										燃烧来自金星的高能甲烷，满足你的全部电力需求。
 										<br>
-										Each Power Station produces 23 能源 and uses 6 methane每秒。
+										每座发电站每秒产出 23 能源，并消耗 6 甲烷。
 										<br>
-										消耗 <span id="methaneStationLunariteCost">110</span> 月岩, <span id="methaneStationTitaniumCost">90</span> 钛.
+										消耗 <span id="methaneStationLunariteCost">110</span> 月岩，<span id="methaneStationTitaniumCost">90</span> 钛。
 									</span>
 									<br>
 									<br>
-									<button onclick="getMethaneStation()" class="btn btn-default">获取 甲烷 Power Station</button>
-									<button onclick="destroyMachine('methaneStation')" class="btn btn-default destroy hidden">销毁 甲烷 Station</button>
+									<button onclick="getMethaneStation()" class="btn btn-default">获取甲烷发电站</button>
+									<button onclick="destroyMachine('methaneStation')" class="btn btn-default destroy hidden">销毁甲烷发电站</button>
 								</td>
 							</tr>
 							<tr id="nuclearPower" class="hidden">
 								<td>
 									<h3 class="default btn-link">
-										Nuclear Power Stations: <span id="nuclearStation">0</span>
+										核电站：<span id="nuclearStation">0</span>
 									</h3>
 									<span>
-										Uses fission to create large amounts of power.
+										利用核裂变产生大量能源。
 										<br>
-										Each Power Station produces 153 能源 and uses 7 uranium每秒。
+										每座核电站每秒产出 153 能源，并消耗 7 铀。
 										<br>
-										消耗 <span id="nuclearStationLunariteCost">20,000</span> 月岩, <span id="nuclearStationTitaniumCost">10,000</span> 钛.
+										消耗 <span id="nuclearStationLunariteCost">20,000</span> 月岩，<span id="nuclearStationTitaniumCost">10,000</span> 钛。
 									</span>
 									<br>
 									<br>
 									<button onclick="getNuclearStation()" class="btn btn-default">获取核电站</button>
-									<button onclick="destroyMachine('nuclearStation')" class="btn btn-default destroy hidden">销毁 Nuclear Station</button>
+									<button onclick="destroyMachine('nuclearStation')" class="btn btn-default destroy hidden">销毁核电站</button>
 								</td>
 							</tr>
 							<tr id="magmaticPower" class="hidden">
@@ -860,16 +835,16 @@
 										磁流体发电机： <span id="magmatic">0</span>
 									</h3>
 									<span>
-										The Magmatic Dynamo is a method of producing power by using lava as a fuel. Because of the extreme temperature of lava, a lot of 能源 can be produced at once.
+										磁流体发电机通过把熔岩作为燃料来发电。由于熔岩温度极高，因此可以一次性产生大量能源。
 										<br>
-										Each Power Station produces 191 能源 and uses 11 lava每秒。
+										每台磁流体发电机每秒产出 191 能源，并消耗 11 熔岩。
 										<br>
-										消耗 <span id="magmaticLunariteCost">25,000</span> 月岩, <span id="magmaticGemCost">30,000</span> 宝石, <span id="magmaticSilverCost">20,000</span> 白银.
+										消耗 <span id="magmaticLunariteCost">25,000</span> 月岩，<span id="magmaticGemCost">30,000</span> 宝石，<span id="magmaticSilverCost">20,000</span> 白银。
 									</span>
 									<br>
 									<br>
 									<button onclick="getMagmatic()" class="btn btn-default">获取磁流体发电机</button>
-									<button onclick="destroyMachine('magmatic')" class="btn btn-default destroy hidden">销毁 Magmatic Dynamo</button>
+									<button onclick="destroyMachine('magmatic')" class="btn btn-default destroy hidden">销毁磁流体发电机</button>
 								</td>
 							</tr>
 							<tr id="fusionPower" class="hidden">
@@ -878,16 +853,16 @@
 										聚变反应堆： <span id="fusionReactor">0</span>
 									</h3>
 									<span>
-										In a fusion reaction, 能源 is released when two light atomic nuclei are fused together to form one heavier atom. This is the same reaction that occurs in stars and produces a lot of power.
+										在聚变反应中，两个较轻的原子核融合成一个较重原子时会释放能量。这与恒星内部发生的反应相同，能够产生大量能源。
 										<br>
-										Each Power Station produces 273 能源 and uses 10 氢 and 10 氦每秒。
+										每座聚变反应堆每秒产出 273 能源，并消耗 10 氢和 10 氦。
 										<br>
-										消耗 <span id="fusionReactorLunariteCost">30,000</span> 月岩, <span id="fusionReactorTitaniumCost">20,000</span> 钛, <span id="fusionReactorSiliconCost">15,000</span> 硅.
+										消耗 <span id="fusionReactorLunariteCost">30,000</span> 月岩，<span id="fusionReactorTitaniumCost">20,000</span> 钛，<span id="fusionReactorSiliconCost">15,000</span> 硅。
 									</span>
 									<br>
 									<br>
 									<button onclick="getFusionReactor()" class="btn btn-default">获取聚变反应堆</button>
-									<button onclick="destroyMachine('fusionReactor')" class="btn btn-default destroy hidden">销毁 Fusion Reactor</button>
+									<button onclick="destroyMachine('fusionReactor')" class="btn btn-default destroy hidden">销毁聚变反应堆</button>
 								</td>
 							</tr>
 						</table>
@@ -899,15 +874,14 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='resource.uranium.heading'>
-										Uranium
-									</h2>
+										铀</h2>
 									<span>
-										Uranium is used for nuclear power generation because when it is split, it releases huge amounts of 能源. For this reason, it is prominent in many advanced machines and for propulsion technology as it is useful for inter-star-system travel. Unfortunately, it is hard to get and it requires a lot of resources to radiation-proof equipment.
+										铀可用于核能发电，因为在发生裂变时会释放巨大能量。因此它广泛应用于高级机器和推进技术，对跨恒星系旅行尤为重要。不幸的是，铀很难获取，而且设备的防辐射处理也需要大量资源。
 									</span>
 									<hide class="gainButton">
 									<br>
 									<br>
-									<div onclick="gainResource('uranium')" class="btn btn-default" data-i18n='common.gain'>获取 <span id="uraniumGain">1</span></div>
+									<div onclick="gainResource('uranium')" class="btn btn-default" data-i18n='common.gain'>获取<span id="uraniumGain">1</span></div>
 									</hide>
 									<br>
 									<br>
@@ -916,12 +890,12 @@
 							<tr id="uraniumStorageUpgrade">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.storageUpgrade'>
-										<span data-i18n="common.storageUpgrade">存储升级</span>
+										存储升级<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span data-i18n='common.upgradeStorageDesc'>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="uraniumNextStorage">100</span>.
+										将你的{0}存储升级到<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="uraniumNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="uraniumLimitType">满</span> 存储： <b><span id="uraniumLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="uraniumLimitType">满</span> 存储： <b><span id="uraniumLimitTime">无</span></b>
 										<br>
 										消耗 <span id="uraniumStorageCost">50</span> 铀, <span id="uraniumStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -933,29 +907,27 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='building.grinder.name'>
-										研磨机： <span id="grinder">0</span>
+										研磨机<span id="grinder">0</span>
 									</h3>
 									<span data-i18n='building.grinder.desc'>
-										Pulverizes 铀 for easy transportation out of deep mineshafts.
-										<br>
+										粉碎铀以便从深层矿井中轻松运输。<br>
 										Produces 1 铀每秒。
 										<br>
 										消耗 <span id="grinderTitaniumCost">2000</span> 钛, <span id="grinderLunariteCost">4000</span> 月岩, <span id="grinderGoldCost">2000</span> 黄金.
 									</span>
 									<br>
 									<br>
-									<button onclick="getGrinder()" class="btn btn-default" data-i18n='common.get'>获取研磨机</button>
-									<button onclick="destroyMachine('grinder')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁研磨机</button>
+									<button onclick="getGrinder()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('grinder')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='building.cubic.name'>
-										立方传送器： <span id="cubic">0</span>
+										立方传送器<span id="cubic">0</span>
 									</h3>
 									<span data-i18n='building.cubic.desc'>
-										This teleposes blocks of rock from far underground to the surface so that 铀 can be mined more easily.
-										<br>
+										这个传送器将深层地下的岩石块传送到地表，以便更容易地开采铀。<br>
 										Produces 9 铀每秒。
 										<br>
 										Uses 40 能源每秒。
@@ -964,18 +936,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getCubic()" class="btn btn-default" data-i18n='common.get'>获取立方传送器</button>
-									<button onclick="destroyMachine('cubic')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁立方传送器</button>
+									<button onclick="getCubic()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('cubic')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="uraniumTier3" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.enricher.name'>
-										Uranium Enricher: <span id="enricher">0</span>
+										铀浓缩器<span id="enricher">0</span>
 									</h3>
 									<span data-i18n='building.enricher.desc'>
-										The Enricher increases the quality of uranium mined and thus allows more of the uranium in rocks to be used in your company.
-										<br>
+										浓缩器提高了开采铀的质量，从而允许岩石中更多的铀被你的公司利用。<br>
 										Produces 61 铀每秒。
 										<br>
 										Uses 180 能源每秒。
@@ -984,18 +955,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getEnricher()" class="btn btn-default" data-i18n='common.get'>获取 铀 Enricher</button>
-									<button onclick="destroyMachine('enricher')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁 铀 Enricher</button>
+									<button onclick="getEnricher()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('enricher')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="uraniumTier4" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.recycler.name'>
-										Yellowcake Recycler: <span id="recycler">0</span>
+										黄饼回收器<span id="recycler">0</span>
 									</h3>
 									<span data-i18n='building.recycler.desc'>
-										Recycles used-up 铀 to provide the resources with a second use. This greatly increases the amount of 铀 you can use每秒。
-										<br>
+										回收用完的铀，使资源获得第二次使用。这大大增加了你每秒可以使用的铀量。<br>
 										Produces 235 铀每秒。
 										<br>
 										Uses 463 能源每秒。
@@ -1004,18 +974,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getRecycler()" class="btn btn-default" data-i18n='common.get'>获取黄饼回收器</button>
-									<button onclick="destroyMachine('recycler')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁黄饼回收器</button>
+									<button onclick="getRecycler()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('recycler')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="uraniumTier5" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.planetNuke.name'>
-										Planetary Nuclear Plant: <span id="planetNuke">0</span>
+										行星核电站<span id="planetNuke">0</span>
 									</h3>
 									<span data-i18n='building.planetNuke.desc'>
-										This huge factory is as large as a planet, fusing together 铀 from common elements.
-										<br>
+										这个巨大的工厂和行星一样大，生产大量的铀。<br>
 										Produces 2412 铀每秒。
 										<br>
 										Uses 2719 能源每秒。
@@ -1024,8 +993,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getPlanetNuke()" class="btn btn-default" data-i18n='common.get'>获取行星核电站</button>
-									<button onclick="destroyMachine('planetNuke')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁行星核电站</button>
+									<button onclick="getPlanetNuke()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('planetNuke')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 						</table>
@@ -1037,27 +1006,26 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='resource.oil.heading'>
-										Oil
-									</h2>
+										石油</h2>
 									<span>
 										Oil is pumped up from the ground and is used to build Tier 2 resource gatherers.
 									</span>
 									<hide class="gainButton">
 									<br>
 									<br>
-									<div onclick="gainResource('oil')" class="btn btn-default" data-i18n='common.gain'>获取 <span id="oilGain">1</span></div>
+									<div onclick="gainResource('oil')" class="btn btn-default" data-i18n='common.gain'>获取<span id="oilGain">1</span></div>
 									</hide>
 								</td>
 							</tr>
 							<tr id="oilStorageUpgrade" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.storageUpgrade'>
-										<span data-i18n="common.storageUpgrade">存储升级</span>
+										存储升级<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span data-i18n='common.upgradeStorageDesc'>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="oilNextStorage">100</span>.
+										将你的{0}存储升级到<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="oilNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="oilLimitType">满</span> 存储： <b><span id="oilLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="oilLimitType">满</span> 存储： <b><span id="oilLimitTime">无</span></b>
 										<br>
 										消耗 <span id="oilStorageCost">50</span> 石油, <span id="oilStorageMetalCost">20</span> 金属.
 									</span>
@@ -1069,47 +1037,44 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='building.pump.name'>
-										小型泵： <span id="pump">0</span>
+										小型油泵<span id="pump">0</span>
 									</h3>
 									<span data-i18n='building.pump.desc'>
-										Build a small pump to extract 石油 from the ground
-										<br>
+										建造一个小型油泵从地下提取石油。<br>
 										Produces 1 石油每秒。
 										<br>
 										消耗 <span id="pumpMetalCost">60</span> 金属, <span id="pumpGemCost">20</span> 宝石s.
 									</span>
 									<br>
 									<br>
-									<button onclick="getPump()" class="btn btn-default" data-i18n='common.get'>获取 Pump</button>
-									<button onclick="destroyMachine('pump')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁小型泵</button>
+									<button onclick="getPump()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('pump')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="oilTier2" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.pumpjack.name'>
-										抽油机： <span id="pumpjack">0</span>
+										抽油机<span id="pumpjack">0</span>
 									</h3>
 									<span data-i18n='building.pumpjack.desc'>
-										抽油机比小型泵大得多，可以工业化生产石油，但需要大量能源。
-										<br>
+										抽油机比小型油泵大得多，能以工业规模生产石油，但需要大量能源。<br>
 										Each one produces <span id="pumpjackOutput">5</span> 石油 for 4 能源 every second.
 										<br>
 										消耗 <span id="pumpjackMetalCost">250</span> 金属, <span id="pumpjackGemCost">80</span> 宝石, <span id="pumpjackOilCost">50</span> 石油.
 									</span>
 									<br>
 									<br>
-									<button onclick="getPumpjack()" class="btn btn-default" data-i18n='common.get'>获取抽油机</button>
-									<button onclick="destroyMachine('pumpjack')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁抽油机</button>
+									<button onclick="getPumpjack()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('pumpjack')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="oilTier3" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.oilField.name'>
-										油田： <span id="oilField">0</span>
+										油田<span id="oilField">0</span>
 									</h3>
 									<span data-i18n='building.oilField.desc'>
-										Oil Fields are large open spaces, usually found in deserts where vast oil wells can be found under the ground.
-										<br>
+										油田是通常在沙漠中发现的大型开阔地带，地下可以找到巨大的油井。<br>
 										Produces 63 石油每秒。
 										<br>
 										Uses 12 能源每秒。
@@ -1118,18 +1083,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getOilField()" class="btn btn-default" data-i18n='common.get'>获取 石油 Field</button>
-									<button onclick="destroyMachine('oilField')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁 石油 Field</button>
+									<button onclick="getOilField()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('oilField')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="oilTier4" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.oilRig.name'>
-										海上钻井平台： <span id="oilRig">0</span>
+										海上钻井平台<span id="oilRig">0</span>
 									</h3>
 									<span data-i18n='building.oilRig.desc'>
-										Offshore Rigs are megastructures floating in the oceans, extracting 石油 from under the sea-beds.
-										<br>
+										海上钻井平台是漂浮在海洋中的巨型结构，从海底提取石油。<br>
 										Produces 246 石油每秒。
 										<br>
 										Uses 44 能源每秒。
@@ -1138,18 +1102,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getOilRig()" class="btn btn-default" data-i18n='common.get'>获取海上钻井平台</button>
-									<button onclick="destroyMachine('oilRig')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁海上钻井平台</button>
+									<button onclick="getOilRig()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('oilRig')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="oilTier5" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.fossilator.name'>
-										化石机9000： <span id="fossilator">0</span>
+										化石机 9000<span id="fossilator">0</span>
 									</h3>
 									<span data-i18n='building.fossilator.desc'>
-										Much better than the 8000 version, this fossilator reverses the fossil fuel cycle. Instead of burning, it creates them from carbon in the air.
-										<br>
+										比8000版本好得多，化石机9000以惊人的速度提取石油。<br>
 										Produces 2627 石油每秒。
 										<br>
 										Uses 258 能源每秒。
@@ -1158,8 +1121,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getFossilator()" class="btn btn-default" data-i18n='common.get'>获取化石机9000</button>
-									<button onclick="destroyMachine('fossilator')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁化石机9000</button>
+									<button onclick="getFossilator()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('fossilator')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 						</table>
@@ -1171,15 +1134,14 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='resource.metal.heading'>
-										Metal
-									</h2>
+										金属</h2>
 									<span>
 										金属是最基础的资源之一，广泛用于存储升级、机械制造和太空探索。
 									</span>
 									<hide class="gainButton">
 									<br>
 									<br>
-									<div onclick="gainResource('metal')" class="btn btn-default" data-i18n='common.gain'>获取 <span id="metalGain">1</span></div>
+									<div onclick="gainResource('metal')" class="btn btn-default" data-i18n='common.gain'>获取<span id="metalGain">1</span></div>
 									</hide>
 									<br>
 									<br>
@@ -1188,12 +1150,12 @@
 							<tr id="metalStorageUpgrade" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.storageUpgrade'>
-										<span data-i18n="common.storageUpgrade">存储升级</span>
+										存储升级<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span data-i18n='common.upgradeStorageDesc'>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="metalNextStorage">100</span>.
+										将你的{0}存储升级到<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="metalNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间：<span id="metalLimitType">满</span>存储： <b><span id="metalLimitTime">N/A</span></b>
+										存储满之前的剩余时间：<span id="metalLimitType">满</span>存储： <b><span id="metalLimitTime">无</span></b>
 										<br>
 										消耗 <span id="metalStorageCost">50</span> 金属.
 									</span>
@@ -1205,29 +1167,27 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='building.miner.name'>
-										矿工： <span id="miner">0</span>
+										矿工<span id="miner">0</span>
 									</h3>
 									<span data-i18n='building.miner.desc'>
-										为你的矿工建造一把镐。
-										<br>
+										为你的矿工建造一把镐。<br>
 										Produces 1 金属每秒。
 										<br>
 										消耗 <span id="minerMetalCost">10</span> 金属, <span id="minerWoodCost">5</span> 木材.
 									</span>
 									<br>
 									<br>
-									<button onclick="getMiner()" class="btn btn-default" data-i18n='common.get'>获取矿工</button>
-									<button onclick="destroyMachine('miner')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁矿工</button>
+									<button onclick="getMiner()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('miner')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="metalTier2" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.heavyDrill.name'>
-										重型钻机： <span id="heavyDrill">0</span>
+										重型钻机<span id="heavyDrill">0</span>
 									</h3>
 									<span data-i18n='building.heavyDrill.desc'>
-										重型钻机大量开采金属。
-										<br>
+										重型钻机可以大规模开采金属。<br>
 										每秒产出 <span id="heavyDrillOutput">8</span> 金属每秒。
 										<br>
 										每秒消耗 2 能源每秒。
@@ -1236,18 +1196,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getHeavyDrill()" class="btn btn-default" data-i18n='common.get'>获取重型钻机</button>
-									<button onclick="destroyMachine('heavyDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁重型钻机</button>
+									<button onclick="getHeavyDrill()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('heavyDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="metalTier3" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.gigaDrill.name'>
-										巨型钻机： <span id="gigaDrill">0</span>
+										巨型钻机<span id="gigaDrill">0</span>
 									</h3>
 									<span data-i18n='building.gigaDrill.desc'>
-										巨型钻机以巨大速度开采金属。
-										<br>
+										巨型钻机以巨大的速度开采金属。<br>
 										每秒产出 108 金属每秒。
 										<br>
 										每秒消耗 9 能源每秒。
@@ -1256,18 +1215,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getGigaDrill()" class="btn btn-default" data-i18n='common.get'>获取巨型钻机</button>
-									<button onclick="destroyMachine('gigaDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁巨型钻机</button>
+									<button onclick="getGigaDrill()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('gigaDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="metalTier4" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.quantumDrill.name'>
-										量子钻机： <span id="quantumDrill">0</span>
+										量子钻机<span id="quantumDrill">0</span>
 									</h3>
 									<span data-i18n='building.quantumDrill.desc'>
-										量子钻机弯曲时空连续体，以超越常规方法的速度获取金属。
-										<br>
+										量子钻机弯曲时空连续体，使金属的获取速度超过物理可能。<br>
 										每秒产出 427 金属每秒。
 										<br>
 										每秒消耗 24 能源每秒。
@@ -1276,18 +1234,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getQuantumDrill()" class="btn btn-default" data-i18n='common.get'>获取量子钻机</button>
-									<button onclick="destroyMachine('quantumDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁量子钻机</button>
+									<button onclick="getQuantumDrill()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('quantumDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 							<tr id="metalTier5" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.multiDrill.name'>
-										多元宇宙钻机： <span id="multiDrill">0</span>
+										多元宇宙钻机<span id="multiDrill">0</span>
 									</h3>
 									<span data-i18n='building.multiDrill.desc'>
-										从金属丰富的平行现实中钻取金属。
-										<br>
+										从平行现实中钻取金属。<br>
 										每秒产出 4768 金属每秒。
 										<br>
 										每秒消耗 131 能源每秒。
@@ -1296,8 +1253,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getMultiDrill()" class="btn btn-default" data-i18n='common.get'>获取多元宇宙钻机</button>
-									<button onclick="destroyMachine('multiDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁多元宇宙钻机</button>
+									<button onclick="getMultiDrill()" class="btn btn-default" data-i18n='common.get'>获取</button>
+									<button onclick="destroyMachine('multiDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>销毁</button>
 								</td>
 							</tr>
 						</table>
@@ -1309,8 +1266,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='resource.gem.heading'>
-										Gems
-									</h2>
+										宝石</h2>
 									<span>
 										宝石是基础资源之一，用于高级机械和强力工具组件。在游戏中后期更加有用。
 									</span>
@@ -1329,9 +1285,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="gemNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="gemNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="gemLimitType">满</span> 存储： <b><span id="gemLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="gemLimitType">满</span> 存储： <b><span id="gemLimitTime">无</span></b>
 										<br>
 										消耗 <span id="gemStorageCost">50</span> 宝石, <span id="gemStorageMetalCost">20</span> 金属.
 									</span>
@@ -1468,9 +1424,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="charcoalNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="charcoalNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="charcoalLimitType">满</span> 存储： <b><span id="charcoalLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="charcoalLimitType">满</span> 存储： <b><span id="charcoalLimitTime">无</span></b>
 										<br>
 										消耗 <span id="charcoalStorageCost">50</span> 木炭, <span id="charcoalStorageMetalCost">20</span> 金属.
 									</span>
@@ -1616,9 +1572,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="woodNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="woodNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="woodLimitType">满</span> 存储： <b><span id="woodLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="woodLimitType">满</span> 存储： <b><span id="woodLimitTime">无</span></b>
 										<br>
 										消耗 <span id="woodStorageCost">50</span> wood, <span id="woodStorageMetalCost">20</span> 金属.
 									</span>
@@ -1754,9 +1710,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="siliconNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="siliconNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="siliconLimitType">满</span> 存储： <b><span id="siliconLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="siliconLimitType">满</span> 存储： <b><span id="siliconLimitTime">无</span></b>
 										<br>
 										消耗 <span id="siliconStorageCost">50</span> 硅, <span id="siliconStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -1892,9 +1848,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="lunariteNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="lunariteNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="lunariteLimitType">满</span> 存储： <b><span id="lunariteLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="lunariteLimitType">满</span> 存储： <b><span id="lunariteLimitTime">无</span></b>
 										<br>
 										消耗 <span id="lunariteStorageCost">50</span> 月岩, <span id="lunariteStorageMetalCost">200</span> 金属.
 									</span>
@@ -2030,9 +1986,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="methaneNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="methaneNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="methaneLimitType">满</span> 存储： <b><span id="methaneLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="methaneLimitType">满</span> 存储： <b><span id="methaneLimitTime">无</span></b>
 										<br>
 										消耗 <span id="methaneStorageCost">50</span> 甲烷, <span id="methaneStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2168,9 +2124,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="titaniumNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="titaniumNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="titaniumLimitType">满</span> 存储： <b><span id="titaniumLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="titaniumLimitType">满</span> 存储： <b><span id="titaniumLimitTime">无</span></b>
 										<br>
 										消耗 <span id="titaniumStorageCost">50</span> 钛, <span id="titaniumStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2306,9 +2262,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="goldNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="goldNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="goldLimitType">满</span> 存储： <b><span id="goldLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="goldLimitType">满</span> 存储： <b><span id="goldLimitTime">无</span></b>
 										<br>
 										消耗 <span id="goldStorageCost">50</span> 黄金, <span id="goldStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2444,9 +2400,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="silverNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="silverNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="silverLimitType">满</span> 存储： <b><span id="silverLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="silverLimitType">满</span> 存储： <b><span id="silverLimitTime">无</span></b>
 										<br>
 										消耗 <span id="silverStorageCost">50</span> 白银, <span id="silverStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2581,9 +2537,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="lavaNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="lavaNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="lavaLimitType">满</span> 存储： <b><span id="lavaLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="lavaLimitType">满</span> 存储： <b><span id="lavaLimitTime">无</span></b>
 										<br>
 										消耗 <span id="lavaStorageCost">50</span> 熔岩, <span id="lavaStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2719,9 +2675,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="hydrogenNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="hydrogenNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="hydrogenLimitType">满</span> 存储： <b><span id="hydrogenLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="hydrogenLimitType">满</span> 存储： <b><span id="hydrogenLimitTime">无</span></b>
 										<br>
 										消耗 <span id="hydrogenStorageCost">50</span> 氢, <span id="hydrogenStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2857,9 +2813,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="heliumNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="heliumNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="heliumLimitType">满</span> 存储： <b><span id="heliumLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="heliumLimitType">满</span> 存储： <b><span id="heliumLimitTime">无</span></b>
 										<br>
 										消耗 <span id="heliumStorageCost">50</span> 氦, <span id="heliumStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -2995,9 +2951,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="iceNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="iceNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="iceLimitType">满</span> 存储： <b><span id="iceLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="iceLimitType">满</span> 存储： <b><span id="iceLimitTime">无</span></b>
 										<br>
 										消耗 <span id="iceStorageCost">50</span> 冰, <span id="iceStorageLunariteCost">20</span> 月岩.
 									</span>
@@ -3136,9 +3092,9 @@
 										<span data-i18n="common.storageUpgrade">存储升级</span>
 									</h3>
 									<span>
-										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg=""></span> <span id="meteoriteNextStorage">100</span>.
+										<span data-i18n="common.upgradeStorageDesc" data-i18n-arg="">将你的{0}存储升级到</span> <span id="meteoriteNextStorage">100</span>.
 										<br>
-										存储满之前的剩余时间： <span id="meteoriteLimitType">满</span> 存储： <b><span id="meteoriteLimitTime">N/A</span></b>
+										存储满之前的剩余时间： <span id="meteoriteLimitType">满</span> 存储： <b><span id="meteoriteLimitTime">无</span></b>
 										<br>
 										消耗 <span id="meteoriteStorageCost">50</span> 陨石, <span id="meteoriteStorageLunariteCost">400</span> 月岩.
 									</span>
@@ -3235,12 +3191,11 @@
 						</td>
 						<td style="border:none; vertical-align:middle;">
 							<span data-i18n='research.sidebar.science'>
-								Science Production
-							</span>
+								科学生产</span>
 						</td>
 						<td style="border:none; vertical-align:middle; text-align:center;">
 							<span>
-								<span id="scienceps">0</span>/Sec
+								<span id="scienceps">0</span>/秒
 							</span>
 					</td>
 						<td style="border:none; vertical-align:middle; text-align:right;">
@@ -3255,8 +3210,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='research.sidebar.tech'>
-								Technologies
-							</span>
+								技术</span>
 						</td>
 					</tr>
 				</table>
@@ -3268,11 +3222,9 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='research.science.title'>
-										Science Production
-									</h2>
+										科学生产</h2>
 									<span data-i18n='research.science.desc'>
-										科学用于研究新技术以推进游戏进度。
-									</span>
+										科学用于研究新技术以推进游戏进度。</span>
 									<br>
 									<br>
 								</td>
@@ -3280,11 +3232,10 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='building.scienceT1.name'>
-										家庭科学套件： <span id="lab">0</span>
+										家庭科学套件<span id="lab">0</span>
 									</h3>
 									<span data-i18n='building.scienceT1.desc'>
-										Build a small laboratory of your very own to start producing science.
-										<br>
+										建造一个属于你自己的小型实验室来开始生产科学。每个每秒产生0.1科学点。<br>
 										Each one produces 0.1 science每秒。
 										<br>
 										消耗 <span id="labMetalCost">20</span> 金属, <span id="labGemCost">15</span> 宝石, <span id="labWoodCost">10</span> 木材.
@@ -3299,11 +3250,10 @@
 							<tr id="labTier2" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.scienceT2.name'>
-										高中科学： <span id="labT2">0</span>
+										高中科学<span id="labT2">0</span>
 									</h3>
 									<span data-i18n='building.scienceT2.desc'>
-										Build a more effective laboratory to continue your quest into the realm of science at a significantly faster speed.
-										<br>
+										建造一个更有效的实验室，以显著更快的速度继续你的科学探索。每个每秒产生1科学点。<br>
 										Each one produces 1 science每秒。
 										<br>
 										消耗 <span id="labT2MetalCost">1,000</span> 金属, <span id="labT2GemCost">200</span> 宝石, <span id="labT2WoodCost">500</span> 木材.
@@ -3318,11 +3268,10 @@
 							<tr id="labTier3" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.scienceT3.name'>
-										大学实验室： <span id="labT3">0</span>
+										大学实验室<span id="labT3">0</span>
 									</h3>
 									<span data-i18n='building.scienceT3.desc'>
-										Build an even better version of the old laboratory to further your exploration of the realm of science.
-										<br>
+										建造一个更好的旧实验室版本，以进一步探索科学领域。每个每秒产生10科学点。<br>
 										Each one produces 10 science每秒。
 										<br>
 										消耗 <span id="labT3MetalCost">17,000</span> 金属, <span id="labT3GemCost">4,700</span> 宝石, <span id="labT3WoodCost">9,600</span> 木材.
@@ -3335,11 +3284,10 @@
 							<tr id="labTier4" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.scienceT4.name'>
-										Scientific Observatory: <span id="labT4">0</span>
+										科学天文台<span id="labT4">0</span>
 									</h3>
 									<span data-i18n='building.scienceT4.desc'>
-										Create an observatory to gaze upon the stars and acquire knowledge from them.
-										<br>
+										建造天文台观测恒星，推进你的科学研究。<br>
 										Each one produces 100 science每秒。
 										<br>
 										消耗 <span id="labT4MetalCost">610,000</span> 金属, <span id="labT4GemCost">370,000</span> 宝石, <span id="labT4WoodCost">926,000</span> 木材.
@@ -3352,11 +3300,10 @@
 							<tr id="labTier5" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.scienceT5.name'>
-										Space Scientific Satellite Station: <span id="labT5">0</span>
+										太空科学卫星站<span id="labT5">0</span>
 									</h3>
 									<span data-i18n='building.scienceT5.desc'>
-										From outside Earth's orbit, the universe can be understood much more efficiently without an atmosphere obstructing the lab's view.
-										<br>
+										在地球轨道外，这颗卫星可以高精度观测宇宙。<br>
 										Each one produces 1000 science每秒。
 										<br>
 										消耗 <span id="labT5MetalCost">12.40M</span> 金属, <span id="labT5GemCost">7.30M</span> 宝石, <span id="labT5WoodCost">15.90M</span> 木材.
@@ -3375,11 +3322,9 @@
 							<tr>
 								<td style="border: none;">
 									<h2 class="default btn-link" data-i18n='research.tech.title'>
-										Technologies
-									</h2>
+										技术</h2>
 									<span data-i18n='research.tech.desc'>
-										Research new technologies to unlock more mechanics and advance through the game.
-									</span>
+										研究新技术以解锁更多机制并加速进度。</span>
 								</td>
 							</tr>
 							<!-- HTML is dynamically generated to fill this table -->
@@ -3399,12 +3344,11 @@
 						</td>
 						<td style="border:none; vertical-align:middle;">
 							<span data-i18n='solarSystem.rocketFuel.name'>
-								Rocket Fuel
-							</span>
+								火箭燃料</span>
 						</td>
 						<td style="border:none; vertical-align:middle; text-align:center;">
 							<span>
-								<span id="rocketFuelps">0</span>/Sec
+								<span id="rocketFuelps">0</span>/秒
 							</span>
 						</td>
 						<td style="border:none; vertical-align:middle; text-align:right;">
@@ -3419,8 +3363,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.rocket.name'>
-								Space Rocket
-							</span>
+								太空火箭</span>
 						</td>
 					</tr>
 					<tr id="collapseInner" class="collapseInner hidden" style="border:none;">
@@ -3434,8 +3377,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.moon.name'>
-								The Moon
-							</span>
+								月球</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="mercury" onclick="activeSolarTab('mercury')" href="#mercuryTab" aria-controls="mercuryTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3444,8 +3386,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.mercury.name'>
-								Mercury
-							</span>
+								水星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="venus" onclick="activeSolarTab('venus')" href="#venusTab" aria-controls="venusTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3454,8 +3395,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.venus.name'>
-								Venus
-							</span>
+								金星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="mars" onclick="activeSolarTab('mars')" href="#marsTab" aria-controls="marsTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3464,8 +3404,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.mars.name'>
-								Mars
-							</span>
+								火星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="asteroidBelt" onclick="activeSolarTab('asteroidBelt')" href="#asteroidBeltTab" aria-controls="asteroidBeltTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3474,8 +3413,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.asteroidBelt.name'>
-								Asteroid Belt
-							</span>
+								小行星带</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="wonderStation" onclick="activeSolarTab('wonderStation')" href="#wonderStationTab" aria-controls="wonderStationTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3484,8 +3422,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.wonderStation.name'>
-								The Wonder Station
-							</span>
+								奇迹空间站</span>
 						</td>
 					</tr>
 					<tr id="collapseOuter" class="collapseOuter hidden" style="border:none;">
@@ -3499,8 +3436,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.jupiter.name'>
-								Jupiter
-							</span>
+								木星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="saturn" onclick="activeSolarTab('saturn')" href="#saturnTab" aria-controls="saturnTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3509,8 +3445,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.saturn.name'>
-								Saturn
-							</span>
+								土星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="uranus" onclick="activeSolarTab('uranus')" href="#uranusTab" aria-controls="uranusTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3519,8 +3454,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.uranus.name'>
-								Uranus
-							</span>
+								天王星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="neptune" onclick="activeSolarTab('neptune')" href="#neptuneTab" aria-controls="neptuneTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3529,8 +3463,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.neptune.name'>
-								Neptune
-							</span>
+								海王星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="pluto" onclick="activeSolarTab('pluto')" href="#plutoTab" aria-controls="plutoTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3539,8 +3472,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.pluto.name'>
-								Pluto
-							</span>
+								冥王星</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="kuiperBelt" onclick="activeSolarTab('kuiperBelt')" href="#kuiperBeltTab" aria-controls="kuiperBeltTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3549,8 +3481,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.kuiperBelt.name'>
-								Kuiper Belt
-							</span>
+								柯伊伯带</span>
 						</td>
 					</tr>
 					<tr class="hidden" id="solCenter" onclick="activeSolarTab('solCenter')" href="#solCenterTab" aria-controls="solCenterTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3559,8 +3490,7 @@
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
 							<span data-i18n='solarSystem.solCenter.name'>
-								Sol Scientific Center
-							</span>
+								太阳科学中心</span>
 						</td>
 					</tr>
 				</table>
@@ -3572,8 +3502,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.rocketFuel.name'>
-										Rocket Fuel
-									</h2>
+										火箭燃料</h2>
 									<span>
 										Rocket fuel is created in chemical plants and is used to allow rockets to launch off into space and to travel to other planets and star systems.
 									</span>
@@ -3587,7 +3516,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='building.rocketFuelT1.name'>
-										化工厂： <span id="chemicalPlant">0</span>
+										化工厂<span id="chemicalPlant">0</span>
 									</h3>
 									<span>
 										化工厂用于自动制造火箭燃料。
@@ -3601,7 +3530,7 @@
 									<br>
 									<br>
 									<button onclick="getChemicalPlant()" class="btn btn-default" data-i18n='solarSystem.buildChemPlant'>建造化工厂</button>
-									<button onclick="destroyMachine('chemicalPlant')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyChemPlant'>销毁 Chemical Plant</button>
+									<button onclick="destroyMachine('chemicalPlant')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyChemPlant'>销毁化工厂</button>
 									<br>
 									<br>
 								</td>
@@ -3609,7 +3538,7 @@
 							<tr id="rocketFuelT2" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.rocketFuelT2.name'>
-										氧化室： <span id="oxidisation">0</span>
+										氧化室<span id="oxidisation">0</span>
 									</h3>
 									<span>
 										氧化室比化工厂更快更高效地制造火箭燃料。
@@ -3623,7 +3552,7 @@
 									<br>
 									<br>
 									<button onclick="getOxidisation()" class="btn btn-default" data-i18n='solarSystem.buildOxidisation'>建造氧化室</button>
-									<button onclick="destroyMachine('oxidisation')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyOxidisation'>销毁 Oxidisation Chamber</button>
+									<button onclick="destroyMachine('oxidisation')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyOxidisation'>销毁氧化室</button>
 									<br>
 									<br>
 								</td>
@@ -3631,7 +3560,7 @@
 							<tr id="rocketFuelT3" class="hidden">
 								<td>
 									<h3 class="default btn-link" data-i18n='building.rocketFuelT3.name'>
-										联氨催化剂： <span id="hydrazine">0</span>
+										联氨催化剂<span id="hydrazine">0</span>
 									</h3>
 									<span>
 										这些利用甲烷等温室气体加速制造火箭燃料所需的化学反应。
@@ -3645,7 +3574,7 @@
 									<br>
 									<br>
 									<button onclick="getHydrazine()" class="btn btn-default" data-i18n='solarSystem.buildHydrazine'>建造联氨催化剂</button>
-									<button onclick="destroyMachine('hydrazine')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyHydrazine'>销毁 Hydrazine Catalyst</button>
+									<button onclick="destroyMachine('hydrazine')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyHydrazine'>销毁联氨催化剂</button>
 									<br>
 									<br>
 								</td>
@@ -3659,11 +3588,9 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.rocket.name'>
-										Rocket
-									</h2>
+										太空火箭</h2>
 									<span data-i18n='solarSystem.rocket.desc'>
-										Building a rocket will allow for exploration around the solar system and will allow you to gather resources in space.
-										<br>
+										建造火箭将允许探索太阳系。<br>
 										<b>注意：你只需要1艘火箭。只需使用燃料即可重复使用同一艘。</b>
 									</span>
 									<br>
@@ -3690,11 +3617,9 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='solarSystem.rocket.launch'>
-										发射火箭
-									</h3>
+										发射火箭</h3>
 									<span data-i18n='solarSystem.rocket.launchDesc'>
-										Launching the rocket into space will unlock space mining, exploration and other planets.
-										<br>
+										将火箭发射到太空将解锁太阳系标签页。<br>
 										This requires <span id="rocketRocketCost" class="red">1</span> 火箭和 <span id="rocketRocketFuelCost" class="red">20</span> rocket fuel.
 									</span>
 									<br>
@@ -3713,8 +3638,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.moon.name'>
-										The Moon
-									</h2>
+										月球</h2>
 									<span>
 										The Moon is our largest satellite, revolving around the Earth once every 27 days. It contains a large quantity of 月岩, left over from when it separated from the Earth billions of years ago. It is much stronger than regular metal and used to build more advanced machines.
 									</span>
@@ -3725,11 +3649,9 @@
 							<tr id="exploreMoon">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.moon.explore'>
-										Exploring the Moon will unlock the collection of 月岩.
-										<br>
+										探索月球将解锁月岩的采集。<br>
 										消耗 <span id="moonRocketFuelCost">20</span> rocket fuel.
 									</span>
 									<br>
@@ -3748,11 +3670,9 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.mercury.name'>
-										Mercury
-									</h2>
+										水星</h2>
 									<span data-i18n='solarSystem.mercury.explore'>
-										Mercury is a lifeless rock with little to no value. It is not worth exploring on the ground as there are no valuable materials present.
-									</span>
+										水星是离太阳最近的行星。</span>
 									<br>
 									<br>
 								</td>
@@ -3766,8 +3686,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.venus.name'>
-										Venus
-									</h2>
+										金星</h2>
 									<span>
 										Venus is the hottest planet in the solar system and the closest one to Earth. It is rich in greenhouse gases, contributing to its extreme heat. You can extract methane from Venus, which allows you to build up a new form of power generation.
 									</span>
@@ -3778,11 +3697,9 @@
 							<tr id="exploreVenus">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.venus.explore'>
-										Exploring Venus will unlock methane and methane based power.
-										<br>
+										探索金星将解锁甲烷采集。<br>
 										消耗 <span id="venusRocketFuelCost">50</span> rocket fuel.
 									</span>
 									<br>
@@ -3801,8 +3718,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.mars.name'>
-										Mars
-									</h2>
+										火星</h2>
 									<span>
 										Mars is the second closest planet to Earth and is covered in red iron oxide, also called rust. You can find 钛 on the surface, but it is more common inside the crust. 钛 will allow for 甲烷 power plants and 硅 production.
 									</span>
@@ -3813,11 +3729,9 @@
 							<tr id="exploreMars">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.mars.explore'>
-										Exploring Mars unlocks 钛 production, which allows you to harvest 硅 on Earth and to build 甲烷 power plants.
-										<br>
+										探索火星将解锁钛的生产。<br>
 										消耗 <span id="marsRocketFuelCost">80</span> rocket fuel.
 									</span>
 									<br>
@@ -3836,8 +3750,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.asteroidBelt.name'>
-										Asteroid Belt
-									</h2>
+										小行星带</h2>
 									<span>
 										The asteroid belt is a vast space with nearly 2 million asteroids. There you can harvest rare metals on Earth more easily, such as 黄金 and 白银.
 									</span>
@@ -3848,11 +3761,9 @@
 							<tr id="exploreAsteroidBelt">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.asteroidBelt.explore'>
-										Exploring the asteroid belt gives you access to 黄金 and 白银.
-										<br>
+										探索小行星带将获得黄金和白银。<br>
 										消耗 <span id="asteroidBeltRocketFuelCost">200</span> rocket fuel.
 									</span>
 									<br>
@@ -3871,8 +3782,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.wonderStation.name'>
-										The Wonder Station
-									</h2>
+										奇迹空间站</h2>
 									<span>
 										The Wonder Station is a large, mysterious construct, orbiting inside the Asteroid Belt. What it contains isn't known exactly, but carvings on ancient artifacts depict something similar. They say that there, you will learn about an almost supernatural, extra-terrestrial overlord, commanding over the galaxy. They say that he will be able to teach you many things on your journey to inter-star and galactic exploration.
 									</span>
@@ -3883,11 +3793,9 @@
 							<tr id="exploreWonderStation">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.wonderStation.explore'>
-										Exploring the Wonder Station will gives you access to Wonders and allow you to continue your research and travel even further than before.
-										<br>
+										探索奇迹空间站将获得奇迹。<br>
 										消耗 <span id="wonderStationRocketFuelCost">500</span> rocket fuel.
 									</span>
 									<br>
@@ -3906,8 +3814,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.jupiter.name'>
-										Jupiter
-									</h2>
+										木星</h2>
 									<span>
 										The largest planet in the solar system, one of four gas giants.
 									</span>
@@ -3918,11 +3825,9 @@
 							<tr id="exploreJupiter">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.jupiter.explore'>
-										Exploring Jupiter gives you access to 氢.
-										<br>
+										探索木星将获得氢。<br>
 										消耗 <span id="jupiterRocketFuelCost">1000</span> rocket fuel.
 									</span>
 									<br>
@@ -3941,8 +3846,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.saturn.name'>
-										Saturn
-									</h2>
+										土星</h2>
 									<span>
 										The second largest planet in the solar system, next to Jupiter. It is one of the few celestial bodies in our solar system to have rings and is the least dense planet in the solar system. You can find 氦 here.
 									</span>
@@ -3953,11 +3857,9 @@
 							<tr id="exploreSaturn">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.saturn.explore'>
-										Exploring Saturn gives you access to 氦.
-										<br>
+										探索土星将获得氦。<br>
 										消耗 <span id="saturnRocketFuelCost">2000</span> rocket fuel.
 									</span>
 									<br>
@@ -3976,8 +3878,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.uranus.name'>
-										Uranus
-									</h2>
+										天王星</h2>
 									<span data-i18n='solarSystem.uranus.desc'>
 										The planet that rotates differently from everyone else has winds up to 300 miles per hour (483kph). Its composition is much like that of the other gas giants, mainly composed of 氢 and 氦. Because of this, it is not worth exploring to get the same resources as in Saturn and Jupiter.
 									</span>
@@ -3994,8 +3895,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.neptune.name'>
-										Neptune
-									</h2>
+										海王星</h2>
 									<span data-i18n='solarSystem.neptune.desc'>
 										Neptune has the strangest weather in the solar system. There are huge storms and winds that are more violent than any other in the solar system. There is not much there but 甲烷, 氢 and 氦.
 									</span>
@@ -4012,8 +3912,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.pluto.name'>
-										Pluto
-									</h2>
+										冥王星</h2>
 									<span>
 										Pluto is the smallest of the widely known celestial bodies, being smaller than the moon. Classed as a dwarf planet, it orbits in the far reaches of the solar system. However, there may be more of interest on the surface than humans think.
 									</span>
@@ -4024,11 +3923,9 @@
 							<tr id="explorePluto">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.pluto.explore'>
-										No-one knows what lies near and around pluto as it is so far away. On there surface, there is almost only ice, but maybe an exploration will teach us more about the unknown.
-										<br>
+										探索冥王星将获得冰。<br>
 										消耗 <span id="plutoRocketFuelCost">5000</span> rocket fuel.
 									</span>
 									<br>
@@ -4047,8 +3944,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.kuiperBelt.name'>
-										Kuiper Belt
-									</h2>
+										柯伊伯带</h2>
 									<span>
 										In the large asteroid belt extending beyond Pluto, you see a large purple structure with a huge glass dome on one of the asteroids. This seems worth checking out. There could be something interesting there.
 									</span>
@@ -4059,11 +3955,9 @@
 							<tr id="exploreKuiperBelt">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.kuiperBelt.explore'>
-										Exploring the Kuiper Belt gives you access to the hidden base
-										<br>
+										探索柯伊伯带将获得隐藏基地。<br>
 										消耗 <span id="kuiperBeltRocketFuelCost">6000</span> rocket fuel.
 									</span>
 									<br>
@@ -4082,8 +3976,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='solarSystem.solCenter.name'>
-										The Sol Scientific Center
-									</h2>
+										太阳科学中心</h2>
 									<span>
 										Welcome to our home. Our race is dedicated to scientific progress and interacting with others. If you wish to trade with us, we can provide you blueprints for technology that few in the galaxy have ever seen.
 									</span>
@@ -4094,11 +3987,9 @@
 							<tr id="exploreSolCenter">
 								<td>
 									<h3 class="default btn-link" data-i18n='common.exploration'>
-										Exploration
-									</h3>
+										探索</h3>
 									<span data-i18n='solarSystem.solCenter.explore'>
-										探索太阳科学中心将获得隐藏基地。
-										<br>
+										探索太阳科学中心将获得隐藏基地。<br>
 										消耗 <span id="solCenterRocketFuelCost">7000</span> rocket fuel.
 									</span>
 									<br>
@@ -4121,91 +4012,87 @@
 					<tr id="theWonderStation" onclick="activeWonderTab('theWonderStation')" href="#theWonderStationTab" aria-controls="theWonderStationTab" role="tab" data-toggle="tab" style="height:60px; border:none;">
 						<td style="border:none; vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.station'>
-								Wonder Station
-							</span>
+								奇迹空间站</span>
 						</td>
 					</tr>
 					<tr id="wonderFloor1Nav" class="hidden">
 						<th>
 							<span data-i18n='wonder.sidebar.floor1'>
-								Wonder Station - Floor 1
-							</span>
+								奇迹空间站 - 第一层</span>
 						</th>
 					</tr>
 					<tr id="preciousWonderNav" onclick="activeWonderTab('preciousWonderNav')" class="sideTab hidden" href="#preciousWonderTab" aria-controls="preciousWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.precious'>
-								Precious Wonder: <span id="preciousActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								珍贵奇迹<span id="preciousActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="energeticWonderNav" onclick="activeWonderTab('energeticWonderNav')" class="sideTab hidden" href="#energeticWonderTab" aria-controls="energeticWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.energetic'>
-								Energetic Wonder: <span id="energeticActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								能量奇迹<span id="energeticActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="techWonderNav" onclick="activeWonderTab('techWonderNav')" class="sideTab hidden" href="#techWonderTab" aria-controls="techWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.technological'>
-								Technological Wonder: <span id="techActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								科技奇迹<span id="techActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="meteoriteWonderNav" onclick="activeWonderTab('meteoriteWonderNav')" class="sideTab hidden" href="#meteoriteWonderTab" aria-controls="meteoriteWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.meteorite'>
-								Meteorite Wonder: <span id="meteoriteActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								陨石奇迹<span id="meteoriteActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="wonderFloor2Nav" class="hidden">
 						<th>
 							<span data-i18n='wonder.sidebar.floor2'>
-								Wonder Station - Floor 2
-							</span>
+								奇迹空间站 - 第二层</span>
 						</th>
 					</tr>
 					<tr id="communicationWonderNav" onclick="activeWonderTab('communicationWonderNav')" class="sideTab hidden" href="#communicationWonderTab" aria-controls="communicationWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.comms'>
-								Comms Wonder: <span id="commsActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								通讯奇迹<span id="commsActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="rocketWonderNav" onclick="activeWonderTab('rocketWonderNav')" class="sideTab hidden" href="#rocketWonderTab" aria-controls="rocketWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.rocket'>
-								Rocket Wonder: <span id="rocketActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								火箭奇迹<span id="rocketActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="antimatterWonderNav" onclick="activeWonderTab('antimatterWonderNav')" class="sideTab hidden" href="#antimatterWonderTab" aria-controls="antimatterWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.antimatter'>
-								Antimatter Wonder: <span id="antimatterActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								反物质奇迹<span id="antimatterActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="portalRoomNav" onclick="activeWonderTab('portalRoomNav')" class="sideTab hidden" href="#portalRoomTab" aria-controls="portalRoomTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.portal'>
-								Portal Room: <span id="portalRoomActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								传送门室<span id="portalRoomActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="wonderFloor3Nav" class="hidden">
 						<th>
 							<span data-i18n='wonder.sidebar.floor3'>
-								Wonder Station - Floor 3
-							</span>
+								奇迹空间站 - 第三层</span>
 						</th>
 					</tr>
 					<tr id="stargateNav" onclick="activeWonderTab('stargateNav')" class="sideTab hidden" href="#stargateTab" aria-controls="stargateTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='wonder.sidebar.stargate'>
-								Stargate: <span id="stargateActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
+								星门<span id="stargateActivation" data-i18n='wonder.sidebar.dormant'>休眠中</span>
 							</span>
 						</td>
 					</tr>
@@ -4218,8 +4105,7 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='wonder.main.title'>
-										奇迹空间站内部
-									</h2>
+										奇迹空间站内部</h2>
 									<span>
 										As you enter the revolving pyramids, floating through space, you feel a small tug on your spacecraft as it gravitates towards an opening doorway in the side of the lowest section. Exiting your spacecraft, you experience the artificial gravity and walk to the large hallway ahead. Adorning the walls are four huge paintings of monolithic structures in the corners of the room with descriptions underneath. At the far end of the room is a giant door, closed without any indication of being able to open. You feel that there is a higher being watching over you as you walk through the room.
 										<br>
@@ -4232,8 +4118,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.main.precious'>
-										Precious 金属s Wonder
-									</h3>
+										贵金属奇迹</h3>
 									<span>
 										The first painting depicts a large, shiny structure and the plaque reads:
 										<br>
@@ -4259,8 +4144,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.main.energetic'>
-										Energetic Wonder
-									</h3>
+										能量奇迹</h3>
 									<span>
 										A pulsating image depicts a huge pyramid, with sparks of lightning. What could the Overlord want now?
 										<br>
@@ -4286,8 +4170,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.main.technological'>
-										Technological Wonder
-									</h3>
+										科技奇迹</h3>
 									<span>
 										A green-tinted picture shows the inside of some computer system.
 										<br>
@@ -4313,8 +4196,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.main.meteorite'>
-										Meteorite Wonder
-									</h3>
+										陨石奇迹</h3>
 									<span>
 										A blazing red portrait depicts a futuristic set of machines.
 										<br>
@@ -4356,13 +4238,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
-										激活奇迹
-									</h3>
+										激活奇迹</h3>
 									<span>
 										Activating this wonder will teach you about 铀, how to get it and how to harness it. Learning about this rare element found deep within Earth will unlock nuclear power, a new way to create 能源.
 										<br>
 										<hide id="activatePreciousWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="preciousActivateGemCost">30,000</span> 宝石, <span id="preciousActivateSilverCost">20,000</span> 白银, <span id="preciousActivateGoldCost">10,000</span> 黄金.
+											<span data-i18n='wonder.costs'>消耗：<span id="preciousActivateGemCost">30,000</span> 宝石, <span id="preciousActivateSilverCost">20,000</span> 白银, <span id="preciousActivateGoldCost">10,000</span> 黄金.
 											<br>
 											<br>
 											<button onclick="activatePreciousWonder()" class="btn btn-default" data-i18n='wonder.activate.precious'>激活珍贵奇迹</button>
@@ -4397,13 +4278,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
-										激活奇迹
-									</h3>
+										激活奇迹</h3>
 									<span>
 										Activating this wonder will allow you to harness the power of 熔岩, a new method of 能源 generation.
 										<br>
 										<hide id="activateEnergeticWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="energeticActivateWoodCost">30,000</span> 木材, <span id="energeticActivateCharcoalCost">15,000</span> 木炭, <span id="energeticActivateUraniumCost">500</span> 铀.
+											<span data-i18n='wonder.costs'>消耗：<span id="energeticActivateWoodCost">30,000</span> 木材, <span id="energeticActivateCharcoalCost">15,000</span> 木炭, <span id="energeticActivateUraniumCost">500</span> 铀.
 											<br>
 											<br>
 											<button onclick="activateEnergeticWonder()" class="btn btn-default" data-i18n='wonder.activate.energetic'>激活能量奇迹</button>
@@ -4438,13 +4318,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
-										激活奇迹
-									</h3>
+										激活奇迹</h3>
 									<span>
 										Activating this wonder will allow you to build Tier 3 Machines, a much more effective method of collecting resources.
 										<br>
 										<hide id="activateTechWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="techActivateSiliconCost">50,000</span> 硅, <span id="techActivateGoldCost">30,000</span> 黄金, <span id="techActivateGemCost">60,000</span> 宝石s.
+											<span data-i18n='wonder.costs'>消耗：<span id="techActivateSiliconCost">50,000</span> 硅, <span id="techActivateGoldCost">30,000</span> 黄金, <span id="techActivateGemCost">60,000</span> 宝石s.
 											<br>
 											<br>
 											<button onclick="activateTechWonder()" class="btn btn-default" data-i18n='wonder.activate.technological'>激活科技奇迹</button>
@@ -4479,13 +4358,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
-										激活奇迹
-									</h3>
+										激活奇迹</h3>
 									<span>
 										Activating this wonder gives you the ability to construct 4th Tier resource gathering machines, which are better and more efficient than anything before it.
 										<br>
 										<hide id="activateMeteoriteWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="meteoriteActivateMeteoriteCost">10,000</span> 陨石, <span id="meteoriteActivateIceCost">2,000,000</span> 冰, <span id="meteoriteActivateSiliconCost">4,000,000</span> 硅.
+											<span data-i18n='wonder.costs'>消耗：<span id="meteoriteActivateMeteoriteCost">10,000</span> 陨石, <span id="meteoriteActivateIceCost">2,000,000</span> 冰, <span id="meteoriteActivateSiliconCost">4,000,000</span> 硅.
 											<br>
 											<br>
 											<button onclick="activateMeteoriteWonder()" class="btn btn-default" data-i18n='wonder.activate.meteorite'>激活陨石奇迹</button>
@@ -4520,13 +4398,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.rebuild.comms'>
-										重建通讯奇迹
-									</h3>
+										重建通讯奇迹</h3>
 									<span>
 										For rebuilding the Communication Wonder, you will be able to talk and listen to aliens in other star systems and determine whether there is sentient life outside of our solar system.
 										<br>
 										<hide id="rebuildCommsWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="commsWonderGoldCost">6M</span> 黄金, <span id="commsWonderSiliconCost">10M</span> 硅, <span id="commsWonderIceCost">6M</span> 冰.
+											<span data-i18n='wonder.costs'>消耗：<span id="commsWonderGoldCost">6M</span> 黄金, <span id="commsWonderSiliconCost">10M</span> 硅, <span id="commsWonderIceCost">6M</span> 冰.
 											<br>
 											<br>
 											<button onclick="rebuildCommsWonder()" class="btn btn-default" data-i18n='wonder.rebuild.comms'>重建通讯奇迹</button>
@@ -4561,13 +4438,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.rebuild.rocket'>
-										重建火箭奇迹
-									</h3>
+										重建火箭奇迹</h3>
 									<span>
 										For rebuilding the Rocket Wonder, you will discover advanced technologies where you can learn how to move beyond your tiny star system.
 										<br>
 										<hide id="rebuildRocketWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="rocketWonderLunariteCost">8M</span> 月岩, <span id="rocketWonderTitaniumCost">6M</span> 钛, <span id="rocketWonderMetalCost">12M</span> 金属.
+											<span data-i18n='wonder.costs'>消耗：<span id="rocketWonderLunariteCost">8M</span> 月岩, <span id="rocketWonderTitaniumCost">6M</span> 钛, <span id="rocketWonderMetalCost">12M</span> 金属.
 											<br>
 											<br>
 											<button onclick="rebuildRocketWonder()" class="btn btn-default" data-i18n='wonder.rebuild.rocket'>重建火箭奇迹</button>
@@ -4602,13 +4478,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.rebuild.antimatter'>
-										重建反物质奇迹
-									</h3>
+										重建反物质奇迹</h3>
 									<span>
 										For rebuilding the Antimatter Wonder, you will gain access to antimatter production and storage.
 										<br>
 										<hide id="rebuildAntimatterWonder">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="antimatterWonderUraniumCost">6M</span> 铀, <span id="antimatterWonderLavaCost">10M</span> 熔岩, <span id="antimatterWonderOilCost">8M</span> 石油, <span id="antimatterWonderMethaneCost">6M</span> 甲烷.
+											<span data-i18n='wonder.costs'>消耗：<span id="antimatterWonderUraniumCost">6M</span> 铀, <span id="antimatterWonderLavaCost">10M</span> 熔岩, <span id="antimatterWonderOilCost">8M</span> 石油, <span id="antimatterWonderMethaneCost">6M</span> 甲烷.
 											<br>
 											<br>
 											<button onclick="rebuildAntimatterWonder()" class="btn btn-default" data-i18n='wonder.rebuild.antimatter'>重建反物质奇迹</button>
@@ -4643,13 +4518,12 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.activate.portal'>
-										激活传送门
-									</h3>
+										激活传送门</h3>
 									<span>
 										Activating the Portal will allow you to go through it to get to the Third Floor of the Wonder Station, detached from the rest of the tetrahedral monolith.
 										<br>
 										<hide id="activatePortal">
-											<span data-i18n='wonder.costs'>消耗：/span> <span id="portalMeteoriteCost">500K</span> 陨石, <span id="portalHeliumCost">8M</span> 氦, <span id="portalSiliconCost">6M</span> 硅.
+											<span data-i18n='wonder.costs'>消耗：<span id="portalMeteoriteCost">500K</span> 陨石, <span id="portalHeliumCost">8M</span> 氦, <span id="portalSiliconCost">6M</span> 硅.
 											<br>
 											<br>
 											<button onclick="activatePortal()" class="btn btn-default" data-i18n='wonder.activate.portal'>激活传送门</button>
@@ -4685,8 +4559,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='wonder.rebuild.stargate'>
-										重建星门 Wonder
-									</h3>
+										重建星门</h3>
 									<span>
 										For rebuilding the Stargate, you will be able to explore outer space, beyond your own solar system.
 										<br>
@@ -4720,22 +4593,19 @@
 					<tr id="unlockPlasmaNav" onclick="activeSolCenterTab('unlockPlasmaNav')" href="#unlockPlasmaResearch" aria-controls="unlockPlasmaResearch" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;" colspan="2">
 						<span data-i18n="solCenter.sidebar.plasma">
-							Plasma
-						</span>
+							等离子体</span>
 						</td>
 					</tr>
 					<tr id="unlockEmcNav" onclick="activeSolCenterTab('unlockEmcNav')" href="#unlockEmcResearch" aria-controls="unlockEmcResearch" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="vertical-align:middle;" colspan="2">
 						<span data-i18n="solCenter.sidebar.emc">
-							质能转换
-						</span>
+							质能转换</span>
 						</td>
 					</tr>
 					<tr id="unlockDysonNav" onclick="activeSolCenterTab('unlockDysonNav')" href="#unlockDysonResearch" aria-controls="unlockDysonResearch" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="vertical-align:middle;">
 						<span data-i18n="solCenter.sidebar.dyson">
-							Dyson Segments
-						</span>
+							戴森环段</span>
 						</td>
 						<td style="vertical-align:middle;">
 							<span id="dyson">0</span>
@@ -4750,8 +4620,7 @@
 							<tr>
 								<td style="border:none;">
 								<h2 class="default btn-link" data-i18n="solCenter.plasma.title">
-									Plasma
-								</h2>
+									等离子体</h2>
 									<span>
 										Plasma being a state of extreme energy, it can be used as a storage of large amounts and provides the ability to use higher tier machines and transmutations.
 									</span>
@@ -4760,15 +4629,14 @@
 							<tr id="researchPlasma">
 								<td>
 								<h3 class="default btn-link" data-i18n="solCenter.plasma.research">
-									Research
-								</h3>
+									研究</h3>
 								<span>
 									After trading resources with the Sol Center, they will give you some of their research on plasma and how to get it.
 									<br>
 									Costs: <span id="unlockPlasmaResearchHydrogenCost">1,500</span> 氢, <span id="unlockPlasmaResearchUraniumCost">1,500</span> 铀, <span id="unlockPlasmaResearchOilCost">15,000</span> 石油, <span id="unlockPlasmaResearchWoodCost">15,000</span> 木材.
 									<br>
 									<br>
-									<button onclick="unlockPlasmaResearch()" class="btn btn-default" data-i18n="solCenter.plasma.unlock">Unlock 等离子体 Research</button>
+									<button onclick="unlockPlasmaResearch()" class="btn btn-default" data-i18n="solCenter.plasma.unlock">解锁等离子体研究</button>
 									</span>
 								</td>
 							</tr>
@@ -4781,8 +4649,7 @@
 							<tr>
 								<td style="border:none;">
 								<h2 class="default btn-link" data-i18n="solCenter.emc.title">
-									质能转换
-								</h2>
+									质能转换</h2>
 									<span>
 										EMC is a technology only dreamt about back on Earth. Here, it's a reality. You can turn energy and plasma into regular resources, or, with large amounts, you can turn it into rare ones, which you are unable to find and have to make to acquire.
 									</span>
@@ -4791,8 +4658,7 @@
 							<tr id="researchEmc">
 								<td>
 								<h3 class="default btn-link" data-i18n="solCenter.emc.research">
-									Research
-								</h3>
+									研究</h3>
 								<span>
 									To be given the blueprints for this mysterious machine, the Aliens require both types of energy.
 									<br>
@@ -4806,18 +4672,17 @@
 							<tr id="emcPage" class="hidden">
 								<td>
 								<h3 class="default btn-link" data-i18n="solCenter.emc.uses">
-									Uses
-								</h3>
+									用途</h3>
 								<p data-i18n="solCenter.emc.desc">
-									This is where you can convert your energy and plasma into resources. <b>（右键点击返回X10）</b>
-									<hide class="autoEmcHide hidden" data-i18n="solCenter.emc.autoEmcDesc"><br>With 自动EMC (unlocked with rebirth), when you can automate multiple, the order will be top to bottom (always Max).</hide>
+									在这里你可以将能源转换为各种资源。<b>（右键点击返回X10）</b>
+									<hide class="autoEmcHide hidden" data-i18n="solCenter.emc.autoEmcDesc">使用自动EMC功能可以自动批量转换资源。<br>With 自动EMC (unlocked with rebirth), when you can automate multiple, the order will be top to bottom (always Max).</hide>
 									</p>
 									<div class="row">
 										<div class="col-md-12">
-										<label data-i18n="solCenter.emc.remaining">剩余能源： <span data-bind="energy">N/A</span></label>
+										<label data-i18n="solCenter.emc.remaining">剩余能量：<span data-bind="energy">无</span></label>
 										<br>
-										<label data-i18n="solCenter.emc.remainingPlasma">剩余等离子体： <span data-bind="plasma">N/A</span></label>
-										<button class="btn btn-default pull-right" onmousedown="changeEmcAmount(event)" oncontextmenu="return false;" data-i18n="solCenter.emc.converting">转换中 <span id="emcButton" data-i18n="solCenter.emc.max">最大</span></button>
+										<label data-i18n="solCenter.emc.remainingPlasma">剩余等离子体：<span data-bind="plasma">无</span></label>
+										<button class="btn btn-default pull-right" onmousedown="changeEmcAmount(event)" oncontextmenu="return false;" data-i18n="solCenter.emc.converting">转换中<span id="emcButton" data-i18n="solCenter.emc.max">最大</span></button>
 										</div>
 									</div>
 									<div class="row">
@@ -4835,119 +4700,119 @@
 													<tr>
 														<td><span id="uraniumEmcVal">37</span> 能源</td>
 														<td><span id="uraniumEmcAmount">1</span> 铀</td>
-														<td><span id="uraniumConv"><span data-bind="uranium">N/A</span> / <span data-bind="uraniumStorage">N/A</span></span></td>
+														<td><span id="uraniumConv"><span data-bind="uranium">无</span> / <span data-bind="uraniumStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('uranium')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="uraniumAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="lavaEmcVal">42</span> 能源</td>
 														<td><span id="lavaEmcAmount">1</span> 熔岩</td>
-														<td><span id="lavaConv"><span data-bind="lava">N/A</span> / <span data-bind="lavaStorage">N/A</span></span></td>
+														<td><span id="lavaConv"><span data-bind="lava">无</span> / <span data-bind="lavaStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('lava')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="lavaAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="oilEmcVal">3</span> 能源</td>
 														<td><span id="oilEmcAmount">1</span> 石油</td>
-														<td><span id="oilConv"><span data-bind="oil">N/A</span> / <span data-bind="oilStorage">N/A</span></span></td>
+														<td><span id="oilConv"><span data-bind="oil">无</span> / <span data-bind="oilStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('oil')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="oilAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="metalEmcVal">1</span> 能源</td>
 														<td><span id="metalEmcAmount">1</span> 金属</td>
-														<td><span id="metalConv"><span data-bind="metal">N/A</span> / <span data-bind="metalStorage">N/A</span></span></td>
+														<td><span id="metalConv"><span data-bind="metal">无</span> / <span data-bind="metalStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('metal')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="metalAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="gemEmcVal">3</span> 能源</td>
 														<td><span id="gemEmcAmount">1</span> 宝石s</td>
-														<td><span id="gemConv"><span data-bind="gem">N/A</span> / <span data-bind="gemStorage">N/A</span></span></td>
+														<td><span id="gemConv"><span data-bind="gem">无</span> / <span data-bind="gemStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('gem')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="gemAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="charcoalEmcVal">2</span> 能源</td>
 														<td><span id="charcoalEmcAmount">1</span> 木炭</td>
-														<td><span id="charcoalConv"><span data-bind="charcoal">N/A</span> / <span data-bind="charcoalStorage">N/A</span></span></td>
+														<td><span id="charcoalConv"><span data-bind="charcoal">无</span> / <span data-bind="charcoalStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('charcoal')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="charcoalAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="woodEmcVal">1</span> 能源</td>
 														<td><span id="woodEmcAmount">1</span> 木材</td>
-														<td><span id="woodConv"><span data-bind="wood">N/A</span> / <span data-bind="woodStorage">N/A</span></span></td>
+														<td><span id="woodConv"><span data-bind="wood">无</span> / <span data-bind="woodStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('wood')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="woodAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="siliconEmcVal">23</span> 能源</td>
 														<td><span id="siliconEmcAmount">1</span> 硅</td>
-														<td><span id="siliconConv"><span data-bind="silicon">N/A</span> / <span data-bind="siliconStorage">N/A</span></span></td>
+														<td><span id="siliconConv"><span data-bind="silicon">无</span> / <span data-bind="siliconStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('silicon')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="siliconAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="lunariteEmcVal">15</span> 能源</td>
 														<td><span id="lunariteEmcAmount">1</span> 月岩</td>
-														<td><span id="lunariteConv"><span data-bind="lunarite">N/A</span> / <span data-bind="lunariteStorage">N/A</span></span></td>
+														<td><span id="lunariteConv"><span data-bind="lunarite">无</span> / <span data-bind="lunariteStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('lunarite')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="lunariteAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="methaneEmcVal">12</span> 能源</td>
 														<td><span id="methaneEmcAmount">1</span> 甲烷</td>
-														<td><span id="methaneConv"><span data-bind="methane">N/A</span> / <span data-bind="methaneStorage">N/A</span></span></td>
+														<td><span id="methaneConv"><span data-bind="methane">无</span> / <span data-bind="methaneStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('methane')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="methaneAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="titaniumEmcVal">17</span> 能源</td>
 														<td><span id="titaniumEmcAmount">1</span> 钛</td>
-														<td><span id="titaniumConv"><span data-bind="titanium">N/A</span> / <span data-bind="titaniumStorage">N/A</span></span></td>
+														<td><span id="titaniumConv"><span data-bind="titanium">无</span> / <span data-bind="titaniumStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('titanium')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="titaniumAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="goldEmcVal">42</span> 能源</td>
 														<td><span id="goldEmcAmount">1</span> 黄金</td>
-														<td><span id="goldConv"><span data-bind="gold">N/A</span> / <span data-bind="goldStorage">N/A</span></span></td>
+														<td><span id="goldConv"><span data-bind="gold">无</span> / <span data-bind="goldStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('gold')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="goldAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="silverEmcVal">42</span> 能源</td>
 														<td><span id="silverEmcAmount">1</span> 白银</td>
-														<td><span id="silverConv"><span data-bind="silver">N/A</span> / <span data-bind="silverStorage">N/A</span></span></td>
+														<td><span id="silverConv"><span data-bind="silver">无</span> / <span data-bind="silverStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('silver')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="silverAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="hydrogenEmcVal">42</span> 能源</td>
 														<td><span id="hydrogenEmcAmount">1</span> 氢</td>
-														<td><span id="hydrogenConv"><span data-bind="hydrogen">N/A</span> / <span data-bind="hydrogenStorage">N/A</span></span></td>
+														<td><span id="hydrogenConv"><span data-bind="hydrogen">无</span> / <span data-bind="hydrogenStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('hydrogen')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="hydrogenAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="heliumEmcVal">42</span> 能源</td>
 														<td><span id="heliumEmcAmount">1</span> 氦</td>
-														<td><span id="heliumConv"><span data-bind="helium">N/A</span> / <span data-bind="heliumStorage">N/A</span></span></td>
+														<td><span id="heliumConv"><span data-bind="helium">无</span> / <span data-bind="heliumStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('helium')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="heliumAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="iceEmcVal">42</span> 能源</td>
 														<td><span id="iceEmcAmount">1</span> 冰</td>
-														<td><span id="iceConv"><span data-bind="ice">N/A</span> / <span data-bind="iceStorage">N/A</span></span></td>
+														<td><span id="iceConv"><span data-bind="ice">无</span> / <span data-bind="iceStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertEnergy('ice')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="iceAutoEmc" class="autoEmc" />
 													</tr>
 													<tr id="meteoriteEMC" class="hidden">
 														<td><span id="meteoriteEmcVal">42</span> 等离子体</td>
 														<td><span id="meteoriteEmcAmount">1</span> 陨石</td>
-														<td><span id="meteoriteConv"><span data-bind="meteorite">N/A</span> / <span data-bind="meteoriteStorage">N/A</span></span></td>
+														<td><span id="meteoriteConv"><span data-bind="meteorite">无</span> / <span data-bind="meteoriteStorage">无</span></span></td>
 														<td><button class="btn btn-default pull-right" onclick="convertPlasma('meteorite')" role="button" data-i18n="solCenter.emc.convert">转换</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="meteoriteAutoEmc" class="autoEmc" />
 													</tr>
@@ -4967,8 +4832,7 @@
 							<tr>
 								<td style="border:none;">
 								<h2 class="default btn-link" data-i18n="solCenter.dyson.title">
-									Dyson Swarms and Sphere
-								</h2>
+									戴森群与球体</h2>
 									<span>
 										This technology, unheard of previously, is now a reality, thanks to those in the Sol Scientific Center. The Sphere can provide much energy for millions of years, but at what cost?
 										<br>
@@ -4980,8 +4844,7 @@
 							<tr id="researchDyson">
 								<td>
 								<h3 class="default btn-link" data-i18n="solCenter.dyson.research">
-									Research
-								</h3>
+									研究</h3>
 								<span>
 									To understand this supreme construct, you must request the aliens' help. They require vast amounts of energy and plasma.
 									<br>
@@ -4995,8 +4858,7 @@
 							<tr id="dysonPage" class="hidden">
 								<td>
 								<h3 class="default btn-link" data-i18n="solCenter.dyson.construction">
-									Construction
-								</h3>
+									建造</h3>
 								<span>
 									These mega-structures cannot possibly be built in one piece. They must be created from small segments and forged together around the sun.
 									<br>
@@ -5010,7 +4872,7 @@
 										<br>
 										<br>
 									<h3 class="default btn-link" data-i18n="solCenter.dyson.ring">
-										Ring: <span id="ring">0</span>
+										环：<span id="ring">0</span>
 									</h3>
 										<span>
 											The ring is a solar strip orbiting and circling the sun that can produce 5,000 energy每秒。 It requires <span id="ringRocketFuelCost">50,000</span> rocket fuel in total to put the segments in place.
@@ -5026,7 +4888,7 @@
 										<br>
 										<hide id="dysonSphere" class="hidden">
 										<h3 class="default btn-link" data-i18n="solCenter.dyson.swarm">
-											Swarm: <span id="swarm">0</span>
+											群：<span id="swarm">0</span>
 										</h3>
 											<span>
 												The swarm is an array of solar stations orbiting the sun, and once built, it can produce 25,000 energy每秒。 However, it requires <span id="swarmRocketFuelCost">250,000</span> rocket fuel in total to put the segments in place.
@@ -5041,7 +4903,7 @@
 											<br>
 											<br>
 											<h3 class="default btn-link" data-i18n="solCenter.dyson.sphere">
-												Sphere: <span id="sphere">0</span> （最大 <span id="sphereMax">1</span>)
+												球体：<span id="sphere">0</span> （最大 <span id="sphereMax">1</span>)
 											</h3>
 											<span>
 												The entire sphere is a monolithic structure completely surrounding the sun. It will allow for enough energy to get interstellar travel and finally escape this Solar System. It will produce 1,000,000 energy每秒。
@@ -5074,29 +4936,25 @@
 					<tr href="#machineEnergyTab" aria-controls="machineEnergyTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;">
 							<span data-i18n='machines.sidebar.energy'>
-								Energy
-							</span>
+								能源</span>
 						</td>
 					</tr>
 					<tr href="#machineEarthTab" aria-controls="machineEarthTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='machines.sidebar.earth'>
-								Earth
-							</span>
+								地球</span>
 						</td>
 					</tr>
 					<tr href="#machineInnerTab" aria-controls="machineInnerTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='machines.sidebar.innerPlanets'>
-								Inner Planets
-							</span>
+								内行星</span>
 						</td>
 					</tr>
 					<tr href="#machineOuterTab" aria-controls="machineOuterTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n='machines.sidebar.outerPlanets'>
-								Outer Planets
-							</span>
+								外行星</span>
 						</td>
 					</tr>
 				</table>
@@ -5109,27 +4967,23 @@
 								<td colspan="2"></td>
 								<td colspan="3">
 								<h2 class="default btn-link" data-i18n='machines.energy.title'>
-									Energy Machines
-								</h2>
+									能源机器</h2>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
 								<h3 class="default btn-link" data-i18n='common.inputPerSec'>
-									Input/sec
-								</h3>
+									输入/秒</h3>
 							</td>
 							<td colspan="2">
 								<h3 class="default btn-link" data-i18n='common.outputPerSec'>
-									Output/sec
-								</h3>
+									输出/秒</h3>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="2"></td>
 								<td colspan="3">
 								<h4 class="default btn-link" data-i18n='machines.energy.plasma'>
-									Plasma
-								</h4>
+									等离子体</h4>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
@@ -5156,8 +5010,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier1'>
-										Tier1
-									</span>
+										T1</span>
 								</td>
 								<td colspan="1">
 									<button class="btn btn-default">
@@ -5193,8 +5046,7 @@
 								</td>
 								<td colspan="3">
 								<span data-i18n='machines.energy.tier2'>
-										Tier 2
-									</span>
+										T2</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5224,8 +5076,7 @@
 								<td colspan="2"></td>
 								<td colspan="3">
 									<h4 class="default btn-link" style="border:none;" data-i18n='machines.energy.energy'>
-										Energy
-									</h4>
+										能源</h4>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
@@ -5252,8 +5103,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier1'>
-										Tier 1
-									</span>
+										T1</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5289,8 +5139,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier2'>
-										Tier 2
-									</span>
+										T2</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5326,8 +5175,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier3'>
-										Tier 3
-									</span>
+										T3</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5363,8 +5211,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier4'>
-										Tier 4
-									</span>
+										T4</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5400,8 +5247,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier5'>
-										Tier 5
-									</span>
+										T5</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5437,8 +5283,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier6'>
-										Tier 6
-									</span>
+										T6</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5468,8 +5313,7 @@
 								<td colspan="2"></td>
 								<td colspan="3">
 									<h4 class="default btn-link" style="border:none;" data-i18n='machines.energy.uranium'>
-										Uranium
-									</h4>
+										铀</h4>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
@@ -5496,8 +5340,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier1'>
-										Tier 1
-									</span>
+										T1</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5533,8 +5376,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier2'>
-										Tier 2
-									</span>
+										T2</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5570,8 +5412,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier3'>
-										Tier 3
-									</span>
+										T3</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5607,8 +5448,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier4'>
-										Tier 4
-									</span>
+										T4</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5638,8 +5478,7 @@
 								<td colspan="2"></td>
 								<td colspan="3">
 									<h4 class="default btn-link" style="border:none;" data-i18n='machines.energy.lava'>
-										Lava
-									</h4>
+										熔岩</h4>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
@@ -5666,8 +5505,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier1'>
-										Tier 1
-									</span>
+										T1</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5703,8 +5541,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier2'>
-										Tier 2
-									</span>
+										T2</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5740,8 +5577,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier3'>
-										Tier 3
-									</span>
+										T3</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5777,8 +5613,7 @@
 								</td>
 								<td colspan="3">
 									<span data-i18n='machines.energy.tier4'>
-										Tier 4
-									</span>
+										T4</span>
 								</td>
 								<td colspan="1">
 									<span>
@@ -5810,8 +5645,7 @@
 							<tr>
 								<td colspan="7">
 								<h2 class="default btn-link" data-i18n='machines.earth.title'>
-									Earth Machines
-								</h2>
+									地球机器</h2>
 								</td>
 							</tr>
 							<tr>
@@ -6045,8 +5879,7 @@
 							<tr>
 								<td colspan="7">
 								<h2 class="default btn-link" data-i18n='machines.inner.title'>
-									Inner Planet Machines
-								</h2>
+									内行星机器</h2>
 								</td>
 							</tr>
 							<tr>
@@ -6280,8 +6113,7 @@
 							<tr>
 								<td colspan="7">
 								<h2 class="default btn-link" data-i18n='machines.outer.title'>
-									Outer Planet Machines
-								</h2>
+									外行星机器</h2>
 								</td>
 							</tr>
 							<tr>
@@ -6549,29 +6381,25 @@
 					<tr href="#savingTab" aria-controls="savingTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;">
 								<span data-i18n="ui.saving.title">
-								保存
-							</span>
+								保存游戏</span>
 						</td>
 					</tr>
 						<tr href="#uiTab" aria-controls="uiTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="vertical-align:middle;">
 							<span data-i18n="ui.settings.title">
-								图形选项
-							</span>
+								图形选项</span>
 						</td>
 					</tr>
 					<tr href="#statsTab" aria-controls="statsTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n="ui.stats.title">
-								统计
-							</span>
+								统计</span>
 						</td>
 					</tr>
 					<tr href="#achievementsTab" aria-controls="achievementsTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab" onclick="tabClicked('achievements')">
 						<td colspan="2" style="vertical-align:middle;">
 							<span data-i18n="ui.achievements.title">
-								成就
-							</span>
+								成就</span>
 							<span id="achievementsTabGlyph" class="pull-right glyphicon glyphicon-exclamation-sign hidden"></span>
 						</td>
 					</tr>
@@ -6598,34 +6426,30 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='ui.saving.title'>
-										保存
-									</h2>
+										保存游戏</h2>
 									<span data-i18n='ui.saving.desc'>
-										在这里你可以更改游戏的保存方式。
-									</span>
+										在这里你可以更改游戏的保存方式。</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.saving.autoSaveDuration'>
-										Auto-Save Duration
-									</h3>
+										自动保存间隔</h3>
 									<span data-i18n='ui.saving.autoSaveDesc'>
-										Change how long the game waits before auto-saving again.
-									</span>
+										更改游戏在再次自动保存前等待的时间。</span>
 									<br>
 									<div class="btn-group" data-toggle="buttons">
 										<label class="btn btn-default active" data-i18n='ui.saving.30seconds'>
-											<input type="radio" name="autosaves" id="30secs" autocomplete="off" checked> 30 Seconds
+											30秒<input type="radio" name="autosaves" id="30secs" autocomplete="off" checked> 30 Seconds
 										</label>
 										<label class="btn btn-default" data-i18n='ui.saving.2minutes'>
-											<input type="radio" name="autosaves" id="2mins" autocomplete="off"> 2 Minutes
+											2分钟<input type="radio" name="autosaves" id="2mins" autocomplete="off"> 2 Minutes
 										</label>
 										<label class="btn btn-default" data-i18n='ui.saving.10minutes'>
-											<input type="radio" name="autosaves" id="10mins" autocomplete="off"> 10 Minutes
+											10分钟<input type="radio" name="autosaves" id="10mins" autocomplete="off"> 10 Minutes
 										</label>
 										<label class="btn btn-default" data-i18n='ui.saving.off'>
-											<input type="radio" name="autosaves" id="off" autocomplete="off"> Off
+											关闭<input type="radio" name="autosaves" id="off" autocomplete="off"> Off
 										</label>
 									</div>
 								</td>
@@ -6637,30 +6461,25 @@
 									</h3>
 									<button id="saveButton" onclick="Game.save()" class="btn btn-primary" style="margin-top:5px; height:80%; vertical-align: middle">
 										<span style="color:white;" data-i18n='ui.saving.save'>
-											Save
-										</span>
+											保存</span>
 									</button>
 									<button id="loadButton" onclick="Game.load()" class="btn btn-primary" style="margin-top:5px; margin-left:2px; height:80%; vertical-align: middle;">
 										<span style="color:white;" data-i18n='ui.saving.load'>
-											Load
-										</span>
+											加载</span>
 									</button>
 									<br>
 									<button onclick="Game.deleteSave()" class="btn btn-danger" style="margin-top:5px; height:80%; display:inline-block; vertical-align: middle">
 										<span style="color:white;" data-i18n='ui.saving.hardReset'>
-											Hard Reset
-										</span>
+											硬重置</span>
 									</button>
 									<span data-i18n='ui.saving.hardResetWarning'>
-										Warning: This is non-reversible! Be cautious. There is a confirmation to delete your save.
-									</span>
+										警告：此操作不可逆！请谨慎操作。删除存档前会有确认步骤。</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.saving.importExport'>
-										Import/Export
-									</h3>
+										导入/导出</h3>
 									<button class="btn btn-primary" onclick="Game.export()" data-i18n='ui.saving.exportSave'>导出存档</button>
 									<button class="btn btn-primary" onclick="Game.import()" data-i18n='ui.saving.importSave'>导入存档</button>
 									<button class="btn btn-primary" id="copyExport" data-i18n='ui.saving.copyClipboard'>复制下方文本到剪贴板</button>
@@ -6668,16 +6487,13 @@
 									<textarea id="impexpField" style="margin-top:20px; width:300px; height:100px;"></textarea>
 									<br>
 									<span data-i18n='ui.saving.importDesc1'>
-										Copy and paste this onto a file somewhere so that you can import it into the game at a later date.
-									</span>
+										将此复制粘贴到某个文件中，以便日后导入到游戏中。</span>
 									<br>
 									<span data-i18n='ui.saving.importDesc2'>
-										You can also use this to create multiple 'savefiles' of the game by storing multiple instances separately.
-									</span>
+										你也可以用此方法通过分别存储来创建多个"存档文件"。</span>
 									<br>
 									<span data-i18n='ui.saving.importDesc3'>
-										Make sure there are no spaces at the end when importing.
-									</span>
+										导入时请确保末尾没有空格。</span>
 								</td>
 							</tr>
 						</table>
@@ -6689,18 +6505,15 @@
 							<tr>
 								<td style="border:none;">
 									<h2 class="default btn-link" data-i18n='ui.settings.title'>
-										图形选项
-									</h2>
+										图形选项</h2>
 									<span data-i18n='ui.settings.desc'>
-										你可以在这里更改界面设置。
-									</span>
+										你可以在这里更改界面设置。</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.theme'>
-										Themes
-									</h3>
+										主题</h3>
 				                	<select id="themeSelector" ng-model="player.current_theme" class="ng-valid ng-touched ng-dirty ng-valid-parse">
 				                		<option value="base">Base</option>
 				                		<option value="cerulean">Cerulean</option>
@@ -6720,107 +6533,87 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.notation'>
-										Notation
-									</h3>
+										数值格式</h3>
 									<select id="formatSelector" ng-model="player.current_theme" class="ng-valid ng-touched ng-dirty ng-valid-parse">
 										<option value="raw">Raw</option>
 										<option value="rounded">Rounded</option>
-										<option value="name">Name</option>
-										<option value="shortName" selected>Short Name</option>
-										<option value="shortName2">Short Name (2)</option>
-										<option value="scientific">Scientific (*10^n)</option>
-										<option value="scientific2">Scientific (E+n)</option>
+										<option value="name">完整名称</option>
+										<option value="shortName" selected>缩写</option>
+										<option value="shortName2">缩写（2）</option>
+										<option value="scientific">科学计数法（*10^n）</option>
+										<option value="scientific2">科学计数法（E+n）</option>
 									</select>
 								</td>
-							</tr>
-								<tr>
-								<td>
-									<h3 class="default btn-link">
-										<span data-i18n="ui.settings.language">语言</span>
-									</h3>
-				                	<select id="languageSelector" class="ng-valid ng-touched ng-dirty ng-valid-parse">
-				                		<option value="en">English</option>
-				                		<option value="zh-CN">简体中文</option>
-				                	</select>
-				                </td>
 							</tr>
 							<tr>
 								<td>
 								<h3 class="default btn-link" data-i18n='ui.settings.companyName'>
-										Change Company Name
-									</h3>
+										更改公司名称</h3>
 				                	<div class="checkbox">
-										<input type="text" name="companyName"> Company <input type="submit" value="Submit">
+										<input type="text" name="companyName"> <input type="submit" value="提交">
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.textDecoration'>
-										Text Decoration
-									</h3>
+										文字装饰</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.boldEnabled'><input id="boldEnabled" type="checkbox" value="">红色费用加粗</label>
+										<label data-i18n='ui.settings.boldEnabled'>红色费用加粗<input id="boldEnabled" type="checkbox" value="">红色费用加粗</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.autosaveNotifications'>
-										Autosave Notifications
-									</h3>
+										自动保存通知</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.autosaveNotifications'><input id="saveNotifsEnabled" type="checkbox" value="">自动保存通知</label>
+										<label data-i18n='ui.settings.autosaveNotifications'>自动保存通知<input id="saveNotifsEnabled" type="checkbox" value="">自动保存通知</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.notifications'>
-										Notifications (Not Autosave)
-									</h3>
+										通知（非自动保存）</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.screenNotifications'><input id="notificationsEnabled" type="checkbox" value="">屏幕通知</label>
+										<label data-i18n='ui.settings.screenNotifications'>屏幕通知<input id="notificationsEnabled" type="checkbox" value="">屏幕通知</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.sidebarCompression'>
-										Sidebar Height Compression (Not fully implemented)
-									</h3>
+										侧栏高度压缩（未完全实现）</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.compressRows'><input id="sidebarCompressed" type="checkbox" value="">压缩侧栏行以减少空白</label>
+										<label data-i18n='ui.settings.compressRows'>压缩侧栏行以减少空白<input id="sidebarCompressed" type="checkbox" value="">压缩侧栏行以减少空白</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.gainButtons'>
-										Gain Buttons
-									</h3>
+										获取按钮</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.gainButtonsHidden'><input id="gainButtonsHidden" type="checkbox" value="">隐藏获取按钮</label>
+										<label data-i18n='ui.settings.gainButtonsHidden'>隐藏获取按钮<input id="gainButtonsHidden" type="checkbox" value="">隐藏获取按钮</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.coloredDestroy'>
-										Coloured Destroy Buttons
-									</h3>
+										彩色销毁按钮</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.destroyButtonsRed'><input id="redDestroyButtons" type="checkbox" value="">销毁按钮变红</label>
+										<label data-i18n='ui.settings.destroyButtonsRed'>销毁按钮变红<input id="redDestroyButtons" type="checkbox" value="">销毁按钮变红</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.settings.hideCompleted'>
-										Hide Completed Tabs
-									</h3>
+										隐藏已完成标签页</h3>
 				                	<div class="checkbox">
-										<label data-i18n='ui.settings.hidden'><input id="hideCompleted" type="checkbox" value="">隐藏</label>
+										<label data-i18n='ui.settings.hidden'>隐藏<input id="hideCompleted" type="checkbox" value="">隐藏</label>
 									</div>
 				                </td>
 							</tr>
@@ -6932,22 +6725,19 @@
 					<tr href="#startingTab" aria-controls="startingTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;">
 						<span data-i18n='ui.help.gettingStarted'>
-							Getting Started
-						</span>
+							入门指南</span>
 						</td>
 					</tr>
 					<tr href="#faqTab" aria-controls="faqTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
 						<span data-i18n='ui.help.faq'>
-							FAQ
-						</span>
+							常见问题</span>
 						</td>
 					</tr>
 					<tr href="#creditsTab" aria-controls="creditsTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
 						<span data-i18n='ui.help.credits'>
-							Credits
-						</span>
+							关于</span>
 						</td>
 					</tr>
 				</table>
@@ -6959,8 +6749,7 @@
 							<tr>
 								<td style="border:none;">
 								<h2 class="default btn-link" data-i18n='ui.guide.beginner'>
-									Beginner's Guide
-								</h2>
+									新手指南</h2>
 									<span>
 										This guide will get you from starting the game to activating your first wonder and will be helpful to grasp everything you need to do. You can refer to this guide at anytime while playing by clicking the Help/FAQ tab in the top right and selecting the Getting Started sub-tab.
 									</span>
@@ -6971,8 +6760,7 @@
 							<tr>
 								<td>
 								<h3 class="default btn-link" data-i18n='ui.guide.firstSteps'>
-									First Steps
-								</h3>
+									第一步</h3>
 									<span>
 										The first thing you can do is start gathering resources. To do this, click the Resources tab near the top left of the screen. This will bring you to the resources display. You can click any of the resources to access its interface, where you can mine the resource yourself by clicking, or you can hire people or build machines to gain those resources for you. While you can hire workers for all three resources, it is recommended to prioritise 金属 and 木材 in the early stages of the game.
 									</span>
@@ -6981,8 +6769,7 @@
 							<tr>
 								<td>
 									<h3 class="default btn-link" data-i18n='ui.guide.research'>
-										Research
-									</h3>
+										研究</h3>
 									<span>
 										To unlock research, you must purchase a metal miner, costing 10 金属 and 5 木材. This is the first step to idle automation. The Research tab is where you can build laboratories to produce science for you, and also where you can discover and research new technologies to further help you through the game.
 										<br>
@@ -6996,8 +6783,7 @@
 							<tr>
 								<td>
 								<h3 class="default btn-link" data-i18n='ui.guide.balancing'>
-									Balancing Resources &amp; 能源
-								</h3>
+									资源与能源的平衡</h3>
 									<span>
 										This game has different amounts output by each machine. This can make balancing your resources hard, especially your 能源, 木炭 and 木材 as they are consumed by other machines. As at tip, prioritise which resources you should build machines for first - in most cases 金属 - and produce the 2 能源 required for a heavy drill. Don't upgrade everything to machines at once as you will end up with an 能源 deficit (this is bad as the machines won't work without 能源). Build up your 木炭 to build engines or increase the number of solar panels to counter this.
 									</span>
@@ -7006,8 +6792,7 @@
 							<tr>
 								<td>
 								<h3 class="default btn-link" data-i18n='ui.guide.solarSystem'>
-									Solar System
-								</h3>
+									太阳系</h3>
 									<span>
 										Well, it isn't called 太空公司 for nothing. The first thing needed to unlock inter-planetary exploration is to build a rocket. This is the first large goal that you should aim for as a target. To build a rocket, you need a lot of resources, which you most likely need to use advanced machines to get without taking an extremely long time. Secondly, to launch it requires 20 rocket fuel, which can be made in chemical plants. These require a large amount of 石油 and 木炭 to produce - 20 of each per second per plant. Once you have 20 Rocket Fuel and have built a rocket, press the launch button to unlock exploration around the solar system and new technologies and ways to get resources.
 									</span>
@@ -7016,8 +6801,7 @@
 							<tr>
 								<td>
 								<h3 class="default btn-link" data-i18n='ui.guide.more'>
-									更多
-								</h3>
+									更多</h3>
 									<span>
 										There are more in-depth explanations and a wider variety of documentation on the <a href="https://reddit.com/r/spacecompany/wiki/">Reddit Wiki</a>. Feel free to explore these to learn more about the game, or discover things yourself by playing the game.
 									</span>
@@ -7032,8 +6816,7 @@
 							<tr>
 								<td style="border:none;">
 								<h2 class="default btn-link" data-i18n='ui.faq.title'>
-									Frequently Asked Questions
-								</h2>
+									常见问题</h2>
 									<span>
 										These are some of the questions that appear the most or that need the most clarifying.
 									</span>
@@ -7042,8 +6825,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q1'>
-									How does the military level work?
-								</h4>
+									军事等级如何运作？</h4>
 									<span>
 										The format used is •,••,•••,I,II,III,X,XX,XXX,XXXX,XXXXX,XXXXXX. It is based on the military army hierarchy found on wikipedia at <a href="https://en.wikipedia.org/wiki/Military_organization#Army_hierarchy">https://en.wikipedia.org/wiki/Military_organization#Army_hierarchy</a>.
 									</span>
@@ -7052,8 +6834,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q2'>
-									I found a bug! What should I do?
-								</h4>
+									我发现了bug！应该怎么做？</h4>
 									<span>
 										If you go to my <a class="btn-link pointer" target="_blank" href="https://github.com/sparticle999/SpaceCompany/issues">Github Page</a>, which you can also find in '更多' Tab, click <b>New Issue</b> 和 submit it there.
 										<br>
@@ -7064,8 +6845,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q3'>
-									I have a suggestion for the game
-								</h4>
+									我对游戏有建议</h4>
 									<span>
 										Similarly to the above, you can go to my <a class="btn-link pointer" target="_blank" href="https://github.com/sparticle999/SpaceCompany/issues">Github Page</a>, and post a <b>New Issue</b>; you can <a class="btn-link pointer" target="_blank" href="https://www.reddit.com/message/compose/">message me</a> on reddit, put it in a comment on any post (or make a post) at <a class="btn-link pointer" target="_blank" href="https://www.reddit.com/r/spacecompany/">r/SpaceCompany</a> or go to my <a class="btn-link pointer" target="_blank" href="https://discord.gg/cjQBgPW">discord channel</a> 和 tell me about it there.
 									</span>
@@ -7074,8 +6854,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q4'>
-									When will the game be updated next?
-								</h4>
+									游戏什么时候更新？</h4>
 									<span>
 										Well, this isn't a full-time project for me. This means that although I will try to work on it as much as I can, progress can be slow. However, I will endeavour to release updates as often as I can and fix any bugs as quickly as possible.
 									</span>
@@ -7084,8 +6863,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q5'>
-									Help, I'm stuck!
-								</h4>
+									帮助，我卡住了！</h4>
 									<span>
 										Have you checked all of the tabs to see if there is anything new? Maybe the guide has something about it? If not, feel free to ask me either on reddit or post it as an issue on github if you think there is a problem with the game.
 									</span>
@@ -7094,8 +6872,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q6'>
-									What does this do?
-								</h4>
+									这是干什么的？</h4>
 									<span>
 										It will probably be self-explanatory, be explained in the description or in the wiki. If not, tell me and I will add it to the item, wiki or to the Frequently Asked Questions page.
 									</span>
@@ -7104,8 +6881,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q7'>
-									I want to help. How do I do that?
-								</h4>
+									我想帮忙，怎么做？</h4>
 									<span>
 										Help is always appreciated! You can look over my code in <a href="http://github.com/sparticle999/SpaceCompany">Github</a> 和 fork it to make changes. Send me a push request, submit an issue or just tell me in reddit and I'll most likely be happy to add it in and give credit where due.
 									</span>
@@ -7114,8 +6890,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q8'>
-									Does donating give me anything?
-								</h4>
+									捐赠会给我什么吗？</h4>
 									<span>
 										No. I didn't want to make this game pay-to-win and make people feel that they had to pay money to get further in the game because this makes it less appealing to those who don't want to donate.
 									</span>
@@ -7124,8 +6899,7 @@
 							<tr>
 								<td>
 								<h4 data-i18n='ui.faq.q9'>
-									Where else can I find the game?
-								</h4>
+									还能在哪里找到这个游戏？</h4>
 									<span>
 										You can find the game on any of these sites:
 										<br>
@@ -7146,8 +6920,7 @@
 							<tr>
 								<td style="border:none;">
 								<h2 class="default btn-link" data-i18n='ui.credits.title'>
-									关于
-								</h2>
+									关于</h2>
 									<span>
 										This game is made by me, Sparticle999, as a project to improve my skills at making games and to see what I could add to the incremental gaming world.
 										<br>
@@ -7158,8 +6931,7 @@
 							<tr>
 								<td style="border:none;">
 								<h3 class="default btn-link" data-i18n='ui.credits.toolsUsed'>
-									Tools Used
-								</h3>
+									使用的工具</h3>
 									<span>
 										<a class="pointer btn-link" target="_blank" href="http://getbootstrap.com/">Bootstrap</a> was central to the base design of the game, and until I decide to create an interface for myself, either when I feel that it is necessary, or when people ask me to change it, this will be the general look for a while.
 										<br>
@@ -7174,8 +6946,7 @@
 							<tr>
 								<td>
 								<h3 class="default btn-link" data-i18n='ui.credits.thanks'>
-									Thank you to all Donators and my supporters on Patreon!
-								</h3>
+									感谢所有捐赠者和我在Patreon上的支持者！</h3>
 									<h4>Patreon:</h4>
 									<ul>
 										<li>Tom Paine</li>
@@ -7208,8 +6979,6 @@
 
 <script type="text/javascript" src="game.js"></script>
 <script type="text/javascript" src="i18n.js"></script>
-<script type="text/javascript" src="locale/en.js"></script>
-<script type="text/javascript" src="locale/zh-CN.js"></script>
 <script type="text/javascript" src="utils.js"></script>
 <script type="text/javascript" src="updates.js"></script>
 <script type="text/javascript" src="achievements.js"></script>

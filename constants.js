@@ -50,18 +50,18 @@ Game.constants = (function(){
     instance.iconPath = "Icons/";
     instance.iconExtension = "png";
 
-    instance.rank = ["Space Noob", "Space Explorer", "Solar Traveler", "Spaceship Pilot", "Dyson Sphere Technician", "Wonder Builder", "Overlord Associate", "Antimatter Tester", "Rocket Engineer", "Interstellar Space Farer", "Fleet Commander", "Faction Diplomat", "Console Cheater", "Save File Editor", "Source Code Hacker", "The Prestiged"]
+    instance.rank = ["太空新手", "太空探索者", "太阳系旅行者", "飞船驾驶员", "戴森球技师", "奇迹建造者", "主宰者助理", "反物质试验员", "火箭工程师", "星际远行者", "舰队指挥官", "阵营外交官", "控制台作弊者", "存档修改者", "源码黑客", "重生者"]
     instance.achievementMax = 1000;
     instance.achievementIconsPerRow = 4;
     instance.achievementResourceBrackets = [50, 50000, 50000000, 50000000000, 50000000000000];
     instance.achievementProducerBrackets = [5, 25, 75, 150, 250];
     instance.achievementBracketColors = ["#9d9d9d", "#1eff00", "#0070dd", "#a335ee", "#ff8000"];
 
-    instance.achievementCategoryResources = "Resources";
-    instance.achievementCategoryProducers = "Producers";
+    instance.achievementCategoryResources = "资源";
+    instance.achievementCategoryProducers = "生产者";
 
-    instance.statisticCategoryGeneral = "General";
-    instance.statisticCategoryUnlockable = "Unlockables";
+    instance.statisticCategoryGeneral = "通用";
+    instance.statisticCategoryUnlockable = "可解锁内容";
     instance.statisticCategoryTiming = "Timing";
 
     instance.maxTier = 6;
