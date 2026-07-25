@@ -4,7 +4,8 @@ Game.i18n = (function() {
         currentLanguage: 'en',
         strings: {},
         fallbackStrings: {},
-        locales: {}
+        locales: {},
+        dataReady: false
     };
 
     instance.register = function(lang, strings) {
@@ -38,7 +39,9 @@ Game.i18n = (function() {
 
         localStorage.setItem('spacecompany_language', lang);
 
-        this.patchDataObjects();
+        if (this.dataReady) {
+            this.patchDataObjects();
+        }
         this.applyDOM();
         this.applyHandlebarsHelpers();
 
@@ -63,7 +66,13 @@ Game.i18n = (function() {
             var key = el.data('i18n');
             var text = self.t(key);
             if (text !== key) {
-                el.text(text);
+                if (el.children().length === 0) {
+                    el.text(text);
+                } else {
+                    el.contents().filter(function() {
+                        return this.nodeType === 3;
+                    }).first().text(text);
+                }
             }
         });
         $('[data-i18n-html]').each(function() {
@@ -196,6 +205,11 @@ Game.i18n = (function() {
         if (selector.length > 0) {
             selector.val(this.currentLanguage);
         }
+    };
+
+    instance.markDataReady = function() {
+        this.dataReady = true;
+        this.patchDataObjects();
     };
 
     instance.toggleLanguage = function() {

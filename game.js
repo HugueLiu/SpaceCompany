@@ -234,6 +234,8 @@ var Game = (function() {
         registerLegacyBindings();
         self.ui.updateAutoDataBindings();
 
+        Game.i18n.markDataReady();
+
         // Initialize first
         self.achievements.initialise();
         self.statistics.initialise();
