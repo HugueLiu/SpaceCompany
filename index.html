@@ -84,12 +84,15 @@
 					<span id="versionLabel" class="text-muted small ng-binding"></span>
 				</a>
 				<a class="navbar-brand">
-					<span id="energyLow" class="text-muted small ng-binding red hidden">
-						Energy Deficit!
-					</span>
+				<span id="energyLow" class="text-muted small ng-binding red hidden" data-i18n="ui.header.energyDeficit">
+					Energy Deficit!
+				</span>
 				</a>
 				<a class="navbar-brand pointer" target="_blank" href="http://discord.gg/hgRUjVp">
-					<span class="text-muted small">Join our Discord!</span>
+					<span class="text-muted small" data-i18n="ui.header.joinDiscord">Join our Discord!</span>
+				</a>
+				<a class="navbar-brand pointer" onclick="Game.i18n.toggleLanguage()" style="cursor:pointer;">
+					<span id="langToggle" class="text-muted small" data-i18n="ui.header.langToggle">中文</span>
 				</a>
 				<div class="pull-right" style="width:200px;">
 					<a class="navbar-brand">
@@ -108,14 +111,14 @@
 
 <!-- Nav tabs -->
 	<ul class="nav nav-tabs no-select" role="tablist" id="tabList">
-		<li role="presentation" class="active"><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')"><div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Resources</a></li>
-		<li role="presentation" id="researchTab" class="hidden"><a href="#research" aria-controls="research" role="tab" data-toggle="tab" onclick="tabClicked('research')"><div id="researchTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Research</a></li>
-    	<li role="presentation" id="solarSystemTab" class="hidden"><a href="#solarSystem" aria-controls="solarSystem" role="tab" data-toggle="tab"onclick="tabClicked('solarSystem')"><div id="solarSystemTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Solar System</a></li>
-    	<li role="presentation" id="wonderTab" class="hidden"><a href="#wonder" aria-control="wonder" role="tab" data-toggle="tab"onclick="tabClicked('wonder')"><div id="wonderTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Wonders</a></li>
-    	<li role="presentation" id="solCenterTopTab" class="hidden"><a href="#solCenterPage" aria-control="solCenterPage" role="tab" data-toggle="tab"onclick="tabClicked('solCenter')"><div id="solCenterTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Sol Center</a></li>
-    	<li role="presentation" id="machineTopTab" style="display: none;"><a href="#machineTab" aria-control="machineTab" role="tab" data-toggle="tab"onclick="tabClicked('machine')"><div id="machineTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Machines</a></li>
-    	<li role="presentation" class="pull-right"><a href="#help" aria-control="help" role="tab" data-toggle="tab"><div class="glyphicon glyphicon-info-sign"></div> Help / FAQ</a></li>
-    	<li role="presentation" class="pull-right"><a href="#more" aria-control="more" role="tab" data-toggle="tab" onclick="tabClicked('more')"><div id="moreTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> More...</a></li>
+		<li role="presentation" class="active"><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')"><div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.resources">Resources</span></a></li>
+		<li role="presentation" id="researchTab" class="hidden"><a href="#research" aria-controls="research" role="tab" data-toggle="tab" onclick="tabClicked('research')"><div id="researchTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.research">Research</span></a></li>
+    	<li role="presentation" id="solarSystemTab" class="hidden"><a href="#solarSystem" aria-controls="solarSystem" role="tab" data-toggle="tab"onclick="tabClicked('solarSystem')"><div id="solarSystemTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.solarSystem">Solar System</span></a></li>
+    	<li role="presentation" id="wonderTab" class="hidden"><a href="#wonder" aria-control="wonder" role="tab" data-toggle="tab"onclick="tabClicked('wonder')"><div id="wonderTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.wonders">Wonders</span></a></li>
+    	<li role="presentation" id="solCenterTopTab" class="hidden"><a href="#solCenterPage" aria-control="solCenterPage" role="tab" data-toggle="tab"onclick="tabClicked('solCenter')"><div id="solCenterTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.solCenter">Sol Center</span></a></li>
+    	<li role="presentation" id="machineTopTab" style="display: none;"><a href="#machineTab" aria-control="machineTab" role="tab" data-toggle="tab"onclick="tabClicked('machine')"><div id="machineTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.machines">Machines</span></a></li>
+    	<li role="presentation" class="pull-right"><a href="#help" aria-control="help" role="tab" data-toggle="tab"><div class="glyphicon glyphicon-info-sign"></div> <span data-i18n="ui.tab.help">Help / FAQ</span></a></li>
+    	<li role="presentation" class="pull-right"><a href="#more" aria-control="more" role="tab" data-toggle="tab" onclick="tabClicked('more')"><div id="moreTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> <span data-i18n="ui.tab.more">More...</span></a></li>
 	</ul>
 
 
@@ -131,7 +134,7 @@
 							<img src="Icons/plasmaIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="border:none; vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.plasma">
 								Plasma
 							</span>
 						</td>
@@ -155,7 +158,7 @@
 							<img src="Icons/EnergyIcon.png" style="width:30px; height:auto">
 						</td>
 						<td id="energyNav1" style="border:none; vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.energy">
 								Energy
 							</span>
 						</td>
@@ -179,7 +182,7 @@
 							<img src="Icons/uraniumIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.uranium">
 								Uranium
 							</span>
 						</td>
@@ -201,7 +204,7 @@
 							<img src="Icons/lavaIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.lava">
 								Lava
 							</span>
 						</td>
@@ -220,7 +223,7 @@
 					</tr>
 					<tr id="collapseEarth" class="collapseEarth" style="border:none;">
 						<td colspan="4">
-							<span>Earth Resources</span> <span class="caret"></span>
+							<span data-i18n="resourceCategory.earth.title">Earth Resources</span> <span class="caret"></span>
 						</td>
 					</tr>
 					<tr id="oilNav" onclick="activeResourceTab('oilNav')" class="sideTab hidden" href="#oilTab" aria-controls="oilTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -228,7 +231,7 @@
 							<img src="Icons/oilIcon.png" style="width:30px; height:auto">
 						</td>
 						<td id="oilNav1" style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.oil">
 								Oil
 							</span>
 						</td>
@@ -250,7 +253,7 @@
 							<img src="Icons/metalIcon.png" style="width:30px; height:auto">
 						</td>
 						<td id="metalNav1" style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.metal">
 								Metal
 							</span>
 						</td>
@@ -272,7 +275,7 @@
 							<img src="Icons/gemIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.gem">
 								Gems
 							</span>
 						</td>
@@ -294,7 +297,7 @@
 							<img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.charcoal">
 								Charcoal
 							</span>
 						</td>
@@ -316,7 +319,7 @@
 							<img src="Icons/woodIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.wood">
 								Wood
 							</span>
 						</td>
@@ -338,7 +341,7 @@
 							<img src="Icons/siliconIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.silicon">
 								Silicon
 							</span>
 						</td>
@@ -357,7 +360,7 @@
 					</tr>
 					<tr id="collapseInnerPlanet" class="collapseInnerPlanet hidden">
 						<td colspan="4">
-							<span>Inner Planetary Resources</span> <span class="caret"></span>
+							<span data-i18n="resourceCategory.innerSol.title">Inner Planetary Resources</span> <span class="caret"></span>
 						</td>
 					</tr>
 					<tr id="lunariteNav" onclick="activeResourceTab('lunariteNav')" class="sideTab hidden" href="#lunariteTab" aria-controls="lunariteTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -365,7 +368,7 @@
 							<img src="Icons/lunariteIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.lunarite">
 								Lunarite
 							</span>
 						</td>
@@ -387,7 +390,7 @@
 							<img src="Icons/methaneIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.methane">
 								Methane
 							</span>
 						</td>
@@ -409,7 +412,7 @@
 							<img src="Icons/titaniumIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.titanium">
 								Titanium
 							</span>
 						</td>
@@ -431,7 +434,7 @@
 							<img src="Icons/goldIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.gold">
 								Gold
 							</span>
 						</td>
@@ -453,7 +456,7 @@
 							<img src="Icons/silverIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.silver">
 								Silver
 							</span>
 						</td>
@@ -472,7 +475,7 @@
 					</tr>
 					<tr id="collapseOuterPlanet" class="collapseOuterPlanet hidden">
 						<td colspan="4">
-							<span>Outer Planetary Resources</span> <span class="caret"></span>
+							<span data-i18n="resourceCategory.outerSol.title">Outer Planetary Resources</span> <span class="caret"></span>
 						</td>
 					</tr>
 					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="sideTab hidden" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -480,7 +483,7 @@
 							<img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.hydrogen">
 								Hydrogen
 							</span>
 						</td>
@@ -502,7 +505,7 @@
 							<img src="Icons/heliumIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.helium">
 								Helium
 							</span>
 						</td>
@@ -524,7 +527,7 @@
 							<img src="Icons/iceIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.ice">
 								Ice
 							</span>
 						</td>
@@ -546,7 +549,7 @@
 							<img src="Icons/meteoriteIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.nav.meteorite">
 								Meteorite
 							</span>
 						</td>
@@ -571,20 +574,20 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='resource.plasma.heading'>
 										Plasma
 									</h2>
-									<span>
+									<span data-i18n='resource.plasma.psDesc'>
 										Plasma is the 4th state of matter and is used by Tier 4 machines and large space structures as an extreme power source for your company. At first you can hold 100,000 plasma at once, but you can unlock and purchase Plasma Storage Units to increase this number.
 										<br>
 										Time remaining until <span id="plasmaLimitType">full</span> storage: <b><span id="plasmaLimitTime">N/A</span></b>
 										<br>
-										1 Plasma is created by infusing <span id="manualPlasmaHydrogenCost">10</span> Hydrogen with <span id="manualPlasmaEnergyCost">1000</span> Energy.
+										<span data-i18n='resource.plasma.infuseDesc'>1 Plasma is created by infusing</span> <span id="manualPlasmaHydrogenCost">10</span> Hydrogen with <span id="manualPlasmaEnergyCost">1000</span> Energy.
 									</span>
 									<br>
 									<br>
 									<hide class="gainButton">
-										<div onclick="gainResource('plasma')" class="btn btn-default">Gain <span id="plasmaGain">1</span></div>
+										<div onclick="gainResource('plasma')" class="btn btn-default" data-i18n='resource.plasma.gain'>Gain <span id="plasmaGain">1</span></div>
 										<br>
 										<br>
 									</hide>
@@ -592,32 +595,32 @@
 							</tr>
 							<tr id="plasmaStorageUnits" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='resource.plasma.psu'>
 										PSUs: <span id="PSU">0</span>
 									</h3>
-									<span>
+									<span data-i18n='resource.plasma.psudesc'>
 										PSUs increase your plasma storage by 50,000 per PSU built.
 										<br>
 										Costs <span id="PSUSilverCost">770,000</span> Silver, <span id="PSUGoldCost">770,000</span> Gold, <span id="PSUUraniumCost">550,000</span> Uranium.
 									</span>
 									<br>
 									<br>
-									<button onclick="getPSU()" class="btn btn-default">Get PSU</button>
+									<button onclick="getPSU()" class="btn btn-default" data-i18n='resource.plasma.getPsu'>Get PSU</button>
 								</td>
 							</tr>
 							<tr id="plasmaStorageUnitsT2" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='resource.plasma.psut2'>
 										T2 PSUs: <span id="PSUT2">0</span>
 									</h3>
-									<span>
+									<span data-i18n='resource.plasma.psut2desc'>
 										Tier 2 PSUs increase your plasma storage by 500,000 per PSU built.
 										<br>
 										Costs <span id="PSUT2SilverCost">9.300M</span> Silver, <span id="PSUT2GoldCost">9.300M</span> Gold, <span id="PSUT2UraniumCost">6.800M</span> Uranium.
 									</span>
 									<br>
 									<br>
-									<button onclick="getPSUT2()" class="btn btn-default">Get PSU T2</button>
+									<button onclick="getPSUT2()" class="btn btn-default" data-i18n='resource.plasma.getPsuT2'>Get PSU T2</button>
 								</td>
 							</tr>
 							<tr>
@@ -691,7 +694,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='resource.energy.heading'>
 										Energy
 									</h2>
 									<span>
@@ -701,27 +704,27 @@
 										<br>
 									</span>
 									<br>
-									<button onclick="toggleEnergy()" class="btn btn-default">Toggle All Energy Production + Consumption</button>
+									<button onclick="toggleEnergy()" class="btn btn-default" data-i18n='common.toggleAllEnergy'>Toggle All Energy Production + Consumption</button>
 								</td>
 							</tr>
 							<tr id="batteries" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.batteries'>
 										Batteries: <span id="battery">0</span>
 									</h3>
-									<span>
+									<span data-i18n='common.batteriesDesc'>
 										Batteries increase your energy storage by 50,000 per battery built.
 										<br>
 										Costs <span id="batteryMetalCost">50,000</span> Metal, <span id="batteryGemCost">50,000</span> Gems, <span id="batteryLunariteCost">30,000</span> Lunarite.
 									</span>
 									<br>
 									<br>
-									<button onclick="getBattery()" class="btn btn-default">Get Battery</button>
+									<button onclick="getBattery()" class="btn btn-default" data-i18n='common.getBattery'>Get Battery</button>
 								</td>
 							</tr>
 							<tr id="batteriesT2" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.t2batteries'>
 										T2 Batteries: <span id="batteryT2">0</span>
 									</h3>
 									<span>
@@ -731,12 +734,12 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getBatteryT2()" class="btn btn-default">Get Battery T2</button>
+									<button onclick="getBatteryT2()" class="btn btn-default" data-i18n='common.getBatteryT2'>Get Battery T2</button>
 								</td>
 							</tr>
 							<tr id="batteriesT3" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.t3batteries'>
 										T3 Batteries: <span id="batteryT3">0</span>
 									</h3>
 									<span>
@@ -746,12 +749,12 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getBatteryT3()" class="btn btn-default">Get Battery T3</button>
+									<button onclick="getBatteryT3()" class="btn btn-default" data-i18n='common.getBatteryT3'>Get Battery T3</button>
 								</td>
 							</tr>
 							<tr id="batteriesT4" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.t4batteries'>
 										T4 Batteries: <span id="batteryT4">0</span>
 									</h3>
 									<span>
@@ -761,12 +764,12 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getBatteryT4()" class="btn btn-default">Get Battery T4</button>
+									<button onclick="getBatteryT4()" class="btn btn-default" data-i18n='common.getBatteryT4'>Get Battery T4</button>
 								</td>
 							</tr>
 							<tr id="batteriesT5" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.t5batteries'>
 										T5 Batteries: <span id="batteryT5">0</span>
 									</h3>
 									<span>
@@ -776,7 +779,7 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getBatteryT5()" class="btn btn-default">Get Battery T5</button>
+									<button onclick="getBatteryT5()" class="btn btn-default" data-i18n='common.getBatteryT5'>Get Battery T5</button>
 								</td>
 							</tr>
 							<tr>
@@ -895,7 +898,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='resource.uranium.heading'>
 										Uranium
 									</h2>
 									<span>
@@ -904,7 +907,7 @@
 									<hide class="gainButton">
 									<br>
 									<br>
-									<div onclick="gainResource('uranium')" class="btn btn-default">Gain <span id="uraniumGain">1</span></div>
+									<div onclick="gainResource('uranium')" class="btn btn-default" data-i18n='common.gain'>Gain <span id="uraniumGain">1</span></div>
 									</hide>
 									<br>
 									<br>
@@ -912,10 +915,10 @@
 							</tr>
 							<tr id="uraniumStorageUpgrade">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.storageUpgrade'>
 										Storage Upgrade
 									</h3>
-									<span>
+									<span data-i18n='common.upgradeStorageDesc'>
 										Upgrade your Uranium storage size to <span id="uraniumNextStorage">100</span>.
 										<br>
 										Time remaining until <span id="uraniumLimitType">full</span> storage: <b><span id="uraniumLimitTime">N/A</span></b>
@@ -924,15 +927,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="upgradeUraniumStorage()" class="btn btn-default">Upgrade Storage</button>
+									<button onclick="upgradeUraniumStorage()" class="btn btn-default" data-i18n='common.upgradeStorage'>Upgrade Storage</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.grinder.name'>
 										Grinder: <span id="grinder">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.grinder.desc'>
 										Pulverizes Uranium for easy transportation out of deep mineshafts.
 										<br>
 										Produces 1 Uranium per second.
@@ -941,16 +944,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getGrinder()" class="btn btn-default">Get Grinder</button>
-									<button onclick="destroyMachine('grinder')" class="btn btn-default destroy hidden">Destroy Grinder</button>
+									<button onclick="getGrinder()" class="btn btn-default" data-i18n='common.get'>Get Grinder</button>
+									<button onclick="destroyMachine('grinder')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Grinder</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.cubic.name'>
 										Cubic Teleposer: <span id="cubic">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.cubic.desc'>
 										This teleposes blocks of rock from far underground to the surface so that Uranium can be mined more easily.
 										<br>
 										Produces 9 Uranium per second.
@@ -961,16 +964,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getCubic()" class="btn btn-default">Get Cubic Teleposer</button>
-									<button onclick="destroyMachine('cubic')" class="btn btn-default destroy hidden">Destroy Cubic Teleposer</button>
+									<button onclick="getCubic()" class="btn btn-default" data-i18n='common.get'>Get Cubic Teleposer</button>
+									<button onclick="destroyMachine('cubic')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Cubic Teleposer</button>
 								</td>
 							</tr>
 							<tr id="uraniumTier3" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.enricher.name'>
 										Uranium Enricher: <span id="enricher">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.enricher.desc'>
 										The Enricher increases the quality of uranium mined and thus allows more of the uranium in rocks to be used in your company.
 										<br>
 										Produces 61 Uranium per second.
@@ -981,16 +984,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getEnricher()" class="btn btn-default">Get Uranium Enricher</button>
-									<button onclick="destroyMachine('enricher')" class="btn btn-default destroy hidden">Destroy Uranium Enricher</button>
+									<button onclick="getEnricher()" class="btn btn-default" data-i18n='common.get'>Get Uranium Enricher</button>
+									<button onclick="destroyMachine('enricher')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Uranium Enricher</button>
 								</td>
 							</tr>
 							<tr id="uraniumTier4" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.recycler.name'>
 										Yellowcake Recycler: <span id="recycler">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.recycler.desc'>
 										Recycles used-up Uranium to provide the resources with a second use. This greatly increases the amount of Uranium you can use per second.
 										<br>
 										Produces 235 Uranium per second.
@@ -1001,16 +1004,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getRecycler()" class="btn btn-default">Get Yellowcake Recycler</button>
-									<button onclick="destroyMachine('recycler')" class="btn btn-default destroy hidden">Destroy Yellowcake Recycler</button>
+									<button onclick="getRecycler()" class="btn btn-default" data-i18n='common.get'>Get Yellowcake Recycler</button>
+									<button onclick="destroyMachine('recycler')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Yellowcake Recycler</button>
 								</td>
 							</tr>
 							<tr id="uraniumTier5" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.planetNuke.name'>
 										Planetary Nuclear Plant: <span id="planetNuke">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.planetNuke.desc'>
 										This huge factory is as large as a planet, fusing together Uranium from common elements.
 										<br>
 										Produces 2412 Uranium per second.
@@ -1021,8 +1024,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getPlanetNuke()" class="btn btn-default">Get Planetary Nuclear Plant</button>
-									<button onclick="destroyMachine('planetNuke')" class="btn btn-default destroy hidden">Destroy Planetary Nuclear Plant</button>
+									<button onclick="getPlanetNuke()" class="btn btn-default" data-i18n='common.get'>Get Planetary Nuclear Plant</button>
+									<button onclick="destroyMachine('planetNuke')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Planetary Nuclear Plant</button>
 								</td>
 							</tr>
 						</table>
@@ -1033,7 +1036,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='resource.oil.heading'>
 										Oil
 									</h2>
 									<span>
@@ -1042,16 +1045,16 @@
 									<hide class="gainButton">
 									<br>
 									<br>
-									<div onclick="gainResource('oil')" class="btn btn-default">Gain <span id="oilGain">1</span></div>
+									<div onclick="gainResource('oil')" class="btn btn-default" data-i18n='common.gain'>Gain <span id="oilGain">1</span></div>
 									</hide>
 								</td>
 							</tr>
 							<tr id="oilStorageUpgrade" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.storageUpgrade'>
 										Storage Upgrade
 									</h3>
-									<span>
+									<span data-i18n='common.upgradeStorageDesc'>
 										Upgrade your Oil storage size to <span id="oilNextStorage">100</span>.
 										<br>
 										Time remaining until <span id="oilLimitType">full</span> storage: <b><span id="oilLimitTime">N/A</span></b>
@@ -1060,15 +1063,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="upgradeOilStorage()" class="btn btn-default">Upgrade Storage</button>
+									<button onclick="upgradeOilStorage()" class="btn btn-default" data-i18n='common.upgradeStorage'>Upgrade Storage</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.pump.name'>
 										Small Pump: <span id="pump">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.pump.desc'>
 										Build a small pump to extract Oil from the ground
 										<br>
 										Produces 1 Oil per second.
@@ -1077,16 +1080,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getPump()" class="btn btn-default">Get Pump</button>
-									<button onclick="destroyMachine('pump')" class="btn btn-default destroy hidden">Destroy Small Pump</button>
+									<button onclick="getPump()" class="btn btn-default" data-i18n='common.get'>Get Pump</button>
+									<button onclick="destroyMachine('pump')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Small Pump</button>
 								</td>
 							</tr>
 							<tr id="oilTier2" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.pumpjack.name'>
 										Pumpjack: <span id="pumpjack">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.pumpjack.desc'>
 										Pumpjacks are much bigger than small pumps and produce Oil on an industrial scale but they require a lot of Energy.
 										<br>
 										Each one produces <span id="pumpjackOutput">5</span> Oil for 4 Energy every second.
@@ -1095,16 +1098,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getPumpjack()" class="btn btn-default">Get Pumpjack</button>
-									<button onclick="destroyMachine('pumpjack')" class="btn btn-default destroy hidden">Destroy Pumpjack</button>
+									<button onclick="getPumpjack()" class="btn btn-default" data-i18n='common.get'>Get Pumpjack</button>
+									<button onclick="destroyMachine('pumpjack')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Pumpjack</button>
 								</td>
 							</tr>
 							<tr id="oilTier3" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.oilField.name'>
 										Oil Field: <span id="oilField">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.oilField.desc'>
 										Oil Fields are large open spaces, usually found in deserts where vast oil wells can be found under the ground.
 										<br>
 										Produces 63 Oil per second.
@@ -1115,16 +1118,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getOilField()" class="btn btn-default">Get Oil Field</button>
-									<button onclick="destroyMachine('oilField')" class="btn btn-default destroy hidden">Destroy Oil Field</button>
+									<button onclick="getOilField()" class="btn btn-default" data-i18n='common.get'>Get Oil Field</button>
+									<button onclick="destroyMachine('oilField')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Oil Field</button>
 								</td>
 							</tr>
 							<tr id="oilTier4" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.oilRig.name'>
 										Offshore Rig: <span id="oilRig">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.oilRig.desc'>
 										Offshore Rigs are megastructures floating in the oceans, extracting Oil from under the sea-beds.
 										<br>
 										Produces 246 Oil per second.
@@ -1135,16 +1138,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getOilRig()" class="btn btn-default">Get Offshore Rig</button>
-									<button onclick="destroyMachine('oilRig')" class="btn btn-default destroy hidden">Destroy Offshore Rig</button>
+									<button onclick="getOilRig()" class="btn btn-default" data-i18n='common.get'>Get Offshore Rig</button>
+									<button onclick="destroyMachine('oilRig')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Offshore Rig</button>
 								</td>
 							</tr>
 							<tr id="oilTier5" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.fossilator.name'>
 										Fossilator 9000: <span id="fossilator">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.fossilator.desc'>
 										Much better than the 8000 version, this fossilator reverses the fossil fuel cycle. Instead of burning, it creates them from carbon in the air.
 										<br>
 										Produces 2627 Oil per second.
@@ -1155,8 +1158,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getFossilator()" class="btn btn-default">Get Fossilator 9000</button>
-									<button onclick="destroyMachine('fossilator')" class="btn btn-default destroy hidden">Destroy Fossilator 9000</button>
+									<button onclick="getFossilator()" class="btn btn-default" data-i18n='common.get'>Get Fossilator 9000</button>
+									<button onclick="destroyMachine('fossilator')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Fossilator 9000</button>
 								</td>
 							</tr>
 						</table>
@@ -1167,7 +1170,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='resource.metal.heading'>
 										Metal
 									</h2>
 									<span>
@@ -1176,7 +1179,7 @@
 									<hide class="gainButton">
 									<br>
 									<br>
-									<div onclick="gainResource('metal')" class="btn btn-default">Gain <span id="metalGain">1</span></div>
+									<div onclick="gainResource('metal')" class="btn btn-default" data-i18n='common.gain'>Gain <span id="metalGain">1</span></div>
 									</hide>
 									<br>
 									<br>
@@ -1184,10 +1187,10 @@
 							</tr>
 							<tr id="metalStorageUpgrade" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.storageUpgrade'>
 										Storage Upgrade
 									</h3>
-									<span>
+									<span data-i18n='common.upgradeStorageDesc'>
 										Upgrade your Metal storage size to <span id="metalNextStorage">100</span>.
 										<br>
 										Time remaining until <span id="metalLimitType">full</span> storage: <b><span id="metalLimitTime">N/A</span></b>
@@ -1196,15 +1199,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="upgradeMetalStorage()" class="btn btn-default">Upgrade Storage</button>
+									<button onclick="upgradeMetalStorage()" class="btn btn-default" data-i18n='common.upgradeStorage'>Upgrade Storage</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.miner.name'>
 										Miner: <span id="miner">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.miner.desc'>
 										Build a pickaxe for your miner.
 										<br>
 										Produces 1 Metal per second.
@@ -1213,16 +1216,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getMiner()" class="btn btn-default">Get Miner</button>
-									<button onclick="destroyMachine('miner')" class="btn btn-default destroy hidden">Destroy Miner</button>
+									<button onclick="getMiner()" class="btn btn-default" data-i18n='common.get'>Get Miner</button>
+									<button onclick="destroyMachine('miner')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Miner</button>
 								</td>
 							</tr>
 							<tr id="metalTier2" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.heavyDrill.name'>
 										Heavy Drill: <span id="heavyDrill">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.heavyDrill.desc'>
 										Heavy Drills mine Metal at mass.
 										<br>
 										They produce <span id="heavyDrillOutput">8</span> Metal per second.
@@ -1233,16 +1236,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getHeavyDrill()" class="btn btn-default">Get Heavy Drill</button>
-									<button onclick="destroyMachine('heavyDrill')" class="btn btn-default destroy hidden">Destroy Heavy Drill</button>
+									<button onclick="getHeavyDrill()" class="btn btn-default" data-i18n='common.get'>Get Heavy Drill</button>
+									<button onclick="destroyMachine('heavyDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Heavy Drill</button>
 								</td>
 							</tr>
 							<tr id="metalTier3" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.gigaDrill.name'>
 										Giga Drill: <span id="gigaDrill">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.gigaDrill.desc'>
 										Giga Drills extract Metal at colossal speeds.
 										<br>
 										They produce 108 Metal per second.
@@ -1253,16 +1256,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getGigaDrill()" class="btn btn-default">Get Giga Drill</button>
-									<button onclick="destroyMachine('gigaDrill')" class="btn btn-default destroy hidden">Destroy Giga Drill</button>
+									<button onclick="getGigaDrill()" class="btn btn-default" data-i18n='common.get'>Get Giga Drill</button>
+									<button onclick="destroyMachine('gigaDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Giga Drill</button>
 								</td>
 							</tr>
 							<tr id="metalTier4" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.quantumDrill.name'>
 										Quantum Drill: <span id="quantumDrill">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.quantumDrill.desc'>
 										Quantum Drills bend the space-time continuum to get metal faster than conventional methods.
 										<br>
 										They produce 427 Metal per second.
@@ -1273,16 +1276,16 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getQuantumDrill()" class="btn btn-default">Get Quantum Drill</button>
-									<button onclick="destroyMachine('quantumDrill')" class="btn btn-default destroy hidden">Destroy Quantum Drill</button>
+									<button onclick="getQuantumDrill()" class="btn btn-default" data-i18n='common.get'>Get Quantum Drill</button>
+									<button onclick="destroyMachine('quantumDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Quantum Drill</button>
 								</td>
 							</tr>
 							<tr id="metalTier5" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.multiDrill.name'>
 										Multiverse Drill: <span id="multiDrill">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.multiDrill.desc'>
 										Drills metal from alternate realities where metal is plentiful .
 										<br>
 										They produce 4768 Metal per second.
@@ -1293,8 +1296,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getMultiDrill()" class="btn btn-default">Get Multiverse Drill</button>
-									<button onclick="destroyMachine('multiDrill')" class="btn btn-default destroy hidden">Destroy Multiverse Drill</button>
+									<button onclick="getMultiDrill()" class="btn btn-default" data-i18n='common.get'>Get Multiverse Drill</button>
+									<button onclick="destroyMachine('multiDrill')" class="btn btn-default destroy hidden" data-i18n='common.destroy'>Destroy Multiverse Drill</button>
 								</td>
 							</tr>
 						</table>
@@ -1305,7 +1308,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='resource.gem.heading'>
 										Gems
 									</h2>
 									<span>
@@ -3231,7 +3234,7 @@
 							<img src="Icons/scienceIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="border:none; vertical-align:middle;">
-							<span>
+							<span data-i18n='research.sidebar.science'>
 								Science Production
 							</span>
 						</td>
@@ -3251,7 +3254,7 @@
 							<img src="Icons/technologyIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='research.sidebar.tech'>
 								Technologies
 							</span>
 						</td>
@@ -3264,10 +3267,10 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='research.science.title'>
 										Science Production
 									</h2>
-									<span>
+									<span data-i18n='research.science.desc'>
 										Science is used for researching new technologies to further your progress in the game.
 									</span>
 									<br>
@@ -3276,10 +3279,10 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.scienceT1.name'>
 										Home Science Kit: <span id="lab">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.scienceT1.desc'>
 										Build a small laboratory of your very own to start producing science.
 										<br>
 										Each one produces 0.1 science per second.
@@ -3288,17 +3291,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getLab()" class="btn btn-default">Build</button>
+									<button onclick="getLab()" class="btn btn-default" data-i18n='common.build'>Build</button>
 									<br>
 									<br>
 								</td>
 							</tr>
 							<tr id="labTier2" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.scienceT2.name'>
 										High School Science: <span id="labT2">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.scienceT2.desc'>
 										Build a more effective laboratory to continue your quest into the realm of science at a significantly faster speed.
 										<br>
 										Each one produces 1 science per second.
@@ -3307,17 +3310,17 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getLabT2()" class="btn btn-default">Build Laboratory T2</button>
+									<button onclick="getLabT2()" class="btn btn-default" data-i18n='research.buildLabT2'>Build Laboratory T2</button>
 									<br>
 									<br>
 								</td>
 							</tr>
 							<tr id="labTier3" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.scienceT3.name'>
 										University Laboratory: <span id="labT3">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.scienceT3.desc'>
 										Build an even better version of the old laboratory to further your exploration of the realm of science.
 										<br>
 										Each one produces 10 science per second.
@@ -3326,15 +3329,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getLabT3()" class="btn btn-default">Build Laboratory T3</button>
+									<button onclick="getLabT3()" class="btn btn-default" data-i18n='research.buildLabT3'>Build Laboratory T3</button>
 								</td>
 							</tr>
 							<tr id="labTier4" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.scienceT4.name'>
 										Scientific Observatory: <span id="labT4">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.scienceT4.desc'>
 										Create an observatory to gaze upon the stars and acquire knowledge from them.
 										<br>
 										Each one produces 100 science per second.
@@ -3343,15 +3346,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getLabT4()" class="btn btn-default">Build Laboratory T4</button>
+									<button onclick="getLabT4()" class="btn btn-default" data-i18n='research.buildLabT4'>Build Laboratory T4</button>
 								</td>
 							</tr>
 							<tr id="labTier5" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.scienceT5.name'>
 										Space Scientific Satellite Station: <span id="labT5">0</span>
 									</h3>
-									<span>
+									<span data-i18n='building.scienceT5.desc'>
 										From outside Earth's orbit, the universe can be understood much more efficiently without an atmosphere obstructing the lab's view.
 										<br>
 										Each one produces 1000 science per second.
@@ -3360,7 +3363,7 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getLabT5()" class="btn btn-default">Build Laboratory T5</button>
+									<button onclick="getLabT5()" class="btn btn-default" data-i18n='research.buildLabT5'>Build Laboratory T5</button>
 								</td>
 							</tr>
 						</table>
@@ -3371,10 +3374,10 @@
 						<table id="techTable" class="table">
 							<tr>
 								<td style="border: none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='research.tech.title'>
 										Technologies
 									</h2>
-									<span>
+									<span data-i18n='research.tech.desc'>
 										Research new technologies to unlock more mechanics and advance through the game.
 									</span>
 								</td>
@@ -3395,7 +3398,7 @@
 							<img src="Icons/rocketFuelIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="border:none; vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.rocketFuel.name'>
 								Rocket Fuel
 							</span>
 						</td>
@@ -3415,14 +3418,14 @@
 							<img src="Icons/rocketIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.rocket.name'>
 								Space Rocket
 							</span>
 						</td>
 					</tr>
 					<tr id="collapseInner" class="collapseInner hidden" style="border:none;">
 						<td colspan="4">
-							<span>Collapse Inner Solar System</span> <span class="caret"></span>
+							<span data-i18n='solarSystem.collapseInner.name'>Collapse Inner Solar System</span> <span class="caret"></span>
 						</td>
 					</tr>
 					<tr class="hidden" id="moon" onclick="activeSolarTab('moon')" href="#moonTab" aria-controls="moonTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3430,7 +3433,7 @@
 							<img src="Icons/moonIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.moon.name'>
 								The Moon
 							</span>
 						</td>
@@ -3440,7 +3443,7 @@
 							<img src="Icons/mercuryIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.mercury.name'>
 								Mercury
 							</span>
 						</td>
@@ -3450,7 +3453,7 @@
 							<img src="Icons/venusIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.venus.name'>
 								Venus
 							</span>
 						</td>
@@ -3460,7 +3463,7 @@
 							<img src="Icons/marsIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.mars.name'>
 								Mars
 							</span>
 						</td>
@@ -3470,7 +3473,7 @@
 							<img src="Icons/asteroidBeltIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.asteroidBelt.name'>
 								Asteroid Belt
 							</span>
 						</td>
@@ -3480,14 +3483,14 @@
 							<img src="Icons/wonderStationIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.wonderStation.name'>
 								The Wonder Station
 							</span>
 						</td>
 					</tr>
 					<tr id="collapseOuter" class="collapseOuter hidden" style="border:none;">
 						<td colspan="4">
-							<span>Collapse Outer Solar System</span> <span class="caret"></span>
+							<span data-i18n='solarSystem.collapseOuter.name'>Collapse Outer Solar System</span> <span class="caret"></span>
 						</td>
 					</tr>
 					<tr class="hidden" id="jupiter" onclick="activeSolarTab('jupiter')" href="#jupiterTab" aria-controls="jupiterTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -3495,7 +3498,7 @@
 							<img src="Icons/jupiterIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.jupiter.name'>
 								Jupiter
 							</span>
 						</td>
@@ -3505,7 +3508,7 @@
 							<img src="Icons/saturnIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.saturn.name'>
 								Saturn
 							</span>
 						</td>
@@ -3515,7 +3518,7 @@
 							<img src="Icons/uranusIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.uranus.name'>
 								Uranus
 							</span>
 						</td>
@@ -3525,7 +3528,7 @@
 							<img src="Icons/neptuneIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.neptune.name'>
 								Neptune
 							</span>
 						</td>
@@ -3535,7 +3538,7 @@
 							<img src="Icons/plutoIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.pluto.name'>
 								Pluto
 							</span>
 						</td>
@@ -3545,7 +3548,7 @@
 							<img src="Icons/kuiperBeltIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.kuiperBelt.name'>
 								Kuiper Belt
 							</span>
 						</td>
@@ -3555,7 +3558,7 @@
 							<img src="Icons/solCenterIcon.png" style="width:30px; height:auto">
 						</td>
 						<td colspan="3" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='solarSystem.solCenter.name'>
 								Sol Scientific Center
 							</span>
 						</td>
@@ -3568,7 +3571,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.rocketFuel.name'>
 										Rocket Fuel
 									</h2>
 									<span>
@@ -3583,7 +3586,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.rocketFuelT1.name'>
 										Chemical Plant: <span id="chemicalPlant">0</span>
 									</h3>
 									<span>
@@ -3597,15 +3600,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getChemicalPlant()" class="btn btn-default">Build Chemical Plant</button>
-									<button onclick="destroyMachine('chemicalPlant')" class="btn btn-default destroy hidden">Destroy Chemical Plant</button>
+									<button onclick="getChemicalPlant()" class="btn btn-default" data-i18n='solarSystem.buildChemPlant'>Build Chemical Plant</button>
+									<button onclick="destroyMachine('chemicalPlant')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyChemPlant'>Destroy Chemical Plant</button>
 									<br>
 									<br>
 								</td>
 							</tr>
 							<tr id="rocketFuelT2" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.rocketFuelT2.name'>
 										Oxidisation Chamber: <span id="oxidisation">0</span>
 									</h3>
 									<span>
@@ -3619,15 +3622,15 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getOxidisation()" class="btn btn-default">Build Oxidisation Chamber</button>
-									<button onclick="destroyMachine('oxidisation')" class="btn btn-default destroy hidden">Destroy Oxidisation Chamber</button>
+									<button onclick="getOxidisation()" class="btn btn-default" data-i18n='solarSystem.buildOxidisation'>Build Oxidisation Chamber</button>
+									<button onclick="destroyMachine('oxidisation')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyOxidisation'>Destroy Oxidisation Chamber</button>
 									<br>
 									<br>
 								</td>
 							</tr>
 							<tr id="rocketFuelT3" class="hidden">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='building.rocketFuelT3.name'>
 										Hydrazine Catalyst: <span id="hydrazine">0</span>
 									</h3>
 									<span>
@@ -3641,8 +3644,8 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getHydrazine()" class="btn btn-default">Build Hydrazine Catalyst</button>
-									<button onclick="destroyMachine('hydrazine')" class="btn btn-default destroy hidden">Destroy Hydrazine Catalyst</button>
+									<button onclick="getHydrazine()" class="btn btn-default" data-i18n='solarSystem.buildHydrazine'>Build Hydrazine Catalyst</button>
+									<button onclick="destroyMachine('hydrazine')" class="btn btn-default destroy hidden" data-i18n='solarSystem.destroyHydrazine'>Destroy Hydrazine Catalyst</button>
 									<br>
 									<br>
 								</td>
@@ -3655,10 +3658,10 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.rocket.name'>
 										Rocket
 									</h2>
-									<span>
+									<span data-i18n='solarSystem.rocket.desc'>
 										Building a rocket will allow for exploration around the solar system and will allow you to gather resources in space.
 										<br>
 										<b>NB: You only need 1 Rocket. You can reuse the same one by just using fuel.</b>
@@ -3679,24 +3682,24 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getRocket()" class="btn btn-default">Build Rocket</button>
+									<button onclick="getRocket()" class="btn btn-default" data-i18n='solarSystem.rocket.build'>Build Rocket</button>
 									<br>
 									<br>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='solarSystem.rocket.launch'>
 										Launch Rocket
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.rocket.launchDesc'>
 										Launching the rocket into space will unlock space mining, exploration and other planets.
 										<br>
 										This requires <span id="rocketRocketCost" class="red">1</span> rocket and <span id="rocketRocketFuelCost" class="red">20</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="launchRocket()" class="btn btn-default">Launch Rocket</button>
+									<button onclick="launchRocket()" class="btn btn-default" data-i18n='solarSystem.rocket.launchBtn'>Launch Rocket</button>
 									<br>
 									<br>
 								</td>
@@ -3709,7 +3712,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.moon.name'>
 										The Moon
 									</h2>
 									<span>
@@ -3721,17 +3724,17 @@
 							</tr>
 							<tr id="exploreMoon">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.moon.explore'>
 										Exploring the Moon will unlock the collection of Lunarite.
 										<br>
 										Costs <span id="moonRocketFuelCost">20</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('Moon')" class="btn btn-default">Explore Moon</button>
+									<button onclick="explore('Moon')" class="btn btn-default" data-i18n='solarSystem.moon.exploreBtn'>Explore Moon</button>
 									<br>
 									<br>
 								</td>
@@ -3744,10 +3747,10 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.mercury.name'>
 										Mercury
 									</h2>
-									<span>
+									<span data-i18n='solarSystem.mercury.explore'>
 										Mercury is a lifeless rock with little to no value. It is not worth exploring on the ground as there are no valuable materials present.
 									</span>
 									<br>
@@ -3762,7 +3765,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.venus.name'>
 										Venus
 									</h2>
 									<span>
@@ -3774,17 +3777,17 @@
 							</tr>
 							<tr id="exploreVenus">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.venus.explore'>
 										Exploring Venus will unlock methane and methane based power.
 										<br>
 										Costs <span id="venusRocketFuelCost">50</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('Venus')" class="btn btn-default">Explore Venus</button>
+									<button onclick="explore('Venus')" class="btn btn-default" data-i18n='solarSystem.venus.exploreBtn'>Explore Venus</button>
 									<br>
 									<br>
 								</td>
@@ -3797,7 +3800,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.mars.name'>
 										Mars
 									</h2>
 									<span>
@@ -3809,17 +3812,17 @@
 							</tr>
 							<tr id="exploreMars">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.mars.explore'>
 										Exploring Mars unlocks Titanium production, which allows you to harvest Silicon on Earth and to build Methane power plants.
 										<br>
 										Costs <span id="marsRocketFuelCost">80</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('Mars')" class="btn btn-default">Explore Mars</button>
+									<button onclick="explore('Mars')" class="btn btn-default" data-i18n='solarSystem.mars.exploreBtn'>Explore Mars</button>
 									<br>
 									<br>
 								</td>
@@ -3832,7 +3835,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.asteroidBelt.name'>
 										Asteroid Belt
 									</h2>
 									<span>
@@ -3844,17 +3847,17 @@
 							</tr>
 							<tr id="exploreAsteroidBelt">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.asteroidBelt.explore'>
 										Exploring the asteroid belt gives you access to Gold and Silver.
 										<br>
 										Costs <span id="asteroidBeltRocketFuelCost">200</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('AsteroidBelt')" class="btn btn-default">Explore Asteroid Belt</button>
+									<button onclick="explore('AsteroidBelt')" class="btn btn-default" data-i18n='solarSystem.asteroidBelt.exploreBtn'>Explore Asteroid Belt</button>
 									<br>
 									<br>
 								</td>
@@ -3867,7 +3870,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.wonderStation.name'>
 										The Wonder Station
 									</h2>
 									<span>
@@ -3879,17 +3882,17 @@
 							</tr>
 							<tr id="exploreWonderStation">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.wonderStation.explore'>
 										Exploring the Wonder Station will gives you access to Wonders and allow you to continue your research and travel even further than before.
 										<br>
 										Costs <span id="wonderStationRocketFuelCost">500</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('WonderStation')" class="btn btn-default">Explore The Wonder Station</button>
+									<button onclick="explore('WonderStation')" class="btn btn-default" data-i18n='solarSystem.wonderStation.exploreBtn'>Explore The Wonder Station</button>
 									<br>
 									<br>
 								</td>
@@ -3902,7 +3905,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.jupiter.name'>
 										Jupiter
 									</h2>
 									<span>
@@ -3914,17 +3917,17 @@
 							</tr>
 							<tr id="exploreJupiter">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.jupiter.explore'>
 										Exploring Jupiter gives you access to Hydrogen.
 										<br>
 										Costs <span id="jupiterRocketFuelCost">1000</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('Jupiter')" class="btn btn-default">Explore Jupiter</button>
+									<button onclick="explore('Jupiter')" class="btn btn-default" data-i18n='solarSystem.jupiter.exploreBtn'>Explore Jupiter</button>
 									<br>
 									<br>
 								</td>
@@ -3937,7 +3940,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.saturn.name'>
 										Saturn
 									</h2>
 									<span>
@@ -3949,17 +3952,17 @@
 							</tr>
 							<tr id="exploreSaturn">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.saturn.explore'>
 										Exploring Saturn gives you access to Helium.
 										<br>
 										Costs <span id="saturnRocketFuelCost">2000</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('Saturn')" class="btn btn-default">Explore Saturn</button>
+									<button onclick="explore('Saturn')" class="btn btn-default" data-i18n='solarSystem.saturn.exploreBtn'>Explore Saturn</button>
 									<br>
 									<br>
 								</td>
@@ -3972,10 +3975,10 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.uranus.name'>
 										Uranus
 									</h2>
-									<span>
+									<span data-i18n='solarSystem.uranus.desc'>
 										The planet that rotates differently from everyone else has winds up to 300 miles per hour (483kph). Its composition is much like that of the other gas giants, mainly composed of Hydrogen and Helium. Because of this, it is not worth exploring to get the same resources as in Saturn and Jupiter.
 									</span>
 									<br>
@@ -3990,10 +3993,10 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.neptune.name'>
 										Neptune
 									</h2>
-									<span>
+									<span data-i18n='solarSystem.neptune.desc'>
 										Neptune has the strangest weather in the solar system. There are huge storms and winds that are more violent than any other in the solar system. There is not much there but Methane, Hydrogen and Helium.
 									</span>
 									<br>
@@ -4008,7 +4011,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.pluto.name'>
 										Pluto
 									</h2>
 									<span>
@@ -4020,17 +4023,17 @@
 							</tr>
 							<tr id="explorePluto">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.pluto.explore'>
 										No-one knows what lies near and around pluto as it is so far away. On there surface, there is almost only ice, but maybe an exploration will teach us more about the unknown.
 										<br>
 										Costs <span id="plutoRocketFuelCost">5000</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('Pluto')" class="btn btn-default">Explore Pluto</button>
+									<button onclick="explore('Pluto')" class="btn btn-default" data-i18n='solarSystem.pluto.exploreBtn'>Explore Pluto</button>
 									<br>
 									<br>
 								</td>
@@ -4043,7 +4046,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.kuiperBelt.name'>
 										Kuiper Belt
 									</h2>
 									<span>
@@ -4055,17 +4058,17 @@
 							</tr>
 							<tr id="exploreKuiperBelt">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.kuiperBelt.explore'>
 										Exploring the Kuiper Belt gives you access to the hidden base
 										<br>
 										Costs <span id="kuiperBeltRocketFuelCost">6000</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('KuiperBelt')" class="btn btn-default">Explore Kuiper Belt</button>
+									<button onclick="explore('KuiperBelt')" class="btn btn-default" data-i18n='solarSystem.kuiperBelt.exploreBtn'>Explore Kuiper Belt</button>
 									<br>
 									<br>
 								</td>
@@ -4078,7 +4081,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='solarSystem.solCenter.name'>
 										The Sol Scientific Center
 									</h2>
 									<span>
@@ -4090,17 +4093,17 @@
 							</tr>
 							<tr id="exploreSolCenter">
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='common.exploration'>
 										Exploration
 									</h3>
-									<span>
+									<span data-i18n='solarSystem.solCenter.explore'>
 										Exploring the Sol Center gives you access to the hidden base.
 										<br>
 										Costs <span id="solCenterRocketFuelCost">7000</span> rocket fuel.
 									</span>
 									<br>
 									<br>
-									<button onclick="explore('SolCenter')" class="btn btn-default">Explore Sol Center</button>
+									<button onclick="explore('SolCenter')" class="btn btn-default" data-i18n='solarSystem.solCenter.exploreBtn'>Explore Sol Center</button>
 									<br>
 									<br>
 								</td>
@@ -4117,92 +4120,92 @@
 				<table class="table table-hover text-primary no-select pointer">
 					<tr id="theWonderStation" onclick="activeWonderTab('theWonderStation')" href="#theWonderStationTab" aria-controls="theWonderStationTab" role="tab" data-toggle="tab" style="height:60px; border:none;">
 						<td style="border:none; vertical-align:middle;">
-							<span>
+							<span data-i18n='wonder.sidebar.station'>
 								Wonder Station
 							</span>
 						</td>
 					</tr>
 					<tr id="wonderFloor1Nav" class="hidden">
 						<th>
-							<span>
+							<span data-i18n='wonder.sidebar.floor1'>
 								Wonder Station - Floor 1
 							</span>
 						</th>
 					</tr>
 					<tr id="preciousWonderNav" onclick="activeWonderTab('preciousWonderNav')" class="sideTab hidden" href="#preciousWonderTab" aria-controls="preciousWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Precious Wonder: <span id="preciousActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.precious'>
+								Precious Wonder: <span id="preciousActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="energeticWonderNav" onclick="activeWonderTab('energeticWonderNav')" class="sideTab hidden" href="#energeticWonderTab" aria-controls="energeticWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Energetic Wonder: <span id="energeticActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.energetic'>
+								Energetic Wonder: <span id="energeticActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="techWonderNav" onclick="activeWonderTab('techWonderNav')" class="sideTab hidden" href="#techWonderTab" aria-controls="techWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Technological Wonder: <span id="techActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.technological'>
+								Technological Wonder: <span id="techActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="meteoriteWonderNav" onclick="activeWonderTab('meteoriteWonderNav')" class="sideTab hidden" href="#meteoriteWonderTab" aria-controls="meteoriteWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Meteorite Wonder: <span id="meteoriteActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.meteorite'>
+								Meteorite Wonder: <span id="meteoriteActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="wonderFloor2Nav" class="hidden">
 						<th>
-							<span>
+							<span data-i18n='wonder.sidebar.floor2'>
 								Wonder Station - Floor 2
 							</span>
 						</th>
 					</tr>
 					<tr id="communicationWonderNav" onclick="activeWonderTab('communicationWonderNav')" class="sideTab hidden" href="#communicationWonderTab" aria-controls="communicationWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Comms Wonder: <span id="commsActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.comms'>
+								Comms Wonder: <span id="commsActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="rocketWonderNav" onclick="activeWonderTab('rocketWonderNav')" class="sideTab hidden" href="#rocketWonderTab" aria-controls="rocketWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Rocket Wonder: <span id="rocketActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.rocket'>
+								Rocket Wonder: <span id="rocketActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="antimatterWonderNav" onclick="activeWonderTab('antimatterWonderNav')" class="sideTab hidden" href="#antimatterWonderTab" aria-controls="antimatterWonderTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Antimatter Wonder: <span id="antimatterActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.antimatter'>
+								Antimatter Wonder: <span id="antimatterActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="portalRoomNav" onclick="activeWonderTab('portalRoomNav')" class="sideTab hidden" href="#portalRoomTab" aria-controls="portalRoomTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Portal Room: <span id="portalRoomActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.portal'>
+								Portal Room: <span id="portalRoomActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
 					<tr id="wonderFloor3Nav" class="hidden">
 						<th>
-							<span>
+							<span data-i18n='wonder.sidebar.floor3'>
 								Wonder Station - Floor 3
 							</span>
 						</th>
 					</tr>
 					<tr id="stargateNav" onclick="activeWonderTab('stargateNav')" class="sideTab hidden" href="#stargateTab" aria-controls="stargateTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Stargate: <span id="stargateActivation">Dormant</span>
+							<span data-i18n='wonder.sidebar.stargate'>
+								Stargate: <span id="stargateActivation" data-i18n='wonder.sidebar.dormant'>Dormant</span>
 							</span>
 						</td>
 					</tr>
@@ -4214,13 +4217,13 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.main.title'>
 										Inside The Wonder Station
 									</h2>
 									<span>
 										As you enter the revolving pyramids, floating through space, you feel a small tug on your spacecraft as it gravitates towards an opening doorway in the side of the lowest section. Exiting your spacecraft, you experience the artificial gravity and walk to the large hallway ahead. Adorning the walls are four huge paintings of monolithic structures in the corners of the room with descriptions underneath. At the far end of the room is a giant door, closed without any indication of being able to open. You feel that there is a higher being watching over you as you walk through the room.
 										<br>
-										<b>NB: You must activate the wonders after building them to receive their effects</b>
+										<b data-i18n='wonder.nb.main'>NB: You must activate the wonders after building them to receive their effects</b>
 									</span>
 									<br>
 									<br>
@@ -4228,7 +4231,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.main.precious'>
 										Precious Metals Wonder
 									</h3>
 									<span>
@@ -4241,7 +4244,7 @@
 											He requires that you donate <span id="preciousGemCost">10,000</span> Gems, <span id="preciousSilverCost">7,500</span> Silver and <span id="preciousGoldCost">5,000</span> Gold for this knowledge.
 											<br>
 											<br>
-											<button onclick="achievePreciousWonder()" class="btn btn-default">Donate Resources</button>
+											<button onclick="achievePreciousWonder()" class="btn btn-default" data-i18n='wonder.main.donate'>Donate Resources</button>
 											<br>
 											<br>
 											<div id="preciousProgress" class="progress">
@@ -4255,7 +4258,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.main.energetic'>
 										Energetic Wonder
 									</h3>
 									<span>
@@ -4268,7 +4271,7 @@
 											He requests a pyramid containing <span id="energeticWoodCost">10,000</span> Wood, <span id="energeticCharcoalCost">5,000</span> Charcoal and <span id="energeticUraniumCost">200</span> Uranium to acquire his methods.
 											<br>
 											<br>
-											<button onclick="achieveEnergeticWonder()" class="btn btn-default">Donate Resources</button>
+											<button onclick="achieveEnergeticWonder()" class="btn btn-default" data-i18n='wonder.main.donate'>Donate Resources</button>
 											<br>
 											<br>
 											<div id="energeticProgress" class="progress">
@@ -4282,7 +4285,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.main.technological'>
 										Technological Wonder
 									</h3>
 									<span>
@@ -4295,7 +4298,7 @@
 											He requests a tower consisting of <span id="techSiliconCost">30,000</span> Silicon, <span id="techGoldCost">18,000</span> Gold and <span id="techGemCost">40,000</span> Gems to unlock this technology.
 											<br>
 											<br>
-											<button onclick="achieveTechWonder()" class="btn btn-default">Donate Resources</button>
+											<button onclick="achieveTechWonder()" class="btn btn-default" data-i18n='wonder.main.donate'>Donate Resources</button>
 											<br>
 											<br>
 											<div id="techProgress" class="progress">
@@ -4309,7 +4312,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.main.meteorite'>
 										Meteorite Wonder
 									</h3>
 									<span>
@@ -4322,7 +4325,7 @@
 											The Overlord wishes for a cube made up of <span id="meteoriteMeteoriteCost">5,000</span> Meteorite, <span id="meteoriteIceCost">600,000</span> Ice and <span id="meteoriteSiliconCost">1,200,000</span> Silicon to be given this technology.
 											<br>
 											<br>
-											<button onclick="achieveMeteoriteWonder()" class="btn btn-default">Donate Resources</button>
+											<button onclick="achieveMeteoriteWonder()" class="btn btn-default" data-i18n='wonder.main.donate'>Donate Resources</button>
 											<br>
 											<br>
 											<div id="meteoriteProgress" class="progress">
@@ -4342,7 +4345,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.precious.title'>
 										The Precious Wonder
 									</h2>
 									<span>
@@ -4352,17 +4355,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
 										Activate Wonder
 									</h3>
 									<span>
 										Activating this wonder will teach you about Uranium, how to get it and how to harness it. Learning about this rare element found deep within Earth will unlock nuclear power, a new way to create Energy.
 										<br>
 										<hide id="activatePreciousWonder">
-											Costs: <span id="preciousActivateGemCost">30,000</span> Gems, <span id="preciousActivateSilverCost">20,000</span> Silver, <span id="preciousActivateGoldCost">10,000</span> Gold.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="preciousActivateGemCost">30,000</span> Gems, <span id="preciousActivateSilverCost">20,000</span> Silver, <span id="preciousActivateGoldCost">10,000</span> Gold.
 											<br>
 											<br>
-											<button onclick="activatePreciousWonder()" class="btn btn-default">Activate Precious Wonder</button>
+											<button onclick="activatePreciousWonder()" class="btn btn-default" data-i18n='wonder.activate.precious'>Activate Precious Wonder</button>
 											<br>
 											<br>
 											<div id="preciousActivateProgress" class="progress">
@@ -4383,7 +4386,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.energetic.title'>
 										The Energetic Wonder
 									</h2>
 									<span>
@@ -4393,17 +4396,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
 										Activate Wonder
 									</h3>
 									<span>
 										Activating this wonder will allow you to harness the power of Lava, a new method of Energy generation.
 										<br>
 										<hide id="activateEnergeticWonder">
-											Costs: <span id="energeticActivateWoodCost">30,000</span> Wood, <span id="energeticActivateCharcoalCost">15,000</span> Charcoal, <span id="energeticActivateUraniumCost">500</span> Uranium.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="energeticActivateWoodCost">30,000</span> Wood, <span id="energeticActivateCharcoalCost">15,000</span> Charcoal, <span id="energeticActivateUraniumCost">500</span> Uranium.
 											<br>
 											<br>
-											<button onclick="activateEnergeticWonder()" class="btn btn-default">Activate Energetic Wonder</button>
+											<button onclick="activateEnergeticWonder()" class="btn btn-default" data-i18n='wonder.activate.energetic'>Activate Energetic Wonder</button>
 											<br>
 											<br>
 											<div id="energeticActivateProgress" class="progress">
@@ -4424,7 +4427,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.technological.title'>
 										The Technological Wonder
 									</h2>
 									<span>
@@ -4434,17 +4437,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
 										Activate Wonder
 									</h3>
 									<span>
 										Activating this wonder will allow you to build Tier 3 Machines, a much more effective method of collecting resources.
 										<br>
 										<hide id="activateTechWonder">
-											Costs: <span id="techActivateSiliconCost">50,000</span> Silicon, <span id="techActivateGoldCost">30,000</span> Gold, <span id="techActivateGemCost">60,000</span> Gems.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="techActivateSiliconCost">50,000</span> Silicon, <span id="techActivateGoldCost">30,000</span> Gold, <span id="techActivateGemCost">60,000</span> Gems.
 											<br>
 											<br>
-											<button onclick="activateTechWonder()" class="btn btn-default">Activate Technological Wonder</button>
+											<button onclick="activateTechWonder()" class="btn btn-default" data-i18n='wonder.activate.technological'>Activate Technological Wonder</button>
 											<br>
 											<br>
 											<div id="techActivateProgress" class="progress">
@@ -4465,7 +4468,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.meteorite.title'>
 										The Meteorite Wonder
 									</h2>
 									<span>
@@ -4475,17 +4478,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.activate.title'>
 										Activate Wonder
 									</h3>
 									<span>
 										Activating this wonder gives you the ability to construct 4th Tier resource gathering machines, which are better and more efficient than anything before it.
 										<br>
 										<hide id="activateMeteoriteWonder">
-											Costs: <span id="meteoriteActivateMeteoriteCost">10,000</span> Meteorite, <span id="meteoriteActivateIceCost">2,000,000</span> Ice, <span id="meteoriteActivateSiliconCost">4,000,000</span> Silicon.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="meteoriteActivateMeteoriteCost">10,000</span> Meteorite, <span id="meteoriteActivateIceCost">2,000,000</span> Ice, <span id="meteoriteActivateSiliconCost">4,000,000</span> Silicon.
 											<br>
 											<br>
-											<button onclick="activateMeteoriteWonder()" class="btn btn-default">Activate Meteorite Wonder</button>
+											<button onclick="activateMeteoriteWonder()" class="btn btn-default" data-i18n='wonder.activate.meteorite'>Activate Meteorite Wonder</button>
 											<br>
 											<br>
 											<div id="meteoriteActivateProgress" class="progress">
@@ -4506,7 +4509,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.comms.title'>
 										The Communication Wonder
 									</h2>
 									<span>
@@ -4516,17 +4519,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.rebuild.comms'>
 										Rebuild Communication Wonder
 									</h3>
 									<span>
 										For rebuilding the Communication Wonder, you will be able to talk and listen to aliens in other star systems and determine whether there is sentient life outside of our solar system.
 										<br>
 										<hide id="rebuildCommsWonder">
-											Costs: <span id="commsWonderGoldCost">6M</span> Gold, <span id="commsWonderSiliconCost">10M</span> Silicon, <span id="commsWonderIceCost">6M</span> Ice.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="commsWonderGoldCost">6M</span> Gold, <span id="commsWonderSiliconCost">10M</span> Silicon, <span id="commsWonderIceCost">6M</span> Ice.
 											<br>
 											<br>
-											<button onclick="rebuildCommsWonder()" class="btn btn-default">Rebuild Communication Wonder</button>
+											<button onclick="rebuildCommsWonder()" class="btn btn-default" data-i18n='wonder.rebuild.comms'>Rebuild Communication Wonder</button>
 											<br>
 											<br>
 											<div id="commsWonderProgress" class="progress">
@@ -4547,7 +4550,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.rocket.title'>
 										The Rocket Wonder
 									</h2>
 									<span>
@@ -4557,17 +4560,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.rebuild.rocket'>
 										Rebuild Rocket Wonder
 									</h3>
 									<span>
 										For rebuilding the Rocket Wonder, you will discover advanced technologies where you can learn how to move beyond your tiny star system.
 										<br>
 										<hide id="rebuildRocketWonder">
-											Costs: <span id="rocketWonderLunariteCost">8M</span> Lunarite, <span id="rocketWonderTitaniumCost">6M</span> Titanium, <span id="rocketWonderMetalCost">12M</span> Metal.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="rocketWonderLunariteCost">8M</span> Lunarite, <span id="rocketWonderTitaniumCost">6M</span> Titanium, <span id="rocketWonderMetalCost">12M</span> Metal.
 											<br>
 											<br>
-											<button onclick="rebuildRocketWonder()" class="btn btn-default">Rebuild Rocket Wonder</button>
+											<button onclick="rebuildRocketWonder()" class="btn btn-default" data-i18n='wonder.rebuild.rocket'>Rebuild Rocket Wonder</button>
 											<br>
 											<br>
 											<div id="rocketWonderProgress" class="progress">
@@ -4588,7 +4591,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.antimatter.title'>
 										The Antimatter Wonder
 									</h2>
 									<span>
@@ -4598,17 +4601,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.rebuild.antimatter'>
 										Rebuild Antimatter Wonder
 									</h3>
 									<span>
 										For rebuilding the Antimatter Wonder, you will gain access to antimatter production and storage.
 										<br>
 										<hide id="rebuildAntimatterWonder">
-											Costs: <span id="antimatterWonderUraniumCost">6M</span> Uranium, <span id="antimatterWonderLavaCost">10M</span> Lava, <span id="antimatterWonderOilCost">8M</span> Oil, <span id="antimatterWonderMethaneCost">6M</span> Methane.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="antimatterWonderUraniumCost">6M</span> Uranium, <span id="antimatterWonderLavaCost">10M</span> Lava, <span id="antimatterWonderOilCost">8M</span> Oil, <span id="antimatterWonderMethaneCost">6M</span> Methane.
 											<br>
 											<br>
-											<button onclick="rebuildAntimatterWonder()" class="btn btn-default">Rebuild Antimatter Wonder</button>
+											<button onclick="rebuildAntimatterWonder()" class="btn btn-default" data-i18n='wonder.rebuild.antimatter'>Rebuild Antimatter Wonder</button>
 											<br>
 											<br>
 											<div id="antimatterWonderProgress" class="progress">
@@ -4629,7 +4632,7 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.portal.title'>
 										The Portal Room
 									</h2>
 									<span>
@@ -4639,17 +4642,17 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.activate.portal'>
 										Activate Portal
 									</h3>
 									<span>
 										Activating the Portal will allow you to go through it to get to the Third Floor of the Wonder Station, detached from the rest of the tetrahedral monolith.
 										<br>
 										<hide id="activatePortal">
-											Costs: <span id="portalMeteoriteCost">500K</span> Meteorite, <span id="portalHeliumCost">8M</span> Helium, <span id="portalSiliconCost">6M</span> Silicon.
+											<span data-i18n='wonder.costs'>Costs:</span> <span id="portalMeteoriteCost">500K</span> Meteorite, <span id="portalHeliumCost">8M</span> Helium, <span id="portalSiliconCost">6M</span> Silicon.
 											<br>
 											<br>
-											<button onclick="activatePortal()" class="btn btn-default">Activate Portal</button>
+											<button onclick="activatePortal()" class="btn btn-default" data-i18n='wonder.activate.portal'>Activate Portal</button>
 											<br>
 											<br>
 											<div id="portalProgress" class="progress">
@@ -4670,18 +4673,18 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='wonder.stargate.title'>
 										The Stargate Room
 									</h2>
 									<span>
 										The final floor, despite being the smallest of the three, appears to be the trophy room, displaying an imposing control panel and a large table.<br>
-										<strong>NB: The Wonder Tab will disappear after completing this wonder. Make sure all others are completed first.</strong>
+										<strong data-i18n='wonder.nb.stargate'>NB: The Wonder Tab will disappear after completing this wonder. Make sure all others are completed first.</strong>
 									</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='wonder.rebuild.stargate'>
 										Rebuild Stargate Wonder
 									</h3>
 									<span>
@@ -4691,7 +4694,7 @@
 											Costs: <span id="stargateWonderPlasmaCost">500,000</span> Plasma, <span id="stargateWonderSiliconCost">920.0M</span> Silicon, <span id="stargateWonderMeteoriteCost">17.00M</span> Meteorite.
 											<br>
 											<br>
-											<button onclick="rebuildStargate()" class="btn btn-default">Rebuild Stargate</button>
+											<button onclick="rebuildStargate()" class="btn btn-default" data-i18n='wonder.rebuild.stargate'>Rebuild Stargate</button>
 											<br>
 											<br>
 											<div id="stargateWonderProgress" class="progress">
@@ -4716,23 +4719,23 @@
 				<table class="table table-hover text-primary no-select pointer">
 					<tr id="unlockPlasmaNav" onclick="activeSolCenterTab('unlockPlasmaNav')" href="#unlockPlasmaResearch" aria-controls="unlockPlasmaResearch" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;" colspan="2">
-							<span>
-								Plasma
-							</span>
+						<span data-i18n="solCenter.sidebar.plasma">
+							Plasma
+						</span>
 						</td>
 					</tr>
 					<tr id="unlockEmcNav" onclick="activeSolCenterTab('unlockEmcNav')" href="#unlockEmcResearch" aria-controls="unlockEmcResearch" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="vertical-align:middle;" colspan="2">
-							<span>
-								Energy-Mass Conversion
-							</span>
+						<span data-i18n="solCenter.sidebar.emc">
+							Energy-Mass Conversion
+						</span>
 						</td>
 					</tr>
 					<tr id="unlockDysonNav" onclick="activeSolCenterTab('unlockDysonNav')" href="#unlockDysonResearch" aria-controls="unlockDysonResearch" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="vertical-align:middle;">
-							<span>
-								Dyson Segments
-							</span>
+						<span data-i18n="solCenter.sidebar.dyson">
+							Dyson Segments
+						</span>
 						</td>
 						<td style="vertical-align:middle;">
 							<span id="dyson">0</span>
@@ -4746,9 +4749,9 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
-										Plasma
-									</h2>
+								<h2 class="default btn-link" data-i18n="solCenter.plasma.title">
+									Plasma
+								</h2>
 									<span>
 										Plasma being a state of extreme energy, it can be used as a storage of large amounts and provides the ability to use higher tier machines and transmutations.
 									</span>
@@ -4756,16 +4759,16 @@
 							</tr>
 							<tr id="researchPlasma">
 								<td>
-									<h3 class="default btn-link">
-										Research
-									</h3>
-									<span>
-										After trading resources with the Sol Center, they will give you some of their research on plasma and how to get it.
-										<br>
-										Costs: <span id="unlockPlasmaResearchHydrogenCost">1,500</span> Hydrogen, <span id="unlockPlasmaResearchUraniumCost">1,500</span> Uranium, <span id="unlockPlasmaResearchOilCost">15,000</span> Oil, <span id="unlockPlasmaResearchWoodCost">15,000</span> Wood.
-										<br>
-										<br>
-										<button onclick="unlockPlasmaResearch()" class="btn btn-default">Unlock Plasma Research</button>
+								<h3 class="default btn-link" data-i18n="solCenter.plasma.research">
+									Research
+								</h3>
+								<span>
+									After trading resources with the Sol Center, they will give you some of their research on plasma and how to get it.
+									<br>
+									Costs: <span id="unlockPlasmaResearchHydrogenCost">1,500</span> Hydrogen, <span id="unlockPlasmaResearchUraniumCost">1,500</span> Uranium, <span id="unlockPlasmaResearchOilCost">15,000</span> Oil, <span id="unlockPlasmaResearchWoodCost">15,000</span> Wood.
+									<br>
+									<br>
+									<button onclick="unlockPlasmaResearch()" class="btn btn-default" data-i18n="solCenter.plasma.unlock">Unlock Plasma Research</button>
 									</span>
 								</td>
 							</tr>
@@ -4777,9 +4780,9 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
-										Energy-Mass Conversion
-									</h2>
+								<h2 class="default btn-link" data-i18n="solCenter.emc.title">
+									Energy-Mass Conversion
+								</h2>
 									<span>
 										EMC is a technology only dreamt about back on Earth. Here, it's a reality. You can turn energy and plasma into regular resources, or, with large amounts, you can turn it into rare ones, which you are unable to find and have to make to acquire.
 									</span>
@@ -4787,34 +4790,34 @@
 							</tr>
 							<tr id="researchEmc">
 								<td>
-									<h3 class="default btn-link">
-										Research
-									</h3>
-									<span>
-										To be given the blueprints for this mysterious machine, the Aliens require both types of energy.
-										<br>
-										Costs: <span id="unlockEmcResearchEnergyCost">75,000</span> Energy, <span id="unlockEmcResearchPlasmaCost">100</span> Plasma.
-										<br>
-										<br>
-										<button onclick="unlockEmcResearch()" class="btn btn-default">Unlock EMC Machine Research</button>
+								<h3 class="default btn-link" data-i18n="solCenter.emc.research">
+									Research
+								</h3>
+								<span>
+									To be given the blueprints for this mysterious machine, the Aliens require both types of energy.
+									<br>
+									Costs: <span id="unlockEmcResearchEnergyCost">75,000</span> Energy, <span id="unlockEmcResearchPlasmaCost">100</span> Plasma.
+									<br>
+									<br>
+									<button onclick="unlockEmcResearch()" class="btn btn-default" data-i18n="solCenter.emc.unlock">Unlock EMC Machine Research</button>
 									</span>
 								</td>
 							</tr>
 							<tr id="emcPage" class="hidden">
 								<td>
-									<h3 class="default btn-link">
-										Uses
-									</h3>
-									<p>
-										This is where you can convert your energy and plasma into resources. <b>(Right click to go back X10)</b>
-										<hide class="autoEmcHide hidden"><br>With Auto Emc (unlocked with rebirth), when you can automate multiple, the order will be top to bottom (always Max).</hide>
+								<h3 class="default btn-link" data-i18n="solCenter.emc.uses">
+									Uses
+								</h3>
+								<p data-i18n="solCenter.emc.desc">
+									This is where you can convert your energy and plasma into resources. <b>(Right click to go back X10)</b>
+									<hide class="autoEmcHide hidden" data-i18n="solCenter.emc.autoEmcDesc"><br>With Auto Emc (unlocked with rebirth), when you can automate multiple, the order will be top to bottom (always Max).</hide>
 									</p>
 									<div class="row">
 										<div class="col-md-12">
-											<label>Remaining energy: <span data-bind="energy">N/A</span></label>
-											<br>
-											<label>Remaining plasma: <span data-bind="plasma">N/A</span></label>
-											<button class="btn btn-default pull-right" onmousedown="changeEmcAmount(event)" oncontextmenu="return false;">Converting <span id="emcButton">Max</span></button>
+										<label data-i18n="solCenter.emc.remaining">Remaining energy: <span data-bind="energy">N/A</span></label>
+										<br>
+										<label data-i18n="solCenter.emc.remainingPlasma">Remaining plasma: <span data-bind="plasma">N/A</span></label>
+										<button class="btn btn-default pull-right" onmousedown="changeEmcAmount(event)" oncontextmenu="return false;" data-i18n="solCenter.emc.converting">Converting <span id="emcButton" data-i18n="solCenter.emc.max">Max</span></button>
 										</div>
 									</div>
 									<div class="row">
@@ -4822,130 +4825,130 @@
 											<div class="table-responsive">
 											<table class="table table-striped">
 												<thead>
-													<th>Cost (Energy)</th>
-													<th>Material</th>
-													<th>Current amount / Storage</th>
-													<th></th>
-													<th class="autoEmcHide hidden">Auto Emc</th>
+											<th data-i18n="solCenter.emc.costEnergy">Cost (Energy)</th>
+												<th data-i18n="solCenter.emc.material">Material</th>
+												<th data-i18n="solCenter.emc.currentStorage">Current amount / Storage</th>
+												<th></th>
+												<th class="autoEmcHide hidden" data-i18n="solCenter.emc.autoEmc">Auto Emc</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><span id="uraniumEmcVal">37</span> Energy</td>
 														<td><span id="uraniumEmcAmount">1</span> Uranium</td>
 														<td><span id="uraniumConv"><span data-bind="uranium">N/A</span> / <span data-bind="uraniumStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('uranium')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('uranium')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="uraniumAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="lavaEmcVal">42</span> Energy</td>
 														<td><span id="lavaEmcAmount">1</span> Lava</td>
 														<td><span id="lavaConv"><span data-bind="lava">N/A</span> / <span data-bind="lavaStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('lava')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('lava')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="lavaAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="oilEmcVal">3</span> Energy</td>
 														<td><span id="oilEmcAmount">1</span> Oil</td>
 														<td><span id="oilConv"><span data-bind="oil">N/A</span> / <span data-bind="oilStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('oil')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('oil')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="oilAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="metalEmcVal">1</span> Energy</td>
 														<td><span id="metalEmcAmount">1</span> Metal</td>
 														<td><span id="metalConv"><span data-bind="metal">N/A</span> / <span data-bind="metalStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('metal')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('metal')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="metalAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="gemEmcVal">3</span> Energy</td>
 														<td><span id="gemEmcAmount">1</span> Gems</td>
 														<td><span id="gemConv"><span data-bind="gem">N/A</span> / <span data-bind="gemStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('gem')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('gem')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="gemAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="charcoalEmcVal">2</span> Energy</td>
 														<td><span id="charcoalEmcAmount">1</span> Charcoal</td>
 														<td><span id="charcoalConv"><span data-bind="charcoal">N/A</span> / <span data-bind="charcoalStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('charcoal')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('charcoal')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="charcoalAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="woodEmcVal">1</span> Energy</td>
 														<td><span id="woodEmcAmount">1</span> Wood</td>
 														<td><span id="woodConv"><span data-bind="wood">N/A</span> / <span data-bind="woodStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('wood')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('wood')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="woodAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="siliconEmcVal">23</span> Energy</td>
 														<td><span id="siliconEmcAmount">1</span> Silicon</td>
 														<td><span id="siliconConv"><span data-bind="silicon">N/A</span> / <span data-bind="siliconStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('silicon')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('silicon')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="siliconAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="lunariteEmcVal">15</span> Energy</td>
 														<td><span id="lunariteEmcAmount">1</span> Lunarite</td>
 														<td><span id="lunariteConv"><span data-bind="lunarite">N/A</span> / <span data-bind="lunariteStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('lunarite')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('lunarite')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="lunariteAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="methaneEmcVal">12</span> Energy</td>
 														<td><span id="methaneEmcAmount">1</span> Methane</td>
 														<td><span id="methaneConv"><span data-bind="methane">N/A</span> / <span data-bind="methaneStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('methane')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('methane')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="methaneAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="titaniumEmcVal">17</span> Energy</td>
 														<td><span id="titaniumEmcAmount">1</span> Titanium</td>
 														<td><span id="titaniumConv"><span data-bind="titanium">N/A</span> / <span data-bind="titaniumStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('titanium')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('titanium')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="titaniumAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="goldEmcVal">42</span> Energy</td>
 														<td><span id="goldEmcAmount">1</span> Gold</td>
 														<td><span id="goldConv"><span data-bind="gold">N/A</span> / <span data-bind="goldStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('gold')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('gold')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="goldAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="silverEmcVal">42</span> Energy</td>
 														<td><span id="silverEmcAmount">1</span> Silver</td>
 														<td><span id="silverConv"><span data-bind="silver">N/A</span> / <span data-bind="silverStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('silver')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('silver')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="silverAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="hydrogenEmcVal">42</span> Energy</td>
 														<td><span id="hydrogenEmcAmount">1</span> Hydrogen</td>
 														<td><span id="hydrogenConv"><span data-bind="hydrogen">N/A</span> / <span data-bind="hydrogenStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('hydrogen')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('hydrogen')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="hydrogenAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="heliumEmcVal">42</span> Energy</td>
 														<td><span id="heliumEmcAmount">1</span> Helium</td>
 														<td><span id="heliumConv"><span data-bind="helium">N/A</span> / <span data-bind="heliumStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('helium')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('helium')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="heliumAutoEmc" class="autoEmc" />
 													</tr>
 													<tr>
 														<td><span id="iceEmcVal">42</span> Energy</td>
 														<td><span id="iceEmcAmount">1</span> Ice</td>
 														<td><span id="iceConv"><span data-bind="ice">N/A</span> / <span data-bind="iceStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertEnergy('ice')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertEnergy('ice')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="iceAutoEmc" class="autoEmc" />
 													</tr>
 													<tr id="meteoriteEMC" class="hidden">
 														<td><span id="meteoriteEmcVal">42</span> Plasma</td>
 														<td><span id="meteoriteEmcAmount">1</span> Meteorite</td>
 														<td><span id="meteoriteConv"><span data-bind="meteorite">N/A</span> / <span data-bind="meteoriteStorage">N/A</span></span></td>
-														<td><button class="btn btn-default pull-right" onclick="convertPlasma('meteorite')" role="button">Convert</button></td>
+														<td><button class="btn btn-default pull-right" onclick="convertPlasma('meteorite')" role="button" data-i18n="solCenter.emc.convert">Convert</button></td>
 														<td class="autoEmcHide hidden" style="text-align:center;"><input type="checkbox" id="meteoriteAutoEmc" class="autoEmc" />
 													</tr>
 												</tbody>
@@ -4963,9 +4966,9 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
-										Dyson Swarms and Sphere
-									</h2>
+								<h2 class="default btn-link" data-i18n="solCenter.dyson.title">
+									Dyson Swarms and Sphere
+								</h2>
 									<span>
 										This technology, unheard of previously, is now a reality, thanks to those in the Sol Scientific Center. The Sphere can provide much energy for millions of years, but at what cost?
 										<br>
@@ -4976,39 +4979,39 @@
 							</tr>
 							<tr id="researchDyson">
 								<td>
-									<h3 class="default btn-link">
-										Research
-									</h3>
-									<span>
-										To understand this supreme construct, you must request the aliens' help. They require vast amounts of energy and plasma.
-										<br>
-										Costs: <span id="unlockDysonResearchEnergyCost">100,000</span> Energy, <span id="unlockDysonResearchPlasmaCost">10,000</span> Plasma.
-										<br>
-										<br>
-										<button onclick="unlockDysonResearch()" class="btn btn-default">Unlock Dyson Sphere Research</button>
+								<h3 class="default btn-link" data-i18n="solCenter.dyson.research">
+									Research
+								</h3>
+								<span>
+									To understand this supreme construct, you must request the aliens' help. They require vast amounts of energy and plasma.
+									<br>
+									Costs: <span id="unlockDysonResearchEnergyCost">100,000</span> Energy, <span id="unlockDysonResearchPlasmaCost">10,000</span> Plasma.
+									<br>
+									<br>
+									<button onclick="unlockDysonResearch()" class="btn btn-default" data-i18n="solCenter.dyson.unlock">Unlock Dyson Sphere Research</button>
 									</span>
 								</td>
 							</tr>
 							<tr id="dysonPage" class="hidden">
 								<td>
-									<h3 class="default btn-link">
-										Construction
+								<h3 class="default btn-link" data-i18n="solCenter.dyson.construction">
+									Construction
+								</h3>
+								<span>
+									These mega-structures cannot possibly be built in one piece. They must be created from small segments and forged together around the sun.
+									<br>
+									<span data-i18n="solCenter.dyson.nextSegment">The next segment costs:</span> <span id="dysonTitaniumCost">300,000</span> Titanium, <span id="dysonGoldCost">100,000</span> Gold, <span id="dysonSiliconCost">200,000</span> Silicon, <span id="dysonMeteoriteCost">1,000</span> Meteorite, <span id="dysonIceCost">100,000</span> Ice.
+									<br>
+									<br>
+									<button onclick="getDyson()" class="btn btn-default" data-i18n="solCenter.dyson.buildSegment">Build Dyson Segment</button>
+									<button onclick="buildDysonTo(50)" class="btn btn-default" data-i18n="solCenter.dyson.build50">Build up to 50</button>
+									<button onclick="buildDysonTo(100)" class="btn btn-default" data-i18n="solCenter.dyson.build100">Build up to 100</button>
+									<button onclick="buildDysonTo(250)" class="btn btn-default" data-i18n="solCenter.dyson.build250">Build up to 250</button>
+										<br>
+										<br>
+									<h3 class="default btn-link" data-i18n="solCenter.dyson.ring">
+										Ring: <span id="ring">0</span>
 									</h3>
-									<span>
-										These mega-structures cannot possibly be built in one piece. They must be created from small segments and forged together around the sun.
-										<br>
-										The next segment costs: <span id="dysonTitaniumCost">300,000</span> Titanium, <span id="dysonGoldCost">100,000</span> Gold, <span id="dysonSiliconCost">200,000</span> Silicon, <span id="dysonMeteoriteCost">1,000</span> Meteorite, <span id="dysonIceCost">100,000</span> Ice.
-										<br>
-										<br>
-										<button onclick="getDyson()" class="btn btn-default">Build Dyson Segment</button>
-										<button onclick="buildDysonTo(50)" class="btn btn-default">Build up to 50</button>
-										<button onclick="buildDysonTo(100)" class="btn btn-default">Build up to 100</button>
-										<button onclick="buildDysonTo(250)" class="btn btn-default">Build up to 250</button>
-										<br>
-										<br>
-										<h3 class="default btn-link">
-											Ring: <span id="ring">0</span>
-										</h3>
 										<span>
 											The ring is a solar strip orbiting and circling the sun that can produce 5,000 energy per second. It requires <span id="ringRocketFuelCost">50,000</span> rocket fuel in total to put the segments in place.
 											<br>
@@ -5017,14 +5020,14 @@
 											<br>
 											<br>
 										</span>
-										<button onclick="buildRing()" class="btn btn-default">Construct Ring</button>
+										<button onclick="buildRing()" class="btn btn-default" data-i18n="solCenter.dyson.constructRing">Construct Ring</button>
 										<button onclick="buildDysonTo(50);buildRing()" class="btn btn-default">Build up to 50 and Ring</button>
 										<br>
 										<br>
 										<hide id="dysonSphere" class="hidden">
-											<h3 class="default btn-link">
-												Swarm: <span id="swarm">0</span>
-											</h3>
+										<h3 class="default btn-link" data-i18n="solCenter.dyson.swarm">
+											Swarm: <span id="swarm">0</span>
+										</h3>
 											<span>
 												The swarm is an array of solar stations orbiting the sun, and once built, it can produce 25,000 energy per second. However, it requires <span id="swarmRocketFuelCost">250,000</span> rocket fuel in total to put the segments in place.
 												<br>
@@ -5033,11 +5036,11 @@
 												<br>
 												<br>
 											</span>
-											<button onclick="buildSwarm()" class="btn btn-default">Construct Swarm</button>
+											<button onclick="buildSwarm()" class="btn btn-default" data-i18n="solCenter.dyson.constructSwarm">Construct Swarm</button>
 											<button onclick="buildDysonTo(100);buildSwarm()" class="btn btn-default">Build up to 100 and Swarm</button>
 											<br>
 											<br>
-											<h3 class="default btn-link">
+											<h3 class="default btn-link" data-i18n="solCenter.dyson.sphere">
 												Sphere: <span id="sphere">0</span> (Max. <span id="sphereMax">1</span>)
 											</h3>
 											<span>
@@ -5051,7 +5054,7 @@
 												<br>
 											</span>
 											<hide id="buildSphereButton">
-												<button onclick="buildSphere()" class="btn btn-default">Construct Sphere</button>
+												<button onclick="buildSphere()" class="btn btn-default" data-i18n="solCenter.dyson.constructSphere">Construct Sphere</button>
 												<button onclick="buildDysonTo(250);buildSphere()" class="btn btn-default">Build up to 250 and Sphere</button>
 											</hide>
 										</hide>
@@ -5070,28 +5073,28 @@
 				<table class="table table-hover text-primary no-select pointer">
 					<tr href="#machineEnergyTab" aria-controls="machineEnergyTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;">
-							<span>
+							<span data-i18n='machines.sidebar.energy'>
 								Energy
 							</span>
 						</td>
 					</tr>
 					<tr href="#machineEarthTab" aria-controls="machineEarthTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='machines.sidebar.earth'>
 								Earth
 							</span>
 						</td>
 					</tr>
 					<tr href="#machineInnerTab" aria-controls="machineInnerTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='machines.sidebar.innerPlanets'>
 								Inner Planets
 							</span>
 						</td>
 					</tr>
 					<tr href="#machineOuterTab" aria-controls="machineOuterTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
+							<span data-i18n='machines.sidebar.outerPlanets'>
 								Outer Planets
 							</span>
 						</td>
@@ -5105,28 +5108,28 @@
 							<tr>
 								<td colspan="2"></td>
 								<td colspan="3">
-									<h2 class="default btn-link">
-										Energy Machines
-									</h2>
+								<h2 class="default btn-link" data-i18n='machines.energy.title'>
+									Energy Machines
+								</h2>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
-									<h3 class="default btn-link">
-										Input/sec
-									</h3>
-								</td>
-								<td colspan="2">
-									<h3 class="default btn-link">
-										Output/sec
-									</h3>
+								<h3 class="default btn-link" data-i18n='common.inputPerSec'>
+									Input/sec
+								</h3>
+							</td>
+							<td colspan="2">
+								<h3 class="default btn-link" data-i18n='common.outputPerSec'>
+									Output/sec
+								</h3>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="2"></td>
 								<td colspan="3">
-									<h4 class="default btn-link">
-										Plasma
-									</h4>
+								<h4 class="default btn-link" data-i18n='machines.energy.plasma'>
+									Plasma
+								</h4>
 								</td>
 								<td colspan="2"></td>
 								<td colspan="2">
@@ -5152,7 +5155,7 @@
 									</button>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier1'>
 										Tier1
 									</span>
 								</td>
@@ -5189,7 +5192,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+								<span data-i18n='machines.energy.tier2'>
 										Tier 2
 									</span>
 								</td>
@@ -5220,7 +5223,7 @@
 							<tr>
 								<td colspan="2"></td>
 								<td colspan="3">
-									<h4 class="default btn-link" style="border:none;">
+									<h4 class="default btn-link" style="border:none;" data-i18n='machines.energy.energy'>
 										Energy
 									</h4>
 								</td>
@@ -5248,7 +5251,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier1'>
 										Tier 1
 									</span>
 								</td>
@@ -5285,7 +5288,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier2'>
 										Tier 2
 									</span>
 								</td>
@@ -5322,7 +5325,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier3'>
 										Tier 3
 									</span>
 								</td>
@@ -5359,7 +5362,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier4'>
 										Tier 4
 									</span>
 								</td>
@@ -5396,7 +5399,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier5'>
 										Tier 5
 									</span>
 								</td>
@@ -5433,7 +5436,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier6'>
 										Tier 6
 									</span>
 								</td>
@@ -5464,7 +5467,7 @@
 							<tr>
 								<td colspan="2"></td>
 								<td colspan="3">
-									<h4 class="default btn-link" style="border:none;">
+									<h4 class="default btn-link" style="border:none;" data-i18n='machines.energy.uranium'>
 										Uranium
 									</h4>
 								</td>
@@ -5492,7 +5495,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier1'>
 										Tier 1
 									</span>
 								</td>
@@ -5529,7 +5532,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier2'>
 										Tier 2
 									</span>
 								</td>
@@ -5566,7 +5569,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier3'>
 										Tier 3
 									</span>
 								</td>
@@ -5603,7 +5606,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier4'>
 										Tier 4
 									</span>
 								</td>
@@ -5634,7 +5637,7 @@
 							<tr>
 								<td colspan="2"></td>
 								<td colspan="3">
-									<h4 class="default btn-link" style="border:none;">
+									<h4 class="default btn-link" style="border:none;" data-i18n='machines.energy.lava'>
 										Lava
 									</h4>
 								</td>
@@ -5662,7 +5665,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier1'>
 										Tier 1
 									</span>
 								</td>
@@ -5699,7 +5702,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier2'>
 										Tier 2
 									</span>
 								</td>
@@ -5736,7 +5739,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier3'>
 										Tier 3
 									</span>
 								</td>
@@ -5773,7 +5776,7 @@
 									</span>
 								</td>
 								<td colspan="3">
-									<span>
+									<span data-i18n='machines.energy.tier4'>
 										Tier 4
 									</span>
 								</td>
@@ -5806,9 +5809,9 @@
 						<table class="table" style="text-align:center;">
 							<tr>
 								<td colspan="7">
-									<h2 class="default btn-link">
-										Earth Machines
-									</h2>
+								<h2 class="default btn-link" data-i18n='machines.earth.title'>
+									Earth Machines
+								</h2>
 								</td>
 							</tr>
 							<tr>
@@ -6041,9 +6044,9 @@
 						<table class="table" style="text-align:center;">
 							<tr>
 								<td colspan="7">
-									<h2 class="default btn-link">
-										Inner Planet Machines
-									</h2>
+								<h2 class="default btn-link" data-i18n='machines.inner.title'>
+									Inner Planet Machines
+								</h2>
 								</td>
 							</tr>
 							<tr>
@@ -6276,9 +6279,9 @@
 						<table class="table" style="text-align:center;">
 							<tr>
 								<td colspan="7">
-									<h2 class="default btn-link">
-										Outer Planet Machines
-									</h2>
+								<h2 class="default btn-link" data-i18n='machines.outer.title'>
+									Outer Planet Machines
+								</h2>
 								</td>
 							</tr>
 							<tr>
@@ -6545,28 +6548,28 @@
 				<table class="table table-hover text-primary no-select pointer">
 					<tr href="#savingTab" aria-controls="savingTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;">
-							<span>
+								<span data-i18n="ui.saving.title">
 								Saving
 							</span>
 						</td>
 					</tr>
-					<tr href="#uiTab" aria-controls="uiTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
+						<tr href="#uiTab" aria-controls="uiTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.settings.title">
 								Graphics Options
 							</span>
 						</td>
 					</tr>
 					<tr href="#statsTab" aria-controls="statsTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.stats.title">
 								Stats
 							</span>
 						</td>
 					</tr>
 					<tr href="#achievementsTab" aria-controls="achievementsTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab" onclick="tabClicked('achievements')">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
+							<span data-i18n="ui.achievements.title">
 								Achievements
 							</span>
 							<span id="achievementsTabGlyph" class="pull-right glyphicon glyphicon-exclamation-sign hidden"></span>
@@ -6594,34 +6597,34 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='ui.saving.title'>
 										Saving
 									</h2>
-									<span>
+									<span data-i18n='ui.saving.desc'>
 										This is where you can change how your game is saved.
 									</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.saving.autoSaveDuration'>
 										Auto-Save Duration
 									</h3>
-									<span>
+									<span data-i18n='ui.saving.autoSaveDesc'>
 										Change how long the game waits before auto-saving again.
 									</span>
 									<br>
 									<div class="btn-group" data-toggle="buttons">
-										<label class="btn btn-default active">
+										<label class="btn btn-default active" data-i18n='ui.saving.30seconds'>
 											<input type="radio" name="autosaves" id="30secs" autocomplete="off" checked> 30 Seconds
 										</label>
-										<label class="btn btn-default">
+										<label class="btn btn-default" data-i18n='ui.saving.2minutes'>
 											<input type="radio" name="autosaves" id="2mins" autocomplete="off"> 2 Minutes
 										</label>
-										<label class="btn btn-default">
+										<label class="btn btn-default" data-i18n='ui.saving.10minutes'>
 											<input type="radio" name="autosaves" id="10mins" autocomplete="off"> 10 Minutes
 										</label>
-										<label class="btn btn-default">
+										<label class="btn btn-default" data-i18n='ui.saving.off'>
 											<input type="radio" name="autosaves" id="off" autocomplete="off"> Off
 										</label>
 									</div>
@@ -6629,46 +6632,50 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.saving.manualSaving'>
 										Manual Saving
 									</h3>
 									<button id="saveButton" onclick="Game.save()" class="btn btn-primary" style="margin-top:5px; height:80%; vertical-align: middle">
-										<span style="color:white;">
+										<span style="color:white;" data-i18n='ui.saving.save'>
 											Save
 										</span>
 									</button>
 									<button id="loadButton" onclick="Game.load()" class="btn btn-primary" style="margin-top:5px; margin-left:2px; height:80%; vertical-align: middle;">
-										<span style="color:white;">
+										<span style="color:white;" data-i18n='ui.saving.load'>
 											Load
 										</span>
 									</button>
 									<br>
 									<button onclick="Game.deleteSave()" class="btn btn-danger" style="margin-top:5px; height:80%; display:inline-block; vertical-align: middle">
-										<span style="color:white;">
+										<span style="color:white;" data-i18n='ui.saving.hardReset'>
 											Hard Reset
 										</span>
 									</button>
-									<span>
+									<span data-i18n='ui.saving.hardResetWarning'>
 										Warning: This is non-reversible! Be cautious. There is a confirmation to delete your save.
 									</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.saving.importExport'>
 										Import/Export
 									</h3>
-									<button class="btn btn-primary" onclick="Game.export()">Export Save</button>
-									<button class="btn btn-primary" onclick="Game.import()">Import Save</button>
-									<button class="btn btn-primary" id="copyExport">Copy Text Below To Clipboard</button>
+									<button class="btn btn-primary" onclick="Game.export()" data-i18n='ui.saving.exportSave'>Export Save</button>
+									<button class="btn btn-primary" onclick="Game.import()" data-i18n='ui.saving.importSave'>Import Save</button>
+									<button class="btn btn-primary" id="copyExport" data-i18n='ui.saving.copyClipboard'>Copy Text Below To Clipboard</button>
 									<br>
 									<textarea id="impexpField" style="margin-top:20px; width:300px; height:100px;"></textarea>
 									<br>
-									<span>
+									<span data-i18n='ui.saving.importDesc1'>
 										Copy and paste this onto a file somewhere so that you can import it into the game at a later date.
-										<br>
+									</span>
+									<br>
+									<span data-i18n='ui.saving.importDesc2'>
 										You can also use this to create multiple 'savefiles' of the game by storing multiple instances separately.
-										<br>
+									</span>
+									<br>
+									<span data-i18n='ui.saving.importDesc3'>
 										Make sure there are no spaces at the end when importing.
 									</span>
 								</td>
@@ -6681,17 +6688,17 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
+									<h2 class="default btn-link" data-i18n='ui.settings.title'>
 										Graphics Options
 									</h2>
-									<span>
+									<span data-i18n='ui.settings.desc'>
 										You can enable settings to change the interface here.
 									</span>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.theme'>
 										Themes
 									</h3>
 				                	<select id="themeSelector" ng-model="player.current_theme" class="ng-valid ng-touched ng-dirty ng-valid-parse">
@@ -6712,7 +6719,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.notation'>
 										Notation
 									</h3>
 									<select id="formatSelector" ng-model="player.current_theme" class="ng-valid ng-touched ng-dirty ng-valid-parse">
@@ -6726,9 +6733,20 @@
 									</select>
 								</td>
 							</tr>
-							<tr>
+								<tr>
 								<td>
 									<h3 class="default btn-link">
+										<span data-i18n="ui.settings.language">Language</span>
+									</h3>
+				                	<select id="languageSelector" class="ng-valid ng-touched ng-dirty ng-valid-parse">
+				                		<option value="en">English</option>
+				                		<option value="zh-CN">简体中文</option>
+				                	</select>
+				                </td>
+							</tr>
+							<tr>
+								<td>
+								<h3 class="default btn-link" data-i18n='ui.settings.companyName'>
 										Change Company Name
 									</h3>
 				                	<div class="checkbox">
@@ -6738,71 +6756,71 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.textDecoration'>
 										Text Decoration
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="boldEnabled" type="checkbox" value="">Red Costs: Bold</label>
+										<label data-i18n='ui.settings.boldEnabled'><input id="boldEnabled" type="checkbox" value="">Red Costs: Bold</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.autosaveNotifications'>
 										Autosave Notifications
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="saveNotifsEnabled" type="checkbox" value="">Autosave Notifications</label>
+										<label data-i18n='ui.settings.autosaveNotifications'><input id="saveNotifsEnabled" type="checkbox" value="">Autosave Notifications</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.notifications'>
 										Notifications (Not Autosave)
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="notificationsEnabled" type="checkbox" value="">Screen Notifications</label>
+										<label data-i18n='ui.settings.screenNotifications'><input id="notificationsEnabled" type="checkbox" value="">Screen Notifications</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.sidebarCompression'>
 										Sidebar Height Compression (Not fully implemented)
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="sidebarCompressed" type="checkbox" value="">Compress Rows in Sidebar to Decrease White Space</label>
+										<label data-i18n='ui.settings.compressRows'><input id="sidebarCompressed" type="checkbox" value="">Compress Rows in Sidebar to Decrease White Space</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.gainButtons'>
 										Gain Buttons
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="gainButtonsHidden" type="checkbox" value="">Gain Buttons Hidden</label>
+										<label data-i18n='ui.settings.gainButtonsHidden'><input id="gainButtonsHidden" type="checkbox" value="">Gain Buttons Hidden</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.coloredDestroy'>
 										Coloured Destroy Buttons
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="redDestroyButtons" type="checkbox" value="">Destroy Buttons Red</label>
+										<label data-i18n='ui.settings.destroyButtonsRed'><input id="redDestroyButtons" type="checkbox" value="">Destroy Buttons Red</label>
 									</div>
 				                </td>
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.settings.hideCompleted'>
 										Hide Completed Tabs
 									</h3>
 				                	<div class="checkbox">
-										<label><input id="hideCompleted" type="checkbox" value="">Hidden</label>
+										<label data-i18n='ui.settings.hidden'><input id="hideCompleted" type="checkbox" value="">Hidden</label>
 									</div>
 				                </td>
 							</tr>
@@ -6913,23 +6931,23 @@
 				<table class="table table-hover text-primary no-select pointer">
 					<tr href="#startingTab" aria-controls="startingTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td style="border:none; vertical-align:middle;">
-							<span>
-								Getting Started
-							</span>
+						<span data-i18n='ui.help.gettingStarted'>
+							Getting Started
+						</span>
 						</td>
 					</tr>
 					<tr href="#faqTab" aria-controls="faqTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								FAQ
-							</span>
+						<span data-i18n='ui.help.faq'>
+							FAQ
+						</span>
 						</td>
 					</tr>
 					<tr href="#creditsTab" aria-controls="creditsTab" role="tab" data-toggle="tab" style="height:60px;" class="sideTab">
 						<td colspan="2" style="vertical-align:middle;">
-							<span>
-								Credits
-							</span>
+						<span data-i18n='ui.help.credits'>
+							Credits
+						</span>
 						</td>
 					</tr>
 				</table>
@@ -6940,9 +6958,9 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
-										Beginner's Guide
-									</h2>
+								<h2 class="default btn-link" data-i18n='ui.guide.beginner'>
+									Beginner's Guide
+								</h2>
 									<span>
 										This guide will get you from starting the game to activating your first wonder and will be helpful to grasp everything you need to do. You can refer to this guide at anytime while playing by clicking the Help/FAQ tab in the top right and selecting the Getting Started sub-tab.
 									</span>
@@ -6952,9 +6970,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
-										First Steps
-									</h3>
+								<h3 class="default btn-link" data-i18n='ui.guide.firstSteps'>
+									First Steps
+								</h3>
 									<span>
 										The first thing you can do is start gathering resources. To do this, click the Resources tab near the top left of the screen. This will bring you to the resources display. You can click any of the resources to access its interface, where you can mine the resource yourself by clicking, or you can hire people or build machines to gain those resources for you. While you can hire workers for all three resources, it is recommended to prioritise Metal and Wood in the early stages of the game.
 									</span>
@@ -6962,7 +6980,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="default btn-link" data-i18n='ui.guide.research'>
 										Research
 									</h3>
 									<span>
@@ -6977,9 +6995,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
-										Balancing Resources &amp; Energy
-									</h3>
+								<h3 class="default btn-link" data-i18n='ui.guide.balancing'>
+									Balancing Resources &amp; Energy
+								</h3>
 									<span>
 										This game has different amounts output by each machine. This can make balancing your resources hard, especially your Energy, Charcoal and Wood as they are consumed by other machines. As at tip, prioritise which resources you should build machines for first - in most cases Metal - and produce the 2 Energy required for a heavy drill. Don't upgrade everything to machines at once as you will end up with an Energy deficit (this is bad as the machines won't work without Energy). Build up your Charcoal to build engines or increase the number of solar panels to counter this.
 									</span>
@@ -6987,9 +7005,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
-										Solar System
-									</h3>
+								<h3 class="default btn-link" data-i18n='ui.guide.solarSystem'>
+									Solar System
+								</h3>
 									<span>
 										Well, it isn't called Space Company for nothing. The first thing needed to unlock inter-planetary exploration is to build a rocket. This is the first large goal that you should aim for as a target. To build a rocket, you need a lot of resources, which you most likely need to use advanced machines to get without taking an extremely long time. Secondly, to launch it requires 20 rocket fuel, which can be made in chemical plants. These require a large amount of Oil and Charcoal to produce - 20 of each per second per plant. Once you have 20 Rocket Fuel and have built a rocket, press the launch button to unlock exploration around the solar system and new technologies and ways to get resources.
 									</span>
@@ -6997,9 +7015,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
-										More
-									</h3>
+								<h3 class="default btn-link" data-i18n='ui.guide.more'>
+									More
+								</h3>
 									<span>
 										There are more in-depth explanations and a wider variety of documentation on the <a href="https://reddit.com/r/spacecompany/wiki/">Reddit Wiki</a>. Feel free to explore these to learn more about the game, or discover things yourself by playing the game.
 									</span>
@@ -7013,9 +7031,9 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
-										Frequently Asked Questions
-									</h2>
+								<h2 class="default btn-link" data-i18n='ui.faq.title'>
+									Frequently Asked Questions
+								</h2>
 									<span>
 										These are some of the questions that appear the most or that need the most clarifying.
 									</span>
@@ -7023,9 +7041,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										How does the military level work?
-									</h4>
+								<h4 data-i18n='ui.faq.q1'>
+									How does the military level work?
+								</h4>
 									<span>
 										The format used is •,••,•••,I,II,III,X,XX,XXX,XXXX,XXXXX,XXXXXX. It is based on the military army hierarchy found on wikipedia at <a href="https://en.wikipedia.org/wiki/Military_organization#Army_hierarchy">https://en.wikipedia.org/wiki/Military_organization#Army_hierarchy</a>.
 									</span>
@@ -7033,9 +7051,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										I found a bug! What should I do?
-									</h4>
+								<h4 data-i18n='ui.faq.q2'>
+									I found a bug! What should I do?
+								</h4>
 									<span>
 										If you go to my <a class="btn-link pointer" target="_blank" href="https://github.com/sparticle999/SpaceCompany/issues">Github Page</a>, which you can also find in 'More' Tab, click <b>New Issue</b> and submit it there.
 										<br>
@@ -7045,9 +7063,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										I have a suggestion for the game
-									</h4>
+								<h4 data-i18n='ui.faq.q3'>
+									I have a suggestion for the game
+								</h4>
 									<span>
 										Similarly to the above, you can go to my <a class="btn-link pointer" target="_blank" href="https://github.com/sparticle999/SpaceCompany/issues">Github Page</a>, and post a <b>New Issue</b>; you can <a class="btn-link pointer" target="_blank" href="https://www.reddit.com/message/compose/">message me</a> on reddit, put it in a comment on any post (or make a post) at <a class="btn-link pointer" target="_blank" href="https://www.reddit.com/r/spacecompany/">r/SpaceCompany</a> or go to my <a class="btn-link pointer" target="_blank" href="https://discord.gg/cjQBgPW">discord channel</a> and tell me about it there.
 									</span>
@@ -7055,9 +7073,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										When will the game be updated next?
-									</h4>
+								<h4 data-i18n='ui.faq.q4'>
+									When will the game be updated next?
+								</h4>
 									<span>
 										Well, this isn't a full-time project for me. This means that although I will try to work on it as much as I can, progress can be slow. However, I will endeavour to release updates as often as I can and fix any bugs as quickly as possible.
 									</span>
@@ -7065,9 +7083,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										Help, I'm stuck!
-									</h4>
+								<h4 data-i18n='ui.faq.q5'>
+									Help, I'm stuck!
+								</h4>
 									<span>
 										Have you checked all of the tabs to see if there is anything new? Maybe the guide has something about it? If not, feel free to ask me either on reddit or post it as an issue on github if you think there is a problem with the game.
 									</span>
@@ -7075,9 +7093,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										What does this do?
-									</h4>
+								<h4 data-i18n='ui.faq.q6'>
+									What does this do?
+								</h4>
 									<span>
 										It will probably be self-explanatory, be explained in the description or in the wiki. If not, tell me and I will add it to the item, wiki or to the Frequently Asked Questions page.
 									</span>
@@ -7085,9 +7103,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										I want to help. How do I do that?
-									</h4>
+								<h4 data-i18n='ui.faq.q7'>
+									I want to help. How do I do that?
+								</h4>
 									<span>
 										Help is always appreciated! You can look over my code in <a href="http://github.com/sparticle999/SpaceCompany">Github</a> and fork it to make changes. Send me a push request, submit an issue or just tell me in reddit and I'll most likely be happy to add it in and give credit where due.
 									</span>
@@ -7095,9 +7113,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										Does donating give me anything?
-									</h4>
+								<h4 data-i18n='ui.faq.q8'>
+									Does donating give me anything?
+								</h4>
 									<span>
 										No. I didn't want to make this game pay-to-win and make people feel that they had to pay money to get further in the game because this makes it less appealing to those who don't want to donate.
 									</span>
@@ -7105,9 +7123,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h4>
-										Where else can I find the game?
-									</h4>
+								<h4 data-i18n='ui.faq.q9'>
+									Where else can I find the game?
+								</h4>
 									<span>
 										You can find the game on any of these sites:
 										<br>
@@ -7127,9 +7145,9 @@
 						<table class="table">
 							<tr>
 								<td style="border:none;">
-									<h2 class="default btn-link">
-										About
-									</h2>
+								<h2 class="default btn-link" data-i18n='ui.credits.title'>
+									About
+								</h2>
 									<span>
 										This game is made by me, Sparticle999, as a project to improve my skills at making games and to see what I could add to the incremental gaming world.
 										<br>
@@ -7139,9 +7157,9 @@
 							</tr>
 							<tr>
 								<td style="border:none;">
-									<h3 class="default btn-link">
-										Tools Used
-									</h3>
+								<h3 class="default btn-link" data-i18n='ui.credits.toolsUsed'>
+									Tools Used
+								</h3>
 									<span>
 										<a class="pointer btn-link" target="_blank" href="http://getbootstrap.com/">Bootstrap</a> was central to the base design of the game, and until I decide to create an interface for myself, either when I feel that it is necessary, or when people ask me to change it, this will be the general look for a while.
 										<br>
@@ -7155,9 +7173,9 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
-										Thank you to all Donators and my supporters on Patreon!
-									</h3>
+								<h3 class="default btn-link" data-i18n='ui.credits.thanks'>
+									Thank you to all Donators and my supporters on Patreon!
+								</h3>
 									<h4>Patreon:</h4>
 									<ul>
 										<li>Tom Paine</li>
@@ -7189,6 +7207,9 @@
 <script type="text/javascript" src="variable.js"></script>
 
 <script type="text/javascript" src="game.js"></script>
+<script type="text/javascript" src="i18n.js"></script>
+<script type="text/javascript" src="locale/en.js"></script>
+<script type="text/javascript" src="locale/zh-CN.js"></script>
 <script type="text/javascript" src="utils.js"></script>
 <script type="text/javascript" src="updates.js"></script>
 <script type="text/javascript" src="achievements.js"></script>

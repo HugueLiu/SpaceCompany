@@ -296,6 +296,10 @@ Game.settings = (function(){
                 Game.settings.set('autoSaveInterval', args.data.val);
             });
         }
+
+        $('#languageSelector').change(function(){
+            Game.i18n.setLanguage($(this).val());
+        });
     };
 
     instance.update = function(delta) {

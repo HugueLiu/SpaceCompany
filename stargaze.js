@@ -61,7 +61,7 @@ Game.stargaze = (function(){
 		var check = confirm("Are you sure? This is non-reversible after you reset and save.");
 		if(check){
 			this.entries.darkMatter.count += this.entries.darkMatter.current;
-			Game.notifySuccess("Dark Matter!", "You have gained " + this.entries.darkMatter.current + " Dark Matter from rebirthing into your new life!");
+			Game.notifySuccess(Game.i18n.t('notification.darkMatter.title'), Game.i18n.t('notification.darkMatter.text', [this.entries.darkMatter.current]));
 
 			for(var i = 0; i < resourcesUnlocked.length; i++){
 				document.getElementById(resourcesUnlocked[i]).className = "hidden";

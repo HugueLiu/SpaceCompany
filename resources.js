@@ -931,7 +931,7 @@ function getMiner(){
 				researchUnlocked = true;
 				tabsUnlocked.push("researchTab");
 				newUnlock("research");
-				Game.notifySuccess("New Tab!", "You've unlocked the Research Tab!");
+				Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.research'));
 			}
 		}
 

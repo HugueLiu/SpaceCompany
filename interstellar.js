@@ -481,12 +481,12 @@ Game.interstellar.military = (function(){
         var roll = Math.random();
         if(chance >= roll){
             star.spy += 1;
-            Game.notifyInfo("Successful Espionage!", "You have found out more about the star system!");
+            Game.notifyInfo(Game.i18n.t('notification.espionageSuccess.title'), Game.i18n.t('notification.espionageSuccess.text'));
         } else {
             var scout = this.entries.scout;
             scout.count -= scout.active;
             scout.active = 0;
-            Game.notifyInfo("Espionage Failed!", "You lost all of your active scouts.");
+            Game.notifyInfo(Game.i18n.t('notification.espionageFailed.title'), Game.i18n.t('notification.espionageFailed.text'));
         }
         star.displayNeedsUpdate = true;
         this.updateFleetStats();
@@ -552,9 +552,9 @@ Game.interstellar.military = (function(){
                     shipData.displayNeedsUpdate = true;
                 }
                 if(losses){
-                    Game.notifyInfo("Successful Invasion!", "You have conquered " + star.name + " and now gain production boosts from it in " + star.resource1 + " and " + star.resource2 + ". Despite your victory, you may have lost some ships in battle.");
+                    Game.notifyInfo(Game.i18n.t('notification.invasionSuccess.title'), Game.i18n.t('notification.invasionSuccess.text1', [star.name, star.resource1, star.resource2]));
                 } else {
-                    Game.notifyInfo("Successful Invasion!", "You have conquered " + star.name + " without any losses and now gain production boosts from it in " + star.resource1 + " and " + star.resource2 + "!");                    
+                    Game.notifyInfo(Game.i18n.t('notification.invasionSuccess.title'), Game.i18n.t('notification.invasionSuccess.text2', [star.name, star.resource1, star.resource2]));
                 }
                 var faction = Game.stargaze.getStargazeData(star.factionId);
                 faction.opinion -= 10;
@@ -569,7 +569,7 @@ Game.interstellar.military = (function(){
                     }
                     shipData.displayNeedsUpdate = true;
                 }
-                Game.notifyInfo("Failed Invasion!", "Unfortunately, the enemy forces were too strong for you. They have destroyed all of your active ships.");
+                Game.notifyInfo(Game.i18n.t('notification.invasionFailed.title'), Game.i18n.t('notification.invasionFailed.text'));
             }
             star.displayNeedsUpdate = true;
             this.updateFleetStats();
@@ -585,7 +585,7 @@ Game.interstellar.military = (function(){
             data.owned = true;
             data.displayNeedsUpdate = true;
             faction.displayNeedsUpdate = true;
-            Game.notifyInfo("Successful Absorbtion!", "You have conquered " + data.name + " peacefully and now gain production boosts from it in " + data.resource1 + " and " + data.resource2 + ". Congratulations!");
+            Game.notifyInfo(Game.i18n.t('notification.absorption.title'), Game.i18n.t('notification.absorption.text', [data.name, data.resource1, data.resource2]));
         }
     };
 

@@ -117,7 +117,7 @@ function explore(planet){
 				tabsUnlocked.push("wonderTab");
 				Game.statistics.add('tabsUnlocked');
 				newUnlock("wonder");
-				Game.notifySuccess("New Tab!", "You've unlocked the Wonders Tab!");
+				Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.wonders'));
 				break;
 			case "Jupiter":
 				document.getElementById("collapseOuterPlanet").className = "collapseOuterPlanet";
@@ -135,7 +135,7 @@ function explore(planet){
 				refreshResources();
 				Game.statistics.add('tabsUnlocked');
 				newUnlock("solCenter");
-				Game.notifySuccess("New Tab!", "You've unlocked the Sol Center Tab!");
+				Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.solCenter'));
 				break;
 		}
 

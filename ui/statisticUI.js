@@ -68,7 +68,12 @@
     };
 
     instance.createCategory = function (category) {
-        var data = {id: "stat_cat_" + category, name: category};
+        var categoryNames = {
+            'general': Game.i18n.t('stat.general'),
+            'unlockable': Game.i18n.t('stat.unlockable'),
+            'timing': Game.i18n.t('stat.timing')
+        };
+        var data = {id: "stat_cat_" + category, name: categoryNames[category] || category};
         this.categoryElements[category] = { id: data.id };
 
         var html = $(this.categoryTemplate(data));

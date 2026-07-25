@@ -12,22 +12,22 @@ Game.statistics = (function(){
     instance.statisticTypeCount = 0;
 
     instance.initialise = function() {
-        this.createStatistic("manualResources", Game.constants.statisticCategoryGeneral, "Resources Mined By Hand");
+        this.createStatistic("manualResources", Game.constants.statisticCategoryGeneral, Game.i18n.t('stat.manualResources'));
 
         for(var i = 1; i <= Game.constants.maxTier; i++) {
-            this.createStatistic("tierOwned" + i, Game.constants.statisticCategoryGeneral, "Tier " + i + " Machines Owned");
+            this.createStatistic("tierOwned" + i, Game.constants.statisticCategoryGeneral, Game.i18n.t('stat.tierOwned', [i]));
         }
 
-        this.createStatistic("tabsUnlocked", Game.constants.statisticCategoryUnlockable, "Tabs Unlocked", 7);
-        this.createStatistic("resourcesUnlocked", Game.constants.statisticCategoryUnlockable, "Resources Unlocked", 16);
-        this.createStatistic("techResearched", Game.constants.statisticCategoryUnlockable, "Technologies Researched", 26);
-        this.createStatistic("placesExplored", Game.constants.statisticCategoryUnlockable, "Places Explored", 10);
-        this.createStatistic("wondersBuilt", Game.constants.statisticCategoryUnlockable, "Wonders Built", 4);
-        this.createStatistic("wondersActivated", Game.constants.statisticCategoryUnlockable, "Wonders Activated", 9);
-        this.createStatistic("rebirthCount", Game.constants.statisticCategoryUnlockable, "Times rebirthed", 0);  
+        this.createStatistic("tabsUnlocked", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.tabsUnlocked'), 7);
+        this.createStatistic("resourcesUnlocked", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.resourcesUnlocked'), 16);
+        this.createStatistic("techResearched", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.techResearched'), 26);
+        this.createStatistic("placesExplored", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.placesExplored'), 10);
+        this.createStatistic("wondersBuilt", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.wondersBuilt'), 4);
+        this.createStatistic("wondersActivated", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.wondersActivated'), 9);
+        this.createStatistic("rebirthCount", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.rebirthCount'), 0);  
 
-        this.createStatistic("sessionTime", Game.constants.statisticCategoryTiming, "Session time", 0, STATISTIC_TYPE.TIME);
-        this.createStatistic("timePlayed", Game.constants.statisticCategoryTiming, "Time Played", 0, STATISTIC_TYPE.TIME);
+        this.createStatistic("sessionTime", Game.constants.statisticCategoryTiming, Game.i18n.t('stat.sessionTime'), 0, STATISTIC_TYPE.TIME);
+        this.createStatistic("timePlayed", Game.constants.statisticCategoryTiming, Game.i18n.t('stat.timePlayed'), 0, STATISTIC_TYPE.TIME);
         
         // Set some defaults
         this.add('resourcesUnlocked', 3);

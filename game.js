@@ -148,7 +148,7 @@ var Game = (function() {
         data = legacySave(data);
 
         localStorage.setItem("save",JSON.stringify(data));
-        Game.notifyInfo('Game Saved', 'Your save data has been stored in localStorage on your computer');
+        Game.notifyInfo(Game.i18n.t('notification.gameSaved.title'), Game.i18n.t('notification.gameSaved.text'));
         console.log('Game Saved');
 
         return data;
@@ -213,16 +213,16 @@ var Game = (function() {
     };
 
     instance.deleteSave = function() {
-        var deleteSave = prompt("Are you sure you want to delete this save? It is irreversible! If so, type 'DELETE' into the box.");
+        var deleteSave = prompt(Game.i18n.t('prompt.deleteSave'));
 
         if(deleteSave === "DELETE") {
             localStorage.removeItem("save");
 
-            alert("Deleted Save");
+            alert(Game.i18n.t('alert.deleteSuccess'));
             window.location.reload();
         }
         else {
-            alert("Deletion Cancelled");
+            alert(Game.i18n.t('alert.deleteCancelled'));
         }
     };
 
@@ -289,7 +289,7 @@ var Game = (function() {
     instance.noticeStack = {"dir1": "up", "dir2": "left", "firstpos1": 25, "firstpos2": 25};
 
     instance.notifyInfo = function(title, message) {
-        if(title == "Game Saved" && Game.settings.entries.saveNotifsEnabled == false){
+        if(title == Game.i18n.t('notification.gameSaved.title') && Game.settings.entries.saveNotifsEnabled == false){
             return;
         }
         if(Game.settings.entries.notificationsEnabled === true){
@@ -322,8 +322,8 @@ var Game = (function() {
     instance.notifyStorage = function() {
         if(Game.settings.entries.notificationsEnabled === true){
             this.activeNotifications.storage = new PNotify({
-                title: "Storage Full!",
-                text: 'You will no longer collect resources when they are full.',
+                title: Game.i18n.t('notification.storageFull.title'),
+                text: Game.i18n.t('notification.storageFull.text'),
                 type: 'warning',
                 animation: 'fade',
                 animate_speed: 'fast',
@@ -340,8 +340,8 @@ var Game = (function() {
 
     instance.notifyOffline = function(time) {
         this.activeNotifications.success = new PNotify({
-            title: "Offline Gains",
-            text: "You've been offline for " + Game.utils.getFullTimeDisplay(time, true),
+            title: Game.i18n.t('notification.offlineGains.title'),
+            text: Game.i18n.t('notification.offlineGains.text', [Game.utils.getFullTimeDisplay(time, true)]),
             type: 'info',
             animation: 'fade',
             animate_speed: 'fast',
@@ -375,10 +375,10 @@ var Game = (function() {
         if (timeLeft <= 15000) {
             element.show();
             if(timeLeft <= 5000){
-                element.text("Autosaving in " + (timeLeft / 1000).toFixed(1) + " seconds");
+                element.text(Game.i18n.t('autosave.prefix') + " " + (timeLeft / 1000).toFixed(1) + " " + Game.i18n.t('autosave.seconds'));
             }
             else{
-                element.text("Autosaving in " + (timeLeft / 1000).toFixed(0) + " seconds");
+                element.text(Game.i18n.t('autosave.prefix') + " " + (timeLeft / 1000).toFixed(0) + " " + Game.i18n.t('autosave.seconds'));
             }
         } else {
             element.hide();
@@ -395,6 +395,8 @@ var Game = (function() {
         PNotify.prototype.options.delay = 3500;
 
         $('[data-toggle="tooltip"]').tooltip();
+
+        Game.i18n.init();
 
         console.debug("Loading Game");
         

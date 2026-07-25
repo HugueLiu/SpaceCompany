@@ -55,7 +55,7 @@ Game.stargazeUI = (function(){
         instance.titleTemplate = Handlebars.compile(
             ['<tr><td style="border:none;">',
                 '<h2 class="default btn-link">{{name}}</h2>',
-                '<h4><b>Relationship: <span id="{{htmlId}}_pageOpinion">{{opinion}}</span></b></h4>',
+                '<h4><b>' + Game.i18n.t('ui.interstellar.relationship') + ' <span id="{{htmlId}}_pageOpinion">{{opinion}}</span></b></h4>',
                 '<span>{{{desc}}}</span>',
                 '<br><br>',
                 '</td></tr>'].join('\n'));
