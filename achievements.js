@@ -60,7 +60,7 @@ Game.achievements = (function() {
 			var bracket = data.brackets[data.unlocked + 1];
 
 			if(data.unlocked < data.brackets.length - 1 && data.evaluator(bracket)) {
-				Game.notifySuccess(Game.i18n.t('notification.achievement.title'), this.getAchievementTitle(data, false));
+				Game.notifySuccess('成就达成', this.getAchievementTitle(data, false));
 
 				this.unlock(id, data.unlocked + 1);
 

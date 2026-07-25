@@ -931,7 +931,7 @@ function getMiner(){
 				researchUnlocked = true;
 				tabsUnlocked.push("researchTab");
 				newUnlock("research");
-				Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.research'));
+				Game.notifySuccess('新标签页！', '你已解锁研究标签页！');
 			}
 		}
 

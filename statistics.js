@@ -12,22 +12,22 @@ Game.statistics = (function(){
     instance.statisticTypeCount = 0;
 
     instance.initialise = function() {
-        this.createStatistic("manualResources", Game.constants.statisticCategoryGeneral, Game.i18n.t('stat.manualResources'));
+        this.createStatistic("manualResources", Game.constants.statisticCategoryGeneral, '手动采集资源');
 
         for(var i = 1; i <= Game.constants.maxTier; i++) {
-            this.createStatistic("tierOwned" + i, Game.constants.statisticCategoryGeneral, Game.i18n.t('stat.tierOwned', [i]));
+            this.createStatistic("tierOwned" + i, Game.constants.statisticCategoryGeneral, 'T' + i + '级机器拥有量');
         }
 
-        this.createStatistic("tabsUnlocked", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.tabsUnlocked'), 7);
-        this.createStatistic("resourcesUnlocked", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.resourcesUnlocked'), 16);
-        this.createStatistic("techResearched", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.techResearched'), 26);
-        this.createStatistic("placesExplored", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.placesExplored'), 10);
-        this.createStatistic("wondersBuilt", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.wondersBuilt'), 4);
-        this.createStatistic("wondersActivated", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.wondersActivated'), 9);
-        this.createStatistic("rebirthCount", Game.constants.statisticCategoryUnlockable, Game.i18n.t('stat.rebirthCount'), 0);  
+        this.createStatistic("tabsUnlocked", Game.constants.statisticCategoryUnlockable, '已解锁标签页', 7);
+        this.createStatistic("resourcesUnlocked", Game.constants.statisticCategoryUnlockable, '已解锁资源', 16);
+        this.createStatistic("techResearched", Game.constants.statisticCategoryUnlockable, '已研究技术', 26);
+        this.createStatistic("placesExplored", Game.constants.statisticCategoryUnlockable, '已探索地点', 10);
+        this.createStatistic("wondersBuilt", Game.constants.statisticCategoryUnlockable, '已建造奇迹', 4);
+        this.createStatistic("wondersActivated", Game.constants.statisticCategoryUnlockable, '已激活奇迹', 9);
+        this.createStatistic("rebirthCount", Game.constants.statisticCategoryUnlockable, '重生次数', 0);  
 
-        this.createStatistic("sessionTime", Game.constants.statisticCategoryTiming, Game.i18n.t('stat.sessionTime'), 0, STATISTIC_TYPE.TIME);
-        this.createStatistic("timePlayed", Game.constants.statisticCategoryTiming, Game.i18n.t('stat.timePlayed'), 0, STATISTIC_TYPE.TIME);
+        this.createStatistic("sessionTime", Game.constants.statisticCategoryTiming, '本次会话时间', 0, STATISTIC_TYPE.TIME);
+        this.createStatistic("timePlayed", Game.constants.statisticCategoryTiming, '总游戏时间', 0, STATISTIC_TYPE.TIME);
         
         // Set some defaults
         this.add('resourcesUnlocked', 3);

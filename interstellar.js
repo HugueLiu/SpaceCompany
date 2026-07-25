@@ -481,12 +481,12 @@ Game.interstellar.military = (function(){
         var roll = Math.random();
         if(chance >= roll){
             star.spy += 1;
-            Game.notifyInfo(Game.i18n.t('notification.espionageSuccess.title'), Game.i18n.t('notification.espionageSuccess.text'));
+            Game.notifyInfo('间谍成功！', '你获取了更多关于该星系的信息！');
         } else {
             var scout = this.entries.scout;
             scout.count -= scout.active;
             scout.active = 0;
-            Game.notifyInfo(Game.i18n.t('notification.espionageFailed.title'), Game.i18n.t('notification.espionageFailed.text'));
+            Game.notifyInfo('间谍失败！', '你失去了所有活跃的侦察兵。');
         }
         star.displayNeedsUpdate = true;
         this.updateFleetStats();
@@ -552,9 +552,9 @@ Game.interstellar.military = (function(){
                     shipData.displayNeedsUpdate = true;
                 }
                 if(losses){
-                    Game.notifyInfo(Game.i18n.t('notification.invasionSuccess.title'), Game.i18n.t('notification.invasionSuccess.text1', [star.name, star.resource1, star.resource2]));
+                    Game.notifyInfo('入侵成功！', '你征服了 star.name, star.resource1, star.resource2，可以获得生产加成。');
                 } else {
-                    Game.notifyInfo(Game.i18n.t('notification.invasionSuccess.title'), Game.i18n.t('notification.invasionSuccess.text2', [star.name, star.resource1, star.resource2]));
+                    Game.notifyInfo('入侵成功！', '你零损失征服了 star.name, star.resource1, star.resource2！');
                 }
                 var faction = Game.stargaze.getStargazeData(star.factionId);
                 faction.opinion -= 10;
@@ -569,7 +569,7 @@ Game.interstellar.military = (function(){
                     }
                     shipData.displayNeedsUpdate = true;
                 }
-                Game.notifyInfo(Game.i18n.t('notification.invasionFailed.title'), Game.i18n.t('notification.invasionFailed.text'));
+                Game.notifyInfo('入侵失败！', '不幸的是，敌方力量太强大了。他们摧毁了你所有的活跃飞船。');
             }
             star.displayNeedsUpdate = true;
             this.updateFleetStats();
@@ -585,7 +585,7 @@ Game.interstellar.military = (function(){
             data.owned = true;
             data.displayNeedsUpdate = true;
             faction.displayNeedsUpdate = true;
-            Game.notifyInfo(Game.i18n.t('notification.absorption.title'), Game.i18n.t('notification.absorption.text', [data.name, data.resource1, data.resource2]));
+            Game.notifyInfo('成功吸收！', '你和平征服了 data.name, data.resource1, data.resource2。');
         }
     };
 

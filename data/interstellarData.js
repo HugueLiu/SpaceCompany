@@ -3,12 +3,12 @@ Game.interstellarCategoryData = (function () {
     var instance = {};
 
     instance.general = {
-        title: 'Interstellar',
+        title: '星际',
         category: 'general'
     };
 
     instance.faction = {
-        title: 'Faction Star Systems',
+        title: '阵营星系',
         category: 'faction',
     };
 
@@ -21,84 +21,84 @@ Game.interstellarData = (function(){
 	var instance = {};
 
 	instance.comms = {
-		name: 'Communications',
-		desc: 'This is where you learn about other systems to travel to. <br><b>NB: The first star, Alpha Centauri is 4.3 LY away. 1 IRS will not get you there.</b>',
+		name: '通讯',
+		desc: '在这里你可以了解其他可前往的星系。<br><b>注意：第一颗星——半人马座α星距离4.3光年。1个IRS无法到达那里。</b>',
 		category: 'general',
 		unlocked: false
 	};
 
 	instance.rocket = {
-		name: 'Rockets',
-		desc: 'This is where you can construct your transport to the stars.',
+		name: '火箭',
+		desc: '在这里你可以建造前往恒星的运输工具。',
 		category: 'general',
-		built: 'Not Built',
+		built: '未建造',
 		unlocked: false
 	};
 
 	instance.antimatter = {
-		name: 'Antimatter',
-		desc: 'Your fuel for interstellar travel is produced here. Unfortunately, you can only handle 100k Antimatter per Star System as it is incredibly volatile.<br><br><button class="btn btn-default" onclick="toggleAntimatter()">Toggle Antimatter <span id="antimatterToggled">On</span></button>',
+		name: '反物质',
+		desc: '你的星际旅行燃料在这里生产。不幸的是，由于其极度不稳定，每个恒星系统只能处理100k反物质。<br><br><button class="btn btn-default" onclick="toggleAntimatter()">切换反物质 <span id="antimatterToggled">开</span></button>',
 		category: 'general',
 		unlocked: false
 	};
 
 	instance.travel = {
-		name: 'Travel',
-		desc: 'Here, you can travel across the cosmos to your heart\'s desire. When you explore a star system, it will appear in the respective faction tab, where you can gain control of it for boosts in the resources present. The number in () after the distance is the antimatter needed to travel there.',
+		name: '旅行',
+		desc: '在这里，你可以随心所欲地穿越宇宙。当你探索一个星系时，它将出现在对应的阵营标签页中，你可以在那里获得控制权以获得相应资源的生产加成。距离后面的数字是到达那里所需的反物质。',
 		category: 'general',
 		unlocked: false
 	};
 
 	instance.military = {
-		name: 'Military',
-		desc: 'This is where you can build up your fleet of ships to invade other systems. Your total fleet\'s attributes are based on which ships you own.',
+		name: '军事',
+		desc: '在这里你可以建立舰队来入侵其他星系。你的舰队总属性取决于你拥有的飞船。',
 		category: 'general',
 		unlocked: false
 	};
 
 	instance.carnelian = {
-		name: "Carnelian Resistance",
-		desc: "A ruthless faction with a fierce anger towards the ones in power, most notable, the Prasnian Empire. They are incessant in their opposition and focus their whole force towards attacking their enemies. Because of this, what they offer comprises mostly of upgrades tending towards a more active gameplay.",
+		name: "红玉髓抵抗军",
+		desc: "一个对当权者怀有强烈愤怒的无情阵营，尤其是普拉斯尼帝国。他们不停地反对，将全部力量集中在攻击敌人上。因此，他们提供的主要是倾向于更主动的游戏玩法的升级。",
 		category: "faction",
 		opinion: 0,
 		unlocked: false
 	};
 
 	instance.prasnian = {
-		name: "Prasnian Empire",
-		desc: "The current leader in the galaxy and the faction most focused on keeping things as they are. Opposed to change, they have an authoritarian regime and offer mainly upgrades concerning structures such as the Dysons or Wonders",
+		name: "普拉斯尼帝国",
+		desc: "当前银河系的领导者，最专注于维持现状的阵营。反对变革，他们有一个威权政权，主要提供与戴森或奇迹等结构相关的升级。",
 		category: "faction",
 		opinion: 0,
 		unlocked: false
 	};
 
 	instance.hyacinite = {
-		name: "Hyacinite Congregation",
-		desc: "The Hyacinite Congregationg is a science loving society, proud of all advances in technology and always looking to the future. They fight for the truth and are welcoming to anyone who shares their beliefs.",
+		name: "海蓝宝集合体",
+		desc: "海蓝宝集合体是一个热爱科学的社会，为所有技术进步感到自豪，并始终展望未来。他们为真理而战，欢迎任何与他们有共同信仰的人。",
 		category: "faction",
 		opinion: 0,
 		unlocked: false
 	};
 
 	instance.kitrinos = {
-		name: "Kitrinos Corporation",
-		desc: "This private company has grown powerful over the galaxy and is inspired by profits, with allies to those who can support their aims. Upgrades offered focus on passive gains, with a large amount of automation.",
+		name: "基特里诺斯公司",
+		desc: "这家私人公司已经在银河系中变得强大，以利润为动力，与那些能支持他们目标的人结盟。提供的升级侧重于被动收益，具有大量自动化。",
 		category: "faction",
 		opinion: 0,
 		unlocked: false
 	};
 
 	instance.moviton = {
-		name: "Moviton Syndicate",
-		desc: "The Moviton Syndicate is an expansionist centred faction, with a goal of conquest over the galaxy. They often play both sides of a conflict, hoping to gain from the chaos. They offer improvements in your travel, including rocket building and interstellar travel.",
+		name: "莫维顿辛迪加",
+		desc: "莫维顿辛迪加是一个以扩张为中心的阵营，目标是征服银河系。他们经常在冲突的双方中周旋，希望从混乱中获利。他们提供旅行方面的改进，包括火箭建造和星际旅行。",
 		category: "faction",
 		opinion: 0,
 		unlocked: false
 	};
 
 	instance.overlord = {
-		name: "Overlord Cult",
-		desc: "This faction is shrowded in mystery. While not much is known, a great sense of power overlooks the whole galaxy, seemingly above the other 5 factions and their 'petty' squables. The upgrades from your loyalty to the Overlord are not constrained to a type and vary greatly.",
+		name: "主宰者教团",
+		desc: "这个阵营笼罩在神秘之中。虽然知之甚少，但一种强大的力量俯瞰着整个银河系，似乎凌驾于其他五个阵营和他们的'琐碎'争斗之上。你对主宰者的忠诚所带来的升级不受类型限制，变化很大。",
 		category: "faction",
 		opinion: 0,
 		unlocked: false
@@ -114,8 +114,8 @@ Game.commsData = (function(){
 
 	instance.astroBreakthrough = {
 		entryName: 'astroBreakthrough',
-		name: 'Astronomical Breakthrough',
-		desc: 'A huge problem with the theory of interstellar space travel is on the verge of being broken. Make it happen with this upgrade. This is a one time upgrade, increasing your exploration range by 5 Light Years.',
+		name: '天文学突破',
+		desc: '星际旅行理论的巨大问题即将被突破。用这个升级来实现它。这是一次性升级，将你的探索范围增加5光年。',
 		category: 'comms',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -135,8 +135,8 @@ Game.commsData = (function(){
 
 	instance.IRS = {
 		entryName: 'IRS',
-		name: 'Interstellar Radar Scanner',
-		desc: 'The Overlord gifts you with the technology to discover stars in outer space by using the IRS. Each one increases the exploration range by 1 Light Year.',
+		name: '星际雷达扫描仪',
+		desc: '主宰者赐予你使用IRS发现外太空恒星的技术。每一个将探索范围增加1光年。',
 		category: 'comms',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -161,8 +161,8 @@ Game.rocketData = (function(){
 	var instance = {};
 
 	instance.tier1Rocket = {
-		name: 'Rocket Ship',
-		desc: 'The Rocket Ship can travel to Stars in the Milky Way, but cannot land on objects within the systems.',
+		name: '火箭飞船',
+		desc: '火箭飞船可以前往银河系中的恒星，但无法降落在系统内的天体上。',
 		category: 'rocket',
 		max: 1,
 		unlocked: true,
@@ -184,9 +184,9 @@ Game.rocketPartsData = (function(){
 	var instance = {};
 
 	instance.shield = {
-		name: 'Shield Plating',
+		name: '护盾装甲',
 		entryName: 'shield',
-		desc: 'This plating combats the Sun\'s radiation, and can protect anyone inside from the frigid cold of space.',
+		desc: '这种装甲抵御太阳辐射，并可以保护里面的任何人免受太空的严寒。',
 		category: 'rocketParts',
 		max: 50,
 		unlocked: true,
@@ -204,9 +204,9 @@ Game.rocketPartsData = (function(){
 	};
 
 	instance.engine = {
-		name: 'Engine Unit',
+		name: '引擎单元',
 		entryName: 'engine',
-		desc: 'These combine antimatter with matter in a controlled reaction to create propulsion that will carry you to the stars.',
+		desc: '这些在受控反应中将反物质与物质结合，产生将你带到恒星的推进力。',
 		category: 'rocketParts',
 		max: 25,
 		unlocked: true,
@@ -224,9 +224,9 @@ Game.rocketPartsData = (function(){
 	};
 
 	instance.aero = {
-		name: 'Aerodynamic Sections',
+		name: '空气动力学部件',
 		entryName: 'aero',
-		desc: 'These allow for easy takeoffs and landings out of atmospheres so that you don\'t have to worry about air resistance.',
+		desc: '这些允许在大气层外轻松起飞和降落，这样你就不用担心空气阻力了。',
 		category: 'rocketParts',
 		max: 15,
 		unlocked: true,
@@ -253,8 +253,8 @@ Game.antimatterData = (function(){
 
 	instance.drive = {
 		entryName: 'drive',
-		name: 'Alcubierre Drive',
-		desc: 'This powerful reactor can turn high-energy plasma into the most efficient fuel we can imagine.',
+		name: 'Alcubierre曲速引擎',
+		desc: '这个强大的反应堆可以将高能等离子体转化为我们能想象到的最高效燃料。',
 		category: 'antimatter',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -285,8 +285,8 @@ Game.militaryData = (function(){
 
 	instance.scout = {
 		entryName: 'scout',
-		name: 'Scout',
-		desc: 'Scout ships are the smallest and fastest ships and cost the least of all. Despite their seemingly little worth, they are important in battle and in numbers, can be deadly.',
+		name: '侦察舰',
+		desc: '侦察舰是最小最快的舰船，成本最低。尽管看似价值不大，但它们在战斗中很重要，数量多时可能致命。',
 		category: 'military',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -309,8 +309,8 @@ Game.militaryData = (function(){
 
 	instance.frigate = {
 		entryName: 'frigate',
-		name: 'Frigate',
-		desc: 'Larger than scouts, Frigates are among the smaller side of ship warefare. They have more power than scouts, but are significantly slower.',
+		name: '护卫舰',
+		desc: '比侦察舰大，护卫舰是小型舰船战争的一类。它们比侦察舰有更强的火力，但明显更慢。',
 		category: 'military',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -333,8 +333,8 @@ Game.militaryData = (function(){
 
 	instance.corvette = {
 		entryName: 'corvette',
-		name: 'Corvette',
-		desc: 'The Corvette is a mid-sized ship with decent speed, given its other attributes. What it lacks in defense, it makes up for in power and speed and is a good ship to populate your fleets with.',
+		name: '驱逐舰',
+		desc: '驱逐舰是一种中型舰船，速度相当不错。虽然防御力不足，但在火力和速度方面弥补了这一缺陷，是填充舰队的好选择。',
 		category: 'military',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -357,8 +357,8 @@ Game.militaryData = (function(){
 
 	instance.battlecruiser = {
 		entryName: 'battlecruiser',
-		name: 'Battle Cruiser',
-		desc: 'The Battle Cruiser is a costly investment, but pays off with a balanced mix of power, defense and speed. It is a high-end ship, both in terms of attributes and cost.',
+		name: '战列巡洋舰',
+		desc: '战列巡洋舰是一项昂贵的投资，但在火力、防御和速度方面都有平衡的表现。它是一种高端舰船。',
 		category: 'military',
 		unlocked: true,
 		displayNeedsUpdate: true,
@@ -381,8 +381,8 @@ Game.militaryData = (function(){
 
 	instance.capitalship = {
 		entryName: 'capitalship',
-		name: 'Capital Ship',
-		desc: 'The Capital Ship is a Defense-heavy ship, but can still pack a punch with it\'s large attack force. The main downside is the slow speed, dragging the fleet\'s manouverability down.',
+		name: '旗舰',
+		desc: '旗舰是一艘防御力很重的舰船，但凭借其强大的攻击力量仍然可以造成重创。主要缺点是速度慢，拖累舰队的机动性。',
 		category: 'military',
 		unlocked: true,
 		displayNeedsUpdate: true,

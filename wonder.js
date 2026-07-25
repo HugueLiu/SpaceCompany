@@ -419,7 +419,7 @@ function rebuildCommsWonder(){
         document.getElementById("interstellarTab").className = "";
 		if(document.getElementById("interstellarTab").className != ""){
         	tabsUnlocked.push("interstellarTab");
-        	Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.interstellar'));
+        	Game.notifySuccess('新标签页！', '你已解锁星际标签页！');
         }
 		newUnlock("interstellar");
 		Game.removeExcess(tabsUnlocked, "interstellarTab");
@@ -443,7 +443,7 @@ function rebuildRocketWonder(){
         if(document.getElementById("interstellarTab").className != ""){
         	document.getElementById("interstellarTab").className = "";
         	tabsUnlocked.push("interstellarTab");
-        	Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.interstellar'));
+        	Game.notifySuccess('新标签页！', '你已解锁星际标签页！');
         }
 		document.getElementById("interstellarTab_rocket_ne").className = "collapse_interstellarTab_general";
 		newUnlock("interstellar");
@@ -470,7 +470,7 @@ function rebuildAntimatterWonder(){
         if(document.getElementById("interstellarTab").className != ""){
         	document.getElementById("interstellarTab").className = "";
         	tabsUnlocked.push("interstellarTab");
-        	Game.notifySuccess(Game.i18n.t('notification.newTab.title'), Game.i18n.t('notification.newTab.interstellar'));
+        	Game.notifySuccess('新标签页！', '你已解锁星际标签页！');
         }
 		document.getElementById("interstellarTab_antimatter_ne").className = "collapse_interstellarTab_general";
 		newUnlock("interstellar");

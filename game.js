@@ -148,7 +148,7 @@ var Game = (function() {
         data = legacySave(data);
 
         localStorage.setItem("save",JSON.stringify(data));
-        Game.notifyInfo(Game.i18n.t('notification.gameSaved.title'), Game.i18n.t('notification.gameSaved.text'));
+        Game.notifyInfo('游戏已保存', '您的存档数据已保存在浏览器本地存储中');
         console.log('Game Saved');
 
         return data;
@@ -213,16 +213,16 @@ var Game = (function() {
     };
 
     instance.deleteSave = function() {
-        var deleteSave = prompt(Game.i18n.t('prompt.deleteSave'));
+        var deleteSave = prompt('你确定要删除存档吗？此操作不可逆！如果确定，请在框中输入DELETE。');
 
         if(deleteSave === "DELETE") {
             localStorage.removeItem("save");
 
-            alert(Game.i18n.t('alert.deleteSuccess'));
+            alert('存档已删除');
             window.location.reload();
         }
         else {
-            alert(Game.i18n.t('alert.deleteCancelled'));
+            alert('删除已取消');
         }
     };
 
@@ -235,9 +235,7 @@ var Game = (function() {
         self.ui.updateAutoDataBindings();
 
         // Patch data objects before initialise
-        Game.i18n.dataReady = true;
-        Game.i18n.patchDataObjects();
-
+                
         // Initialize first
         self.achievements.initialise();
         self.statistics.initialise();
@@ -259,8 +257,7 @@ var Game = (function() {
         self.updateUI(self);
 
         // Apply i18n after UI is ready
-        Game.i18n.applyDOM();
-        if (typeof refreshResources === 'function') refreshResources();
+                if (typeof refreshResources === 'function') refreshResources();
         if (typeof refreshResearches === 'function') refreshResearches();
         if (typeof refreshTabs === 'function') refreshTabs();
         if (typeof legacyRefreshUI === 'function') legacyRefreshUI();
@@ -300,7 +297,7 @@ var Game = (function() {
     instance.noticeStack = {"dir1": "up", "dir2": "left", "firstpos1": 25, "firstpos2": 25};
 
     instance.notifyInfo = function(title, message) {
-        if(title == Game.i18n.t('notification.gameSaved.title') && Game.settings.entries.saveNotifsEnabled == false){
+        if(title == '游戏已保存' && Game.settings.entries.saveNotifsEnabled == false){
             return;
         }
         if(Game.settings.entries.notificationsEnabled === true){
@@ -333,8 +330,8 @@ var Game = (function() {
     instance.notifyStorage = function() {
         if(Game.settings.entries.notificationsEnabled === true){
             this.activeNotifications.storage = new PNotify({
-                title: Game.i18n.t('notification.storageFull.title'),
-                text: Game.i18n.t('notification.storageFull.text'),
+                title: '存储已满！',
+                text: '资源满后将不再收集。',
                 type: 'warning',
                 animation: 'fade',
                 animate_speed: 'fast',
@@ -351,8 +348,8 @@ var Game = (function() {
 
     instance.notifyOffline = function(time) {
         this.activeNotifications.success = new PNotify({
-            title: Game.i18n.t('notification.offlineGains.title'),
-            text: Game.i18n.t('notification.offlineGains.text', [Game.utils.getFullTimeDisplay(time, true)]),
+            title: '离线收益',
+            text: '你已离线 ' + Game.utils.getFullTimeDisplay(time, true),
             type: 'info',
             animation: 'fade',
             animate_speed: 'fast',
@@ -386,10 +383,10 @@ var Game = (function() {
         if (timeLeft <= 15000) {
             element.show();
             if(timeLeft <= 5000){
-                element.text(Game.i18n.t('autosave.prefix') + " " + (timeLeft / 1000).toFixed(1) + " " + Game.i18n.t('autosave.seconds'));
+                element.text('自动保存中，剩余' +  (timeLeft / 1000).toFixed(1) + " " + '秒');
             }
             else{
-                element.text(Game.i18n.t('autosave.prefix') + " " + (timeLeft / 1000).toFixed(0) + " " + Game.i18n.t('autosave.seconds'));
+                element.text('自动保存中，剩余' + " " + (timeLeft / 1000).toFixed(0) + " " + '秒');
             }
         } else {
             element.hide();
@@ -407,8 +404,7 @@ var Game = (function() {
 
         $('[data-toggle="tooltip"]').tooltip();
 
-        Game.i18n.init();
-
+        
         console.debug("Loading Game");
         
         this.createInterval("Loading Animation", this.loadAnimation, 10);

@@ -69,9 +69,9 @@
 
     instance.createCategory = function (category) {
         var categoryNames = {
-            'general': Game.i18n.t('stat.general'),
-            'unlockable': Game.i18n.t('stat.unlockable'),
-            'timing': Game.i18n.t('stat.timing')
+            'general': '常规',
+            'unlockable': '可解锁',
+            'timing': '时间'
         };
         var data = {id: "stat_cat_" + category, name: categoryNames[category] || category};
         this.categoryElements[category] = { id: data.id };

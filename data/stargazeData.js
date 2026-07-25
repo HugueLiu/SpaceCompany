@@ -3,12 +3,12 @@ Game.stargazeCategoryData = (function () {
     var instance = {};
 
     instance.general = {
-        title: 'General',
+        title: '通用',
         category: 'general'
     };
 
     instance.faction = {
-        title: 'Factions',
+        title: '阵营',
         category: 'faction',
     };
 
@@ -21,19 +21,19 @@ Game.stargazeData = (function(){
 	var instance = {};
 
 	instance.intro = {
-		name: "Introduction",
-		para1: '"So here we are, at what seems like the end of your journey, but what you don\'t realise... is that this is just the beginning. Gazing up at the stars, you wonder what you could do with all of your newfound wealth and your empire in the solar system.',
-		para2: 'Suddenly, the Overlord reaches out to you and says: "You have come far in your time, and I feel that your life is slowing to an end after a long life of empire building. However, you have not met the expectations I thought you would."',
-		para3: '"Despite disapointing me and not achieving as much greatness as I would have liked, because of your loyalty and your dedication to me, I am prepared to give you another chance at Rebirth."',
-		para4: '"You will have many chances to impress me, as I will give you the ability of redemption when you feel the time has come and sacrifice is necessary. Your empire will grow even greater than before every time you rebirth, and as long as your alliegence lies with me, I will show you the way to galactic domination."',
-		para5: '"You will start over, a new life, but in exchange for your soul, I will reward your next self with the knowledge you have gained during your time in this universe and some of the most valuble material in this side of the multiverse: Dark Matter."',
+		name: "引言",
+		para1: '"就这样，你来到了这里，看似是你旅程的终点，但你没有意识到……这仅仅是开始。仰望星空，你思考着如何用你在太阳系中获得的财富和帝国去做些什么。',
+		para2: '突然，主宰者向你伸出手说："你已经走了很远，我觉得你的生命在漫长的帝国建设之后正在慢慢走向终结。然而，你没有达到我期望的标准。"',
+		para3: '"尽管让我失望了，也没有取得我期望的伟大成就，但考虑到你的忠诚和奉献，我准备给你一次重生的机会。"',
+		para4: '"你将有很多机会打动我，当你觉得时机成熟需要牺牲时，我会给你救赎的能力。每次重生，你的帝国都会比以前更强大，只要你忠于我，我将指引你走向银河霸权。"',
+		para5: '"你将重新开始，一段新的人生，但作为你灵魂的交换，我将用你在这一宇宙中获得的知识和多元宇宙这一侧最有价值的物质——暗物质——来奖励你的下一个自己。"',
 		category: "general",
 		unlocked: true
 	};
 
 	instance.darkMatter = {
-		name: "Dark Matter",
-		desc: "Here, you can see how much Dark Matter you have acquired and the earnings you will recieve upon reset (in brackets). You can find out how DM is gained and can spend it on Dark-Matter-specific upgrades.",
+		name: "暗物质",
+		desc: "在这里，你可以看到你获得的暗物质数量以及重置时将获得的收益（括号内）。你可以了解如何获得暗物质，并将其用于暗物质专属升级。",
 		current: 0,
 		count: 0,
 		category: "general",
@@ -41,48 +41,48 @@ Game.stargazeData = (function(){
 	};
 
 	instance.carnelian = {
-		name: "Carnelian Resistance",
-		desc: "A ruthless faction with a fierce anger towards the ones in power, most notable, the Prasnian Empire. They are incessant in their opposition and focus their whole force towards attacking their enemies. Because of this, what they offer comprises mostly of upgrades tending towards a more active gameplay.",
+		name: "红玉髓抵抗军",
+		desc: "一个对当权者怀有强烈愤怒的无情阵营，尤其是普拉斯尼帝国。他们不停地反对，将全部力量集中在攻击敌人上。因此，他们提供的主要是倾向于更主动的游戏玩法的升级。",
 		category: "faction",
 		opinion: 0,
 		unlocked: true
 	};
 
 	instance.prasnian = {
-		name: "Prasnian Empire",
-		desc: "The current leader in the galaxy and the faction most focused on keeping things as they are. Opposed to change, they have an authoritarian regime and offer mainly upgrades concerning structures such as the Dysons or Wonders",
+		name: "普拉斯尼帝国",
+		desc: "当前银河系的领导者，最专注于维持现状的阵营。反对变革，他们有一个威权政权，主要提供与戴森或奇迹等结构相关的升级。",
 		category: "faction",
 		opinion: 0,
 		unlocked: true
 	};
 
 	instance.hyacinite = {
-		name: "Hyacinite Congregation",
-		desc: "The Hyacinite Congregationg is a science loving society, proud of all advances in technology and always looking to the future. They fight for the truth and are welcoming to anyone who shares their beliefs.",
+		name: "海蓝宝集合体",
+		desc: "海蓝宝集合体是一个热爱科学的社会，为所有技术进步感到自豪，并始终展望未来。他们为真理而战，欢迎任何与他们有共同信仰的人。",
 		category: "faction",
 		opinion: 0,
 		unlocked: true
 	};
 
 	instance.kitrinos = {
-		name: "Kitrinos Corporation",
-		desc: "This private company has grown powerful over the galaxy and is inspired by profits, with allies to those who can support their aims. Upgrades offered focus on passive gains, with a large amount of automation.",
+		name: "基特里诺斯公司",
+		desc: "这家私人公司已经在银河系中变得强大，以利润为动力，与那些能支持他们目标的人结盟。提供的升级侧重于被动收益，具有大量自动化。",
 		category: "faction",
 		opinion: 0,
 		unlocked: true
 	};
 
 	instance.moviton = {
-		name: "Moviton Syndicate",
-		desc: "The Moviton Syndicate is an expansionist centred faction, with a goal of conquest over the galaxy. They often play both sides of a conflict, hoping to gain from the chaos. They offer improvements in your travel, including rocket building and interstellar travel.",
+		name: "莫维顿辛迪加",
+		desc: "莫维顿辛迪加是一个以扩张为中心的阵营，目标是征服银河系。他们经常在冲突的双方中周旋，希望从混乱中获利。他们提供旅行方面的改进，包括火箭建造和星际旅行。",
 		category: "faction",
 		opinion: 0,
 		unlocked: true
 	};
 
 	instance.overlord = {
-		name: "Overlord Cult",
-		desc: "This faction is shrowded in mystery. While not much is known, a great sense of power overlooks the whole galaxy, seemingly above the other 5 factions and their 'petty' squables. The upgrades from your loyalty to the Overlord are not constrained to a type and vary greatly.",
+		name: "主宰者教团",
+		desc: "这个阵营笼罩在神秘之中。虽然知之甚少，但一种强大的力量俯瞰着整个银河系，似乎凌驾于其他五个阵营和他们的'琐碎'争斗之上。你对主宰者的忠诚所带来的升级不受类型限制，变化很大。",
 		category: "faction",
 		opinion: 0,
 		unlocked: true
@@ -102,28 +102,28 @@ Game.darkMatter = (function(){
 	************/
 
 	instance.wonder = {
-		name: "Wonders",
-		desc: "You get Dark Matter for the floors of the Wonder Station that you complete. It is likely you will have achieved all of these in your first run before resetting. You get 4 Dark Matter for every floor completed, but 2 for the last floor (only one wonder).",
+		name: "奇迹",
+		desc: "你每完成一个奇迹站的楼层就能获得暗物质。你很可能在第一次重置之前就完成了所有这些。每完成一个楼层获得4暗物质，但最后一个楼层获得2暗物质。",
 	};
 
 	instance.sphere = {
-		name: "Sphere",
-		desc: "For building a sphere in your home system and thus completing it, you get 15 dark matter. For every sphere built in another system, you gain 5 dark matter."
+		name: "球体",
+		desc: "在你的主星系建造一个戴森球从而完成它，你将获得15暗物质。在其他星系中建造的每个戴森球将获得5暗物质。"
 	};
 
 	instance.research = {
-		name: "Research Efficiency",
-		desc: "For every 25 Research Efficiencies in any of the repurchaseable researches, you will get 2 Dark Matter.",
+		name: "研究效率",
+		desc: "在任何可重复购买的研究中每达到25次研究效率，你将获得2暗物质。",
 	};
 
 	instance.rank = {
-		name: "Achievement Rank",
-		desc: "For every achievement rank attained, you will get 2 dark matter. Due to the easy difficulty in the first few achievement ranks, this will be your primary source of dark matter early in a run.",
+		name: "成就等级",
+		desc: "每达到一个成就等级，你将获得2暗物质。由于前几个成就等级比较容易，这将是你早期运行中暗物质的主要来源。",
 	};
 
 	instance.swarm = {
-		name: "Swarms",
-		desc: "One of the more complex systems, your Dark Matter gained from swarms is judged on an old mathematical sequence: Pascal's Triangle. You will get 1 dark matter for passing each triangular number of swarms necessary. For example: 1,3,6,10,15,21...",
+		name: "集群",
+		desc: "这是更复杂的系统之一，你从集群获得的暗物质基于一个古老的数学序列：帕斯卡三角。你将每通过一个三角数获得1暗物质。例如：1,3,6,10,15,21...",
 	};
 
 	return instance;
@@ -139,22 +139,22 @@ Game.prestigeData = (function(){
 	************/
 
 	instance.rebirth = {
-		name: "Rebirth",
-		desc: "Stepping forth into a new life is a great undertaking and not something to be done on a whim. Once certain, you may start afresh, maintaining the knowledge and experience you gave gained from your previous life and renew yourself, achieving greater and faster than before. You will keep any unspent dark matter, as well as your upgrades. <br><b>NB: You cannot rebirth without a sphere, even on second runs.<br> NB: You will keep all upgrades purchased in your previous life  </b>",
+		name: "重生",
+		desc: "踏入新生命是一项伟大的事业，不是一时兴起就能做的事。一旦确定，你可以重新开始，保留你在前世获得的知识和经验，实现比以前更大更快的成就。你将保留未使用的暗物质和升级。<br><b>注意：没有球体就无法重生，即使在第二次运行中。<br>注意：你将保留前世购买的所有升级。</b>",
 		cost: 0,
 		category: "intro",
 	};
 
 	instance.respec = {
-		name: "Respec",
-		desc: "When you have made a mistake or want to change your upgrades, you can respec and refund every upgrade for dark matter. Unfortunately, this huge amount of power can only be unleashed a finite number of times. The Overlord graciously gives you 3 free chances at redemption, but the rest will have to be earned through rebirth (1 extra every 3 times). <br><b>NB: You will lose machines gained with these ugprades, including all T5 machines. You will also divide your storage by 128 if you have the starting storage. (6400/50 = 128).</b>",
+		name: "重置技能",
+		desc: "当你犯了错误或想更改升级时，你可以重置技能并退还每个升级的暗物质。不幸的是，这种巨大的力量只能释放有限的次数。主宰者慷慨地给你3次免费的救赎机会，其余的需要通过重生获得（每3次额外获得1次）。<br><b>注意：你将失去通过这些升级获得的机器，包括所有T5机器。如果你拥有初始存储，存储将除以128。</b>",
 		cost: 0,
 		category: "intro",
 	};
 
 	instance.increaseProd1 = {
-		name: "Dark Matter Boost",
-		desc: "This adds a 1% boost to all resources (including science) for each Dark Matter you have not spent.",
+		name: "暗物质增益",
+		desc: "每有一个未使用的暗物质，所有资源（包括科学）增加1%的加成。",
 		cost: 30,
 		category: "darkMatter",
 		onApply: function(){
@@ -171,23 +171,16 @@ Game.prestigeData = (function(){
 	**************/
 
 	instance.empowerManualGains = {
-		name: "Empower Manual Gains",
-		desc: "Increase all gain buttons to 20 per click instead of 1.",
+		name: "强化手动获取",
+		desc: "将所有获取按钮从每次1个增加到每次20个。",
 		cost: 5,
 		category: "carnelian",
 		opinion: 3,
 		onApply: function(){
-			// old
 			gainNum = 20;
 			for(var resource in RESOURCE){
 				if(RESOURCE[resource] != "science")$('#' + RESOURCE[resource] + 'Gain').text(gainNum);
 			}
-
-			// new
-			// for(var id in Game.resources.entries){
-			// 	Game.resources.entries[id].perClick = 20;
-			// 	Game.resources.entries[id].displayNeedsUpdate = true;
-			// }
 		},
 		remove: function(){
 	    	gainNum = 1;
@@ -199,13 +192,12 @@ Game.prestigeData = (function(){
 	};
 
 	instance.startingStorage = {
-		name: "Starting Storage",
-		desc: "Start with 6,400 max-storage on everything on rebirth. (Does not affect if over 6,400)",
+		name: "初始存储",
+		desc: "重生时所有资源初始最大存储量为6,400。（如果已超过6,400则不受影响）",
 		cost: 8,
 		category: "carnelian",
 		opinion: 6,
 		onApply: function(){
-			// old
 			var newStorage = 6400;
 			for(var i = 0; i < resources.length; i++){
 				if(window[resources[i] + "Storage"] <= 6400){
@@ -213,8 +205,6 @@ Game.prestigeData = (function(){
 					window[resources[i] + "NextStorage"] = newStorage * 2;
 				}
 			}
-
-			// new
 		},
 		remove: function(){
 	    	for(var i = 0; i < resources.length; i++){
@@ -231,16 +221,13 @@ Game.prestigeData = (function(){
 	};
 
 	instance.storageDiscount = {
-		name: "Storage Discount",
-		desc: "All Storages no longer cost 100% of the main resource, but instead, 75%.",
+		name: "存储折扣",
+		desc: "所有存储不再消耗100%的主要资源，而是75%。",
 		cost: 21,
 		category: "carnelian",
 		opinion: 14,
 		onApply: function(){
-			// old
 			storagePrice -= 0.25;
-
-			// new
 		},
 		remove: function(){
 	    	storagePrice += 0.25;
@@ -253,8 +240,8 @@ Game.prestigeData = (function(){
 	*************/
 
 	instance.T3Plasma = {
-		name: "Tier 3 Plasma",
-		desc: "Unlock the Electron Bath",
+		name: "T3等离子体",
+		desc: "解锁电子浴",
 		cost: 11,
 		category: "prasnian",
 		opinion: 4,
@@ -270,8 +257,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.floor1Discount = {
-		name: "Floor 1 Discount",
-		desc: "All Wonders on the First Floor recieve a 15% price reduction.",
+		name: "第一层折扣",
+		desc: "第一层的所有奇迹享受15%的价格减免。",
 		cost: 16,
 		category: "prasnian",
 		opinion: 10,
@@ -287,8 +274,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.floor23Discount = {
-		name: "Floor 2 & 3 Discount",
-		desc: "All Wonders on the Second and Third Floor recieve a 20% price reduction.",
+		name: "第二三层折扣",
+		desc: "第二层和第三层的所有奇迹享受20%的价格减免。",
 		cost: 19,
 		category: "prasnian",
 		opinion: 15,
@@ -304,8 +291,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.autoEmc = {
-		name: "Automated EMC",
-		desc: "Check a box on an EMC resource and have that resource be 'EMCed' to the max every second.",
+		name: "自动EMC",
+		desc: "在EMC资源上勾选一个框，让该资源每秒自动转换到最大值。",
 		cost: 24,
 		category: "prasnian",
 		opinion: 17,
@@ -329,8 +316,8 @@ Game.prestigeData = (function(){
 	**************/
 
 	instance.startingLabs = {
-		name: "Starting Labs",
-		desc: "Start with 20 T1 Labs on rebirth.",
+		name: "初始实验室",
+		desc: "重生时初始拥有20个T1实验室。",
 		cost: 7,
 		category: "hyacinite",
 		opinion: 3,
@@ -345,17 +332,14 @@ Game.prestigeData = (function(){
 	};
 
 	instance.labDiscount = {
-		name: "Lab Discount",
-		desc: "T2+ Labs are 20% cheaper with this upgrade.",
+		name: "实验室折扣",
+		desc: "T2+实验室此升级后便宜20%。",
 		cost: 16,
 		category: "hyacinite",
 		opinion: 12,
 		onApply: function(){
-			// old
 			labT2PlusMulti -= 0.2;
 			updateLabCost();
-
-			// new
 		},
 		remove: function(){
             labT2PlusMulti += 0.2;
@@ -365,8 +349,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.T5Labs = {
-		name: "Tier 5 Laboratories",
-		desc: "Unlock the Space Scientific Satellite Station",
+		name: "T5实验室",
+		desc: "解锁太空科学卫星站",
 		cost: 24,
 		category: "hyacinite",
 		opinion: 14,
@@ -382,8 +366,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.energyEff = {
-		name: "Energy Efficiency Cap",
-		desc: "Increase Energy Efficiency research cap to 50% instead of 25%.",
+		name: "能源效率上限",
+		desc: "将能源效率研究上限从25%提高到50%。",
 		cost: 36,
 		category: "hyacinite",
 		opinion: 25,
@@ -402,8 +386,8 @@ Game.prestigeData = (function(){
 	*************/
 
 	instance.T1Discount = {
-		name: "Tier 1 Machine Discount",
-		desc: "All Tier 1 machines on every resource (in resources tab) are 10% cheaper.",
+		name: "T1机器折扣",
+		desc: "资源标签页中所有T1机器便宜10%。",
 		cost: 8,
 		category: "kitrinos",
 		opinion: 4,
@@ -417,8 +401,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.T5Batteries = {
-		name: "Tier 5 Batteries",
-		desc: "Unlock the fifth tier of batteries for all your energy storage needs.",
+		name: "T5电池",
+		desc: "解锁第五级电池以满足所有能源存储需求。",
 		cost: 14,
 		category: "kitrinos",
 		opinion: 17,
@@ -434,8 +418,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.T5Machines = {
-		name: "Tier 5 Machines",
-		desc: "Gain access to a fifth tier of machines to produce resources.",
+		name: "T5机器",
+		desc: "获得第五级机器的使用权来生产资源。",
 		cost: 35,
 		category: "kitrinos",
 		opinion: 20,
@@ -448,21 +432,13 @@ Game.prestigeData = (function(){
 		achieved: false
 	};
 
-	// instance.recycling = {
-	// 	name: "Recycling",
-	// 	desc: "Instead of destroying machines, recycle them for 50% of the cost!",
-	// 	cost: 29,
-	// 	category: "hyacinite",
-	// 	achieved: false
-	// };
-
 	/************
 	** Moviton **
 	************/
 
 	instance.chemicalBoost = {
-		name: "Chemical Plant Boost",
-		desc: "Produce 100% more rocket fuel per chemical plant.",
+		name: "化工厂增益",
+		desc: "每个化工厂的火箭燃料产量增加100%。",
 		cost: 11,
 		category: "moviton",
 		opinion: 7,
@@ -476,8 +452,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.rocketDiscount = {
-		name: "Rocket Discount",
-		desc: "Rocket Parts Cost 35% less.",
+		name: "火箭折扣",
+		desc: "火箭零件成本减少35%。",
 		cost: 23,
 		category: "moviton",
 		opinion: 28,
@@ -491,8 +467,8 @@ Game.prestigeData = (function(){
 	};
 
 	instance.meteoriteTier3 = {
-		name: "Meteorite Tier 3",
-		desc: "Unlock the Planet Smasher building.",
+		name: "T3陨石",
+		desc: "解锁行星粉碎机建筑。",
 		cost: 37,
 		category: "moviton",
 		opinion: 29,
@@ -508,8 +484,8 @@ Game.prestigeData = (function(){
 	}
 
 	instance.meteoriteTier4 = {
-		name: "Meteorite Tier 4",
-		desc: "Unlock the Nebulous Synthesizer building.",
+		name: "T4陨石",
+		desc: "解锁星云合成器建筑。",
 		cost: 49,
 		category: "moviton",
 		opinion: 36,
@@ -523,14 +499,6 @@ Game.prestigeData = (function(){
 	    },
 		achieved: false
 	}
-
-	// instance.spaceElevator = {
-	// 	name: "Space Elevator",
-	// 	desc: "Build a giant elevator to reduce antimatter costs by 20%",
-	// 	cost: 42,
-	// 	category: "moviton",
-	// 	achieved: false
-	// }
 
 	/*************
 	** Overlord **

@@ -41,24 +41,24 @@ Game.interstellarUI = (function(){
         instance.militaryTitleTemplate = Handlebars.compile(
             ['<tr><td colspan="2" style="border:none;">',
                 '<h2 class="default btn-link">{{name}}</h2>',
-                '<h4><b>' + Game.i18n.t('ui.interstellar.fleetAttributes') + '</b></h4>',
-                '<span class="fleetPower">0</span> ' + Game.i18n.t('ui.interstellar.power') + ',',
-                '<span class="fleetDefense">0</span> ' + Game.i18n.t('ui.interstellar.defense') + ',',
-                '<span class="fleetSpeed">0</span> ' + Game.i18n.t('ui.interstellar.speed'),
+                '<h4><b>' + '舰队总属性：' + '</b></h4>',
+                '<span class="fleetPower">0</span> ' + '攻击力' + ',',
+                '<span class="fleetDefense">0</span> ' + '防御力' + ',',
+                '<span class="fleetSpeed">0</span> ' + '速度',
                 '<br><br>',
                 '</td></tr>'].join('\n'));
 
         instance.factionTitleTemplate = Handlebars.compile(
             ['<tr><td style="border:none; width:50%;">',
                 '<h2 class="default btn-link">{{name}}</h2>',
-                '<h4><b>' + Game.i18n.t('ui.interstellar.relationship') + ' {{opinion}}</b></h4>',
+                '<h4><b>' + '关系' + ' {{opinion}}</b></h4>',
                 '<span>{{desc}}</span>',
                 '<br><br>',
                 '</td><td style="border:none; width:50%;">',
-                '<br><br><br><h4><b>' + Game.i18n.t('ui.interstellar.yourFleet') + '</b></h4>',
-                '<h4><span class="fleetPower">0</span> ' + Game.i18n.t('ui.interstellar.power') + ',',
-                '<span class="fleetDefense">0</span> ' + Game.i18n.t('ui.interstellar.defense') + ',',
-                '<span class="fleetSpeed">0</span> ' + Game.i18n.t('ui.interstellar.speed') + '</h4>',
+                '<br><br><br><h4><b>' + '你的入侵舰队：' + '</b></h4>',
+                '<h4><span class="fleetPower">0</span> ' + '攻击力' + ',',
+                '<span class="fleetDefense">0</span> ' + '防御力' + ',',
+                '<span class="fleetSpeed">0</span> ' + '速度' + '</h4>',
                 '</td></tr>'].join('\n'));
 
         instance.commMachineTemplate = Handlebars.compile(
@@ -68,7 +68,7 @@ Game.interstellarUI = (function(){
                     '<p>{{desc}}</p>',
                     '<p id="{{htmlId}}_cost"></p>',
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.comms.buildMachine(\'{{entryName}}\')" class="btn btn-default">' + Game.i18n.t('ui.interstellar.getPrefix') + ' {{name}}</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.comms.buildMachine(\'{{entryName}}\')" class="btn btn-default">' + '获取' + ' {{name}}</div>',
                 '</td></tr>'].join('\n'));
 
         instance.machineTemplate = Handlebars.compile(
@@ -80,18 +80,18 @@ Game.interstellarUI = (function(){
                     '<p id="{{htmlId}}_use"></p>',
                     '<p id="{{htmlId}}_cost"></p>',
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.antimatter.buildMachine(\'{{entryName}}\')" class="btn btn-default">' + Game.i18n.t('ui.interstellar.getOne') + '</div>',
-                '<div id="{{htmlId}}_destroy" onclick="Game.interstellar.antimatter.destroyMachine(\'{{entryName}}\')" class="btn btn-default">' + Game.i18n.t('ui.interstellar.destroyOne') + '</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.antimatter.buildMachine(\'{{entryName}}\')" class="btn btn-default">' + '获取 1' + '</div>',
+                '<div id="{{htmlId}}_destroy" onclick="Game.interstellar.antimatter.destroyMachine(\'{{entryName}}\')" class="btn btn-default">' + '销毁 1' + '</div>',
                 '</td></tr>'].join('\n'));
 
         instance.rocketTemplate = Handlebars.compile(
             ['<tr id="{{htmlId}}"></tr><td>',
-                '<h3 class="default btn-link">{{name}}: <span id="{{htmlId}}Built">' + Game.i18n.t('ui.interstellar.notBuilt') + '</span></h3>',
+                '<h3 class="default btn-link">{{name}}: <span id="{{htmlId}}Built">' + '未建造' + '</span></h3>',
                 '<span>',
                     '<p>{{desc}}</p>',
                     '<p id="{{htmlId}}_cost"></p>',
                 '</span>',
-                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.rocket.buildRocket(\'tier1Rocket\')" class="btn btn-default">' + Game.i18n.t('ui.interstellar.getPrefix') + ' {{name}}</div>',
+                '<div id="{{htmlId}}_buy" onclick="Game.interstellar.rocket.buildRocket(\'tier1Rocket\')" class="btn btn-default">' + '获取' + ' {{name}}</div>',
                 '</td></tr>'].join('\n'));
 
         instance.rocketPartTemplate = Handlebars.compile(

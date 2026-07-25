@@ -298,7 +298,6 @@ Game.settings = (function(){
         }
 
         $('#languageSelector').change(function(){
-            Game.i18n.setLanguage($(this).val());
         });
     };
 

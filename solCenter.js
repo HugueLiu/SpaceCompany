@@ -131,7 +131,7 @@ function convertEnergy(resourceName, notification){
 		Game.resources.takeResource(RESOURCE.Energy, requiredEnergy);
 		Game.resources.addResource(resourceName, amount);
 		if(notification != false){
-			Game.notifyInfo(Game.i18n.t('notification.energyConversion.title'), Game.i18n.t('notification.energyConversion.text', [Game.settings.format(amount), Game.utils.capitaliseFirst(resourceName)]));
+			Game.notifyInfo('能源转换', '获得 ' + Game.settings.format(amount) + ' ' + Game.utils.capitaliseFirst(resourceName));
 		}
 
 		refreshConversionDisplay();
@@ -156,7 +156,7 @@ function convertPlasma(resourceName, notification){
 		Game.resources.takeResource(RESOURCE.Plasma, requiredPlasma);
 		Game.resources.addResource(resourceName, amount);
 		if(notification != false){
-			Game.notifyInfo(Game.i18n.t('notification.plasmaConversion.title'), Game.i18n.t('notification.energyConversion.text', [Game.settings.format(parseFloat(amount)), Game.utils.capitaliseFirst(resourceName)]));
+			Game.notifyInfo('等离子体转换', '获得 ' + Game.settings.format(parseFloat(amount)) + ' ' + Game.utils.capitaliseFirst(resourceName));
 		}
 
 		refreshConversionDisplay();
