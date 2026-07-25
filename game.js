@@ -226,7 +226,7 @@ var Game = (function() {
         }
     };
 
-    instance.loadDelay = function (self, delta) {
+     instance.loadDelay = function (self, delta) {
         document.getElementById("game").className = "container";
 
         self.deleteInterval("Loading");
@@ -234,7 +234,9 @@ var Game = (function() {
         registerLegacyBindings();
         self.ui.updateAutoDataBindings();
 
-        Game.i18n.markDataReady();
+        // Patch data objects before initialise
+        Game.i18n.dataReady = true;
+        Game.i18n.patchDataObjects();
 
         // Initialize first
         self.achievements.initialise();
@@ -255,6 +257,13 @@ var Game = (function() {
         }
 
         self.updateUI(self);
+
+        // Apply i18n after UI is ready
+        Game.i18n.applyDOM();
+        if (typeof refreshResources === 'function') refreshResources();
+        if (typeof refreshResearches === 'function') refreshResearches();
+        if (typeof refreshTabs === 'function') refreshTabs();
+        if (typeof legacyRefreshUI === 'function') legacyRefreshUI();
 
         // Display what has changed since last time
         self.updates.initialise();

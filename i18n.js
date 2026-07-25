@@ -210,6 +210,11 @@ Game.i18n = (function() {
     instance.markDataReady = function() {
         this.dataReady = true;
         this.patchDataObjects();
+        this.applyDOM();
+        if (typeof refreshResources === 'function') refreshResources();
+        if (typeof refreshResearches === 'function') refreshResearches();
+        if (typeof refreshTabs === 'function') refreshTabs();
+        if (typeof legacyRefreshUI === 'function') legacyRefreshUI();
     };
 
     instance.toggleLanguage = function() {
